@@ -1,0 +1,87 @@
+# STROYKA - Global gitignore
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build outputs
+build/
+dist/
+*.apk
+*.ipa
+*.aab
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Keys and secrets
+*.jks
+*.p12
+*.key
+*.pem
+google-services.json
+GoogleService-Info.plist
+firebase-adminsdk*.json
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backend specific
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+*.mo
+
+# Frontend specific
+.next/
+out/
+.cache/
+
+# Mobile specific
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+ios/Pods/
+ios/.symlinks/
+android/.gradle/
+android/local.properties
+
+# Documentation generated
+docs/_build/
+site/

@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: yodo-db
+    environment:
+      POSTGRES_USER: yodo
+      POSTGRES_PASSWORD: yodo_password
+      POSTGRES_DB: yodo
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U yodo"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Python Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: yodo-api
+    environment:
+      DATABASE_URL: postgresql+asyncpg://yodo:yodo_password@postgres:5432/yodo
+      SECRET_KEY: your-secret-key-change-in-production
+      DEBUG: "true"
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Next.js Landing (for local development)
+  landing:
+    build:
+      context: ./landing
+      dockerfile: Dockerfile.dev
+    container_name: yodo-landing
+    environment:
+      POSTGRES_PRISMA_URL: postgresql://yodo:yodo_password@postgres:5432/yodo
+      POSTGRES_URL_NON_POOLING: postgresql://yodo:yodo_password@postgres:5432/yodo
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./landing:/app
+      - /app/node_modules
+      - /app/.next
+
+volumes:
+  postgres_data:
+
+
+
+

@@ -27,6 +27,7 @@ class PushNotificationService {
    * Проверка поддержки Push уведомлений
    */
   isSupported(): boolean {
+    if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
     return (
       'serviceWorker' in navigator &&
       'PushManager' in window &&
@@ -50,7 +51,7 @@ class PushNotificationService {
    * Проверка текущего статуса разрешения
    */
   getPermissionStatus(): NotificationPermission {
-    if (!this.isSupported()) {
+    if (typeof window === 'undefined' || !this.isSupported()) {
       return 'denied';
     }
     return Notification.permission;
@@ -139,7 +140,7 @@ class PushNotificationService {
         },
         body: JSON.stringify({
           subscription,
-          userAgent: navigator.userAgent
+          userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
         })
       });
 

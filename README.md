@@ -1,4 +1,4 @@
-# 🏗️ STROYKA - Платформа строительных услуг
+# 🏗️ МастерОК - Платформа строительных услуг
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Flutter](https://img.shields.io/badge/Flutter-3.16%2B-blue)](https://flutter.dev)
@@ -8,7 +8,7 @@
 
 > Современная платформа для поиска строительных специалистов с безопасными платежами через ЮKassa и real-time коммуникацией
 
-![STROYKA Banner](https://via.placeholder.com/1200x400/4F46E5/FFFFFF?text=STROYKA+-+Платформа+строительных+услуг)
+![МастерОК Banner](https://via.placeholder.com/1200x400/4F46E5/FFFFFF?text=МастерОК+-+Платформа+строительных+услуг)
 
 ---
 
@@ -28,7 +28,7 @@
 ## 📁 Структура проекта
 
 ```
-stroyka/
+masterok/
 ├── 📱 mobile/          # Flutter приложение (iOS + Android)
 ├── 🌐 landing/         # Next.js лендинг
 ├── ⚡ backend/         # FastAPI бэкенд
@@ -81,6 +81,15 @@ flutter run
 
 ---
 
+## 🌍 Прод‑деплой (сайт + API + web‑версия)
+
+См. **`PRODUCTION_SERVER_COMMANDS.md`** — там готовые команды для сервера (Docker Compose + Nginx в контейнере), и как добавить:
+
+- `/webapp/` (Flutter Web)
+- `/downloads/app-release.apk` (ссылка на APK на сайте)
+
+---
+
 ## 📱 Сборка мобильного приложения
 
 ### Android APK
@@ -119,7 +128,7 @@ YOOKASSA_SHOP_ID=123456
 YOOKASSA_SECRET_KEY=live_XXXXXXXXXXXXX
 ```
 
-4. Настроить webhook: `https://api.stroyka.ru/api/v1/payment/webhook`
+4. Настроить webhook: `https://api.masterok.ru/api/v1/payment/webhook`
 
 ### Схема эскроу-платежей
 
@@ -152,9 +161,9 @@ POST /api/v1/payment/webhook  - Webhook от ЮKassa
 ### Настройка
 
 1. Создать проект на [Firebase Console](https://console.firebase.google.com)
-2. Добавить Android app (`com.stroyka.app`)
+2. Добавить Android app (`com.masterok.app`)
 3. Скачать `google-services.json` → `mobile/android/app/`
-4. Добавить iOS app (`com.stroyka.app`)
+4. Добавить iOS app (`com.masterok.app`)
 5. Скачать `GoogleService-Info.plist` → `mobile/ios/Runner/`
 6. Включить Cloud Messaging
 
@@ -206,7 +215,7 @@ POST /api/v1/payment/webhook  - Webhook от ЮKassa
 
 1. 📄 [START_HERE.md](START_HERE.md) - Входная точка
 2. 📄 [🎯_ДЛЯ_ВТОРОГО_РАЗРАБОТЧИКА.md](🎯_ДЛЯ_ВТОРОГО_РАЗРАБОТЧИКА.md) - Пошаговый гайд (60 минут)
-3. 📄 [🏗️_STROYKA_FINAL_PACKAGE.md](🏗️_STROYKA_FINAL_PACKAGE.md) - Технические детали
+3. 📄 [🏗️_MasterOK_FINAL_PACKAGE.md](🏗️_MasterOK_FINAL_PACKAGE.md) - Технические детали
 
 ### Специализированные гайды
 
@@ -256,7 +265,7 @@ GET  /api/v1/chat/{chat_id}     - История сообщений
 ### Backend (Heroku)
 
 ```bash
-heroku create stroyka-api
+heroku create masterok-api
 heroku addons:create heroku-postgresql:mini
 git subtree push --prefix backend heroku main
 heroku run alembic upgrade head
@@ -376,9 +385,9 @@ flutter pub run build_runner build --delete-conflicting-outputs
 
 ## 📞 Поддержка
 
-- 🐛 **Issues:** [GitHub Issues](https://github.com/YOUR/stroyka-platform/issues)
-- 📧 **Email:** dev@stroyka.ru
-- 💬 **Telegram:** @stroyka_dev
+- 🐛 **Issues:** [GitHub Issues](https://github.com/YOUR/masterok-platform/issues)
+- 📧 **Email:** dev@masterok.ru
+- 💬 **Telegram:** @masterok_dev
 - 📖 **Docs:** [START_HERE.md](START_HERE.md)
 
 ---
@@ -395,7 +404,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 
 ## 🎉 Production Ready!
 
-**STROYKA готова к запуску!**
+**МастерОК готов к запуску!**
 
 Все компоненты протестированы и готовы к production использованию:
 
@@ -415,6 +424,6 @@ flutter pub run build_runner build --delete-conflicting-outputs
   
 **Сделано с ❤️ для российского рынка строительства**
 
-[Документация](START_HERE.md) · [API](http://localhost:8000/docs) · [Issues](https://github.com/YOUR/stroyka-platform/issues)
+[Документация](START_HERE.md) · [API](http://localhost:8000/docs) · [Issues](https://github.com/YOUR/masterok-platform/issues)
 
 </div>

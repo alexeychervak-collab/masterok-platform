@@ -99,7 +99,7 @@ export default function InteractiveFeatures() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Почему выбирают <span className="gradient-text">YoDo</span>
+            Почему выбирают <span className="gradient-text">МастерОК</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Современная платформа с максимальной защитой и удобством для клиентов и специалистов

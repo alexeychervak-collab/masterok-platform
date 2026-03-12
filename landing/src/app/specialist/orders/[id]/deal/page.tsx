@@ -53,7 +53,7 @@ export default function SpecialistDealPage() {
             orderId={order.id}
             orderTitle={order.title}
             amount={amount}
-            specialistName="Специалист YoDo"
+            specialistName="Специалист МастерОК"
             clientName={order.client.name}
           />
         </div>

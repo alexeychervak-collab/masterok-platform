@@ -28,6 +28,10 @@ import {
   FileText
 } from 'lucide-react';
 
+const APP_DOWNLOAD_URL =
+  process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL || '/downloads/app-release.apk';
+const WEBAPP_URL = process.env.NEXT_PUBLIC_WEBAPP_URL || '/webapp/';
+
 const categories = [
   {
     id: 1,
@@ -227,9 +231,9 @@ export default function EnhancedHomePage() {
               </div>
               <div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  YoDo
+                  МастерОК
                 </div>
-                <div className="text-xs text-gray-500">Marketplace Pro</div>
+                <div className="text-xs text-gray-500">Строительные специалисты</div>
               </div>
             </Link>
 
@@ -250,6 +254,18 @@ export default function EnhancedHomePage() {
             </nav>
 
             <div className="hidden md:flex items-center gap-4">
+              <Link
+                href={WEBAPP_URL}
+                className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Веб‑версия
+              </Link>
+              <Link
+                href={APP_DOWNLOAD_URL}
+                className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Скачать APK
+              </Link>
               <Link
                 href="/login"
                 className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -282,6 +298,12 @@ export default function EnhancedHomePage() {
             className="md:hidden bg-white border-t border-gray-200"
           >
             <div className="px-4 py-6 space-y-4">
+              <Link href={WEBAPP_URL} className="block text-gray-700 hover:text-blue-600 font-medium">
+                Веб‑версия
+              </Link>
+              <Link href={APP_DOWNLOAD_URL} className="block text-gray-700 hover:text-blue-600 font-medium">
+                Скачать APK
+              </Link>
               <Link href="/search" className="block text-gray-700 hover:text-blue-600 font-medium">
                 Найти специалиста
               </Link>
@@ -343,6 +365,28 @@ export default function EnhancedHomePage() {
                 15,000+ проверенных профессионалов готовы выполнить ваш проект.
                 Безопасные сделки, гарантия качества.
               </p>
+
+              {/* Primary CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+                <Link
+                  href="/search"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold hover:shadow-lg hover:scale-[1.02] transition-all"
+                >
+                  Найти специалиста <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href={WEBAPP_URL}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white text-gray-900 rounded-2xl font-semibold border border-gray-200 hover:shadow-md transition-all"
+                >
+                  Открыть веб‑версию <Play className="w-5 h-5" />
+                </Link>
+                <Link
+                  href={APP_DOWNLOAD_URL}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white text-gray-900 rounded-2xl font-semibold border border-gray-200 hover:shadow-md transition-all"
+                >
+                  Скачать приложение (APK) <Phone className="w-5 h-5" />
+                </Link>
+              </div>
 
               {/* Search Bar */}
               <div className="relative mb-8">
@@ -824,8 +868,8 @@ export default function EnhancedHomePage() {
                   <Briefcase className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold">YoDo</div>
-                  <div className="text-sm text-gray-400">Marketplace Pro</div>
+                  <div className="text-2xl font-bold">МастерОК</div>
+                  <div className="text-sm text-gray-400">Строительные специалисты</div>
                 </div>
               </div>
               <p className="text-gray-400 mb-4">
@@ -838,7 +882,7 @@ export default function EnhancedHomePage() {
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">
                   <Mail className="w-4 h-4" />
-                  support@yodo.ru
+                  support@masterok.ru
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
@@ -881,7 +925,7 @@ export default function EnhancedHomePage() {
 
           <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">
-              © 2025 YoDo Marketplace. Все права защищены.
+              © 2025 МастерОК. Все права защищены.
             </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

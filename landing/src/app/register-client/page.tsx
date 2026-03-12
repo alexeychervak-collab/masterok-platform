@@ -22,8 +22,8 @@ export default function RegisterClientPage() {
     setIsSubmitting(true)
     try {
       // TODO: backend registration
-      localStorage.setItem('yodo_role', 'client')
-      localStorage.setItem('yodo_user', JSON.stringify({ name: form.name || 'Заказчик' }))
+      localStorage.setItem('masterok_role', 'client')
+      localStorage.setItem('masterok_user', JSON.stringify({ name: form.name || 'Заказчик' }))
       await new Promise((r) => setTimeout(r, 700))
       router.push('/create-order')
     } finally {
@@ -36,7 +36,7 @@ export default function RegisterClientPage() {
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-bold text-primary-600">
-            YoDo
+            МастерОК
           </Link>
           <h1 className="text-3xl font-bold mt-4">Регистрация заказчика</h1>
           <p className="text-gray-600 mt-2">Создайте аккаунт, чтобы размещать проекты и общаться со специалистами</p>

@@ -5,13 +5,15 @@ import os
 
 class Settings(BaseSettings):
     # App
-    APP_NAME: str = "YODO API"
+    APP_NAME: str = "МастерОК API"
     DEBUG: bool = False
+    API_V1_PREFIX: str = "/api/v1"
+    PROJECT_NAME: str = "МастерОК"
     
     # Database
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
-        "postgresql+asyncpg://postgres:postgres@localhost:5432/yodo"
+        "postgresql+asyncpg://postgres:postgres@localhost:5432/masterok"
     )
     
     # Auth
@@ -23,7 +25,8 @@ class Settings(BaseSettings):
     CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://localhost:8000",
-        "https://yodo.vercel.app",
+        "https://masterok.ru",
+        "https://*.masterok.ru",
         "https://*.vercel.app",
     ]
     

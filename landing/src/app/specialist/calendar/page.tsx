@@ -38,7 +38,7 @@ export default function SpecialistCalendarPage() {
   const [statusByDay, setStatusByDay] = useState<Record<string, DayStatus>>(() => {
     if (typeof window !== 'undefined') {
       try {
-        const raw = localStorage.getItem('yodo_calendar_status')
+        const raw = localStorage.getItem('masterok_calendar_status')
         if (raw) return JSON.parse(raw)
       } catch {
         // ignore
@@ -54,8 +54,8 @@ export default function SpecialistCalendarPage() {
   // persist calendar + workHours
   function persist(nextStatus: Record<string, DayStatus>, nextHours?: { from: string; to: string }) {
     try {
-      localStorage.setItem('yodo_calendar_status', JSON.stringify(nextStatus))
-      if (nextHours) localStorage.setItem('yodo_calendar_hours', JSON.stringify(nextHours))
+      localStorage.setItem('masterok_calendar_status', JSON.stringify(nextStatus))
+      if (nextHours) localStorage.setItem('masterok_calendar_hours', JSON.stringify(nextHours))
     } catch {
       // ignore
     }
@@ -64,7 +64,7 @@ export default function SpecialistCalendarPage() {
   // load work hours once
   useEffect(() => {
     try {
-      const raw = localStorage.getItem('yodo_calendar_hours')
+      const raw = localStorage.getItem('masterok_calendar_hours')
       if (raw) setWorkHours(JSON.parse(raw))
     } catch {
       // ignore

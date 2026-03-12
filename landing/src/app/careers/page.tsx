@@ -147,7 +147,7 @@ export default function CareersPage() {
         <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-16 mb-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Присоединяйтесь к команде YODO
+              Присоединяйтесь к команде МастерОК
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Мы строим будущее индустрии услуг. Станьте частью команды профессионалов, 
@@ -181,7 +181,7 @@ export default function CareersPage() {
 
         {/* Benefits */}
         <section className="container mx-auto px-4 mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Почему YODO?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Почему МастерОК?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="bg-white rounded-2xl p-6 border border-gray-100">
@@ -274,7 +274,7 @@ export default function CareersPage() {
               Отправьте нам свое резюме, и мы свяжемся с вами, когда появится подходящая позиция
             </p>
             <a
-              href="mailto:hr@yodo.ru"
+              href="mailto:hr@masterok.ru"
               className="inline-block px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:shadow-lg transition-shadow"
             >
               Отправить резюме

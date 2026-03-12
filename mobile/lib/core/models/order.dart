@@ -1,5 +1,5 @@
-import 'package:equatable/equatable.dart';
-import 'package:yodo/core/models/specialist.dart';
+﻿import 'package:equatable/equatable.dart';
+import 'package:masterok/core/models/specialist.dart';
 
 enum OrderStatus {
   pending,
@@ -54,11 +54,13 @@ class Order extends Equatable {
 
   factory Order.fromJson(Map<String, dynamic> json) {
     OrderStatus status;
-    switch (json['status'] as String) {
+    final rawStatus = (json['status'] as String?) ?? 'pending';
+    switch (rawStatus) {
       case 'accepted':
         status = OrderStatus.accepted;
         break;
       case 'in_progress':
+      case 'inProgress':
         status = OrderStatus.inProgress;
         break;
       case 'completed':
@@ -89,11 +91,19 @@ class Order extends Equatable {
   }
 
   Map<String, dynamic> toJson() {
+    final statusValue = switch (status) {
+      OrderStatus.pending => 'pending',
+      OrderStatus.accepted => 'accepted',
+      OrderStatus.inProgress => 'in_progress',
+      OrderStatus.completed => 'completed',
+      OrderStatus.cancelled => 'cancelled',
+      OrderStatus.disputed => 'disputed',
+    };
     return {
       'id': id,
       'title': title,
       'description': description,
-      'status': status.name,
+      'status': statusValue,
       'price': price,
       'created_at': createdAt.toIso8601String(),
       'deadline': deadline?.toIso8601String(),
@@ -117,4 +127,7 @@ class Order extends Equatable {
         clientId,
       ];
 }
+
+
+
 

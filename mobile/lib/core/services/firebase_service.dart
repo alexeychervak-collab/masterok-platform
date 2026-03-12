@@ -5,7 +5,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:developer' as developer;
 
-/// Firebase Service для STROYKA
+/// Firebase Service для МастерОК
 /// Push-уведомления, Analytics, Crashlytics
 class FirebaseService {
   static final FirebaseService _instance = FirebaseService._internal();
@@ -201,4 +201,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   
   // TODO: Обработка background уведомлений
 }
+
+
+
 

@@ -83,7 +83,7 @@ export default function FavoritesPage() {
   }, []);
 
   const loadFavorites = () => {
-    const stored = localStorage.getItem('yodo_favorites');
+    const stored = localStorage.getItem('masterok_favorites');
     if (stored) {
       const ids = JSON.parse(stored);
       setFavoriteIds(ids);
@@ -98,7 +98,7 @@ export default function FavoritesPage() {
 
   const clearAllFavorites = () => {
     if (confirm('Удалить всех специалистов из избранного?')) {
-      localStorage.removeItem('yodo_favorites');
+      localStorage.removeItem('masterok_favorites');
       setFavoriteIds([]);
       setFavorites([]);
     }

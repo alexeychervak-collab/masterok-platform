@@ -1,4 +1,4 @@
-# 👨‍💻 Руководство разработчика YODO Mobile App
+# 👨‍💻 Руководство разработчика МастерОК Mobile App
 
 ## 📋 Содержание
 
@@ -130,7 +130,7 @@ feature_name/
 API клиент настроен в `lib/core/network/api_client.dart`:
 
 ```dart
-const String baseUrl = 'https://api.yodo.ru/api/v1';
+const String baseUrl = 'https://api.masterok.ru/api/v1';
 ```
 
 Для локальной разработки измените на:
@@ -145,7 +145,7 @@ const String baseUrl = 'http://localhost:8000/api/v1';  // iOS Simulator
 // lib/core/services/my_service.dart
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/core/network/api_client.dart';
+import 'package:masterok/core/network/api_client.dart';
 
 final myServiceProvider = Provider<MyService>((ref) {
   return MyService(ref.read(dioProvider));
@@ -580,4 +580,6 @@ flutter doctor -v
 ---
 
 **Удачной разработки! 🚀**
+
+
 

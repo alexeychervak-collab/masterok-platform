@@ -1,4 +1,4 @@
-# 🚀 YoDo Marketplace - Руководство по деплою
+# 🚀 MasterOK Marketplace - Руководство по деплою
 
 ## 📋 Информация о сервере
 
@@ -35,7 +35,7 @@ chmod +x deploy.sh
 
 ### Шаг 1: Сборка проекта
 ```bash
-cd D:\yodo\landing
+cd D:\masterok\landing
 npm install --force
 npm run build
 ```
@@ -47,26 +47,26 @@ ssh alexei@158.255.6.22
 
 ### Шаг 3: Создание директории на сервере
 ```bash
-mkdir -p /home/alexei/yodo-marketplace
+mkdir -p /home/alexei/masterok-marketplace
 ```
 
 ### Шаг 4: Копирование файлов
 ```bash
 # На вашем компьютере (Windows PowerShell)
-scp -r .next alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp -r public alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp -r src alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp package*.json alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp next.config.ts alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp tsconfig.json alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp tailwind.config.ts alexei@158.255.6.22:/home/alexei/yodo-marketplace/
-scp postcss.config.mjs alexei@158.255.6.22:/home/alexei/yodo-marketplace/
+scp -r .next alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp -r public alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp -r src alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp package*.json alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp next.config.ts alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp tsconfig.json alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp tailwind.config.ts alexei@158.255.6.22:/home/alexei/masterok-marketplace/
+scp postcss.config.mjs alexei@158.255.6.22:/home/alexei/masterok-marketplace/
 ```
 
 ### Шаг 5: Установка зависимостей на сервере
 ```bash
 ssh alexei@158.255.6.22
-cd /home/alexei/yodo-marketplace
+cd /home/alexei/masterok-marketplace
 npm install --production
 ```
 
@@ -78,7 +78,7 @@ npm install --production
 npm install -g pm2
 
 # Запустите приложение
-pm2 start npm --name "yodo-landing" -- start -- -p 3000
+pm2 start npm --name "masterok-landing" -- start -- -p 3000
 pm2 save
 pm2 startup
 ```
@@ -102,25 +102,25 @@ ssh alexei@158.255.6.22 'ps aux | grep node'
 ### Просмотр логов
 ```bash
 # С PM2
-ssh alexei@158.255.6.22 'pm2 logs yodo-landing'
+ssh alexei@158.255.6.22 'pm2 logs masterok-landing'
 
 # Без PM2
-ssh alexei@158.255.6.22 'tail -f /home/alexei/yodo-marketplace/app.log'
+ssh alexei@158.255.6.22 'tail -f /home/alexei/masterok-marketplace/app.log'
 ```
 
 ### Перезапуск приложения
 ```bash
 # С PM2
-ssh alexei@158.255.6.22 'cd /home/alexei/yodo-marketplace && pm2 restart yodo-landing'
+ssh alexei@158.255.6.22 'cd /home/alexei/masterok-marketplace && pm2 restart masterok-landing'
 
 # Без PM2
-ssh alexei@158.255.6.22 'pkill -f "next start" && cd /home/alexei/yodo-marketplace && nohup npm start > app.log 2>&1 &'
+ssh alexei@158.255.6.22 'pkill -f "next start" && cd /home/alexei/masterok-marketplace && nohup npm start > app.log 2>&1 &'
 ```
 
 ### Остановка приложения
 ```bash
 # С PM2
-ssh alexei@158.255.6.22 'pm2 stop yodo-landing'
+ssh alexei@158.255.6.22 'pm2 stop masterok-landing'
 
 # Без PM2
 ssh alexei@158.255.6.22 'pkill -f "next start"'
@@ -139,7 +139,7 @@ sudo apt install nginx -y
 
 ### 2. Создайте конфигурацию
 ```bash
-sudo nano /etc/nginx/sites-available/yodo
+sudo nano /etc/nginx/sites-available/masterok
 ```
 
 Вставьте:
@@ -164,7 +164,7 @@ server {
 
 ### 3. Активируйте конфигурацию
 ```bash
-sudo ln -s /etc/nginx/sites-available/yodo /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/masterok /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
 ```
@@ -202,9 +202,9 @@ ssh alexei@158.255.6.22 'free -m'
 ## 🆘 Решение проблем
 
 ### Приложение не запускается
-1. Проверьте логи: `pm2 logs yodo-landing`
+1. Проверьте логи: `pm2 logs masterok-landing`
 2. Проверьте, свободен ли порт: `sudo lsof -i :3000`
-3. Проверьте наличие node_modules: `ls -la /home/alexei/yodo-marketplace/node_modules`
+3. Проверьте наличие node_modules: `ls -la /home/alexei/masterok-marketplace/node_modules`
 
 ### Не хватает памяти
 ```bash
@@ -218,7 +218,7 @@ sudo swapon /swapfile
 ### Проблемы с правами доступа
 ```bash
 ssh alexei@158.255.6.22
-cd /home/alexei/yodo-marketplace
+cd /home/alexei/masterok-marketplace
 sudo chown -R alexei:alexei .
 chmod -R 755 .
 ```
@@ -228,7 +228,7 @@ chmod -R 755 .
 После деплоя проверьте:
 
 1. **Доступность сайта:** http://158.255.6.22:3000
-2. **Логи:** `pm2 logs yodo-landing`
+2. **Логи:** `pm2 logs masterok-landing`
 3. **Статус:** `pm2 status`
 4. **Все функции работают:**
    - Поиск специалистов

@@ -1,4 +1,4 @@
-# 📱 Руководство по сборке APK для YODO Mobile App
+# 📱 Руководство по сборке APK для МастерОК Mobile App
 
 ## ✅ Предварительные требования
 
@@ -81,11 +81,11 @@ flutter pub get
 ### Шаг 4: Создание keystore (для Release-сборки)
 
 **ВАЖНО:** Keystore уже создан в проекте для удобства разработки.
-Файл: `android/app/yodo-keystore.jks`
+Файл: `android/app/masterok-keystore.jks`
 
 Параметры:
-- Alias: `yodo-key`
-- Password: `yodo123456`
+- Alias: `masterok-key`
+- Password: `masterok123456`
 
 **Для production используйте свой keystore:**
 
@@ -174,6 +174,27 @@ flutter build apk --analyze-size
 - [ ] Проверен размер APK (< 50 MB желательно)
 
 ## 🐛 Решение проблем
+
+### Ошибка SAI: `DISPLAY_NAME column is null`
+
+Если при установке через **SAI (Split APKs Installer)** появляется ошибка вида:
+`com.aefyr.sai... BadContentProviderException: DISPLAY_NAME column is null`,
+то проблема обычно **в установщике/провайдере файла**, а не в приложении.
+
+✅ Решение для продакшена/рассылки пользователям:
+- Собирайте и распространяйте **универсальный APK**:
+
+```bash
+flutter build apk --release
+```
+
+- Устанавливайте стандартным установщиком Android или через ADB:
+
+```bash
+adb install -r build/app/outputs/flutter-apk/app-release.apk
+```
+
+Split (`--split-per-abi`) используйте только для оптимизации, когда вы точно контролируете способ установки.
 
 ### Ошибка: "SDK location not found"
 ```bash
@@ -278,4 +299,6 @@ flutter build appbundle --release
 ---
 
 **Успешной сборки! 🎉**
+
+
 

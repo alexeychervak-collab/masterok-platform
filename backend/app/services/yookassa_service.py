@@ -1,6 +1,6 @@
 """
-YooKassa Payment Service для STROYKA
-Полная интеграция эскроу-платежей из D:\Пиица
+YooKassa Payment Service для МастерОК
+Полная интеграция эскроу-платежей
 """
 
 import asyncio
@@ -14,7 +14,7 @@ import requests
 from requests.exceptions import HTTPError as RequestsHTTPError
 from yookassa import Payment as YKPayment, Configuration, Refund
 
-from backend.settings import settings
+from app.core.config import settings
 
 log = logging.getLogger("yookassa")
 
@@ -232,7 +232,7 @@ async def create_payment_by_token(
         if customer_email:
             customer_data["email"] = customer_email
         if not customer_data:
-            customer_data["email"] = "customer@stroyka.ru"
+            customer_data["email"] = "customer@masterok.ru"
         
         payload["receipt"] = {
             "customer": customer_data,
@@ -312,7 +312,7 @@ payment = await create_payment_by_token(
     metadata={"order_id": 123, "user_id": 456},
     capture=False,  # Холдирование!
     customer_email="client@example.com",
-    return_url="stroyka://payment/success"
+    return_url="masterok://payment/success"
 )
 
 # 2. После выполнения работ - capture
@@ -325,4 +325,7 @@ refunded = await refund_payment(
     "Работы не выполнены"
 )
 """
+
+
+
 

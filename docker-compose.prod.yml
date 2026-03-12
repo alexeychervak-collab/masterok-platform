@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: masterok-db
+    environment:
+      POSTGRES_USER: masterok
+      POSTGRES_PASSWORD: masterok_password
+      POSTGRES_DB: masterok
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U masterok"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: masterok-api
+    environment:
+      DATABASE_URL: postgresql+asyncpg://masterok:masterok_password@postgres:5432/masterok
+      SECRET_KEY: change-me-in-production
+      DEBUG: "false"
+      # Для настоящей оплаты:
+      # YOOKASSA_SHOP_ID: ""
+      # YOOKASSA_SECRET_KEY: ""
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - "8000"
+
+  landing:
+    build:
+      context: ./landing
+      dockerfile: Dockerfile
+    container_name: masterok-landing
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: /api/v1
+      NEXT_PUBLIC_APP_DOWNLOAD_URL: /downloads/app-release.apk
+      NEXT_PUBLIC_WEBAPP_URL: /webapp/
+      POSTGRES_PRISMA_URL: postgresql://masterok:masterok_password@postgres:5432/masterok
+      POSTGRES_URL_NON_POOLING: postgresql://masterok:masterok_password@postgres:5432/masterok
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: masterok-nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - landing
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./downloads:/data/downloads:ro
+
+volumes:
+  postgres_data:
+
+
+
+

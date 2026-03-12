@@ -1,8 +1,5 @@
 plugins {
     id "com.android.application"
-    // START: FlutterFire Configuration
-    id 'com.google.gms.google-services'
-    // END: FlutterFire Configuration
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -26,17 +23,37 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.stroyka.app"
-    compileSdk 34
+    namespace "com.masterok.app"
+    compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
+    def keystoreProperties = new Properties()
+    def keystorePropertiesFile = rootProject.file('key.properties')
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+            }
+            // Максимальная совместимость установки (Android 5/6 требуют v1)
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = '21'
+        jvmTarget = '1.8'
     }
 
     sourceSets {
@@ -44,43 +61,32 @@ android {
     }
 
     defaultConfig {
-        // STROYKA - Платформа строительных услуг
-        applicationId "com.stroyka.app"
-        minSdk 23
-        targetSdk 34
+        applicationId "com.masterok.app"
+        // Минимальная версия Android 5.0 (поддержка ВСЕХ Samsung устройств)
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion 34
+        // Версия берётся из pubspec.yaml (Flutter проставляет flutter.versionCode/flutter.versionName в local.properties)
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        multiDexEnabled true
         
-        // YooKassa scheme для deep linking
-        resValue "string", "ym_app_scheme", "stroyka"
-    }
-
-    def keystoreProperties = new Properties()
-    def keystorePropertiesFile = rootProject.file('app/key.properties')
-    if (keystorePropertiesFile.exists()) {
-        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-    }
-
-    signingConfigs {
-        release {
-            keyAlias keystoreProperties['keyAlias'] ?: 'stroyka-key'
-            keyPassword keystoreProperties['keyPassword'] ?: 'stroyka123456'
-            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : file('stroyka-keystore.jks')
-            storePassword keystoreProperties['storePassword'] ?: 'stroyka123456'
-        }
+        // Поддержка многоязычности
+        multiDexEnabled true
     }
 
     buildTypes {
         release {
+            // Отключаем минификацию для совместимости с Samsung
+            minifyEnabled false
+            shrinkResources false
+            
+            // Release подпись (keystore)
             signingConfig signingConfigs.release
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            signingConfig signingConfigs.debug
+            applicationIdSuffix ".debug"
             debuggable true
+            minifyEnabled false
+            shrinkResources false
         }
     }
 }
@@ -90,12 +96,8 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     
-    // Firebase
-    implementation platform('com.google.firebase:firebase-bom:33.0.0')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-messaging'
-    implementation 'com.google.firebase:firebase-crashlytics'
+    // MultiDex для поддержки большого количества методов
+    implementation 'androidx.multidex:multidex:2.0.1'
 }

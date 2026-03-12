@@ -1,14 +1,14 @@
-# YoDo Marketplace Deployment Script for Windows
+# MasterOK Marketplace Deployment Script for Windows
 # Deploy to: alexei@158.255.6.22
 
 $ErrorActionPreference = "Stop"
 
-Write-Host "🚀 Starting YoDo Marketplace deployment..." -ForegroundColor Green
+Write-Host "🚀 Starting MasterOK Marketplace deployment..." -ForegroundColor Green
 
 # Configuration
 $SERVER_USER = "alexei"
 $SERVER_IP = "158.255.6.22"
-$SERVER_PATH = "/home/alexei/yodo-marketplace"
+$SERVER_PATH = "/home/alexei/masterok-marketplace"
 $SERVER = "${SERVER_USER}@${SERVER_IP}"
 
 Write-Host "📦 Building production version..." -ForegroundColor Yellow
@@ -71,8 +71,8 @@ pkill -f 'node.*next' || true
 
 echo "🚀 Starting application..."
 if command -v pm2 &> /dev/null; then
-    pm2 delete yodo-landing || true
-    pm2 start npm --name 'yodo-landing' -- start -- -p 3000
+    pm2 delete masterok-landing || true
+    pm2 start npm --name 'masterok-landing' -- start -- -p 3000
     pm2 save
     echo "✅ Started with PM2"
 else
@@ -91,7 +91,7 @@ Write-Host "🌐 Your application is running at: http://158.255.6.22:3000" -Fore
 Write-Host ""
 Write-Host "📊 Useful commands:" -ForegroundColor Yellow
 Write-Host "   Check logs: ssh ${SERVER} 'cd ${SERVER_PATH} && tail -f app.log'" -ForegroundColor Gray
-Write-Host "   Restart app: ssh ${SERVER} 'cd ${SERVER_PATH} && pm2 restart yodo-landing'" -ForegroundColor Gray
+Write-Host "   Restart app: ssh ${SERVER} 'cd ${SERVER_PATH} && pm2 restart masterok-landing'" -ForegroundColor Gray
 Write-Host "   View status: ssh ${SERVER} 'pm2 status'" -ForegroundColor Gray
 
 

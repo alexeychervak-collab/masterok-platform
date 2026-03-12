@@ -1,6 +1,6 @@
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║           🎉 YODO MARKETPLACE - ВСЕ ГОТОВО! 🎉               ║
+║        🎉 MASTEROK MARKETPLACE - ВСЕ ГОТОВО! 🎉              ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
@@ -59,7 +59,7 @@
 🚀 КАК ЗАПУСТИТЬ:
 
 1. Локально:
-   cd D:\yodo\landing
+   cd D:\masterok\landing
    npm install --force
    npm run dev
    → http://localhost:3000
@@ -156,10 +156,10 @@ vs freelancer.com:
 🆘 ПОМОЩЬ:
 
 Логи на сервере:
-  ssh alexei@158.255.6.22 'pm2 logs yodo-landing'
+  ssh alexei@158.255.6.22 'pm2 logs masterok-landing'
 
 Перезапуск:
-  ssh alexei@158.255.6.22 'pm2 restart yodo-landing'
+  ssh alexei@158.255.6.22 'pm2 restart masterok-landing'
 
 Статус:
   ssh alexei@158.255.6.22 'pm2 status'

@@ -189,7 +189,7 @@ export default function EscrowPayment({
                 {
                   icon: <Lock className="w-5 h-5 text-blue-600" />,
                   title: 'Деньги заблокированы',
-                  text: 'После оплаты деньги блокируются на счёте YoDo'
+                  text: 'После оплаты деньги блокируются на счёте МастерОК'
                 },
                 {
                   icon: <User className="w-5 h-5 text-purple-600" />,
@@ -229,7 +229,7 @@ export default function EscrowPayment({
                 <ul className="space-y-1 text-blue-800">
                   <li>• Если специалист не выполнит работу - деньги вернутся вам</li>
                   <li>• Вы можете открыть спор в течение 14 дней</li>
-                  <li>• Модерация YoDo поможет разрешить конфликт</li>
+                  <li>• Модерация МастерОК поможет разрешить конфликт</li>
                 </ul>
               </div>
             </div>
@@ -392,7 +392,7 @@ export default function EscrowPayment({
               Оплата успешна!
             </h2>
             <p className="text-gray-600 mb-6">
-              Деньги заблокированы на счёте YoDo и будут переведены специалисту после завершения работы
+              Деньги заблокированы на счёте МастерОК и будут переведены специалисту после завершения работы
             </p>
           </div>
 

@@ -1,0 +1,1370 @@
+[+3205 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[   +6 ms] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[  +11 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[ +565 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[  +15 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +577 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[  +31 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[ +420 ms] executing: [D:\yodo\mobile/] C:\src\flutter\flutter\bin\cache\dart-sdk\bin\dart pub --suppress-analytics --directory . get --example
+Resolving dependencies...
+Downloading packages...
+  characters 1.4.0 (1.4.1 available)
+  flutter_lints 3.0.2 (6.0.0 available)
+  flutter_riverpod 2.6.1 (3.1.0 available)
+  flutter_secure_storage 9.2.4 (10.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.0 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.0 available)
+  flutter_secure_storage_windows 3.1.2 (4.1.0 available)
+  go_router 13.2.5 (17.0.1 available)
+  js 0.6.7 (0.7.2 available)
+  lints 3.0.0 (6.0.0 available)
+  matcher 0.12.17 (0.12.18 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  meta 1.16.0 (1.17.0 available)
+  riverpod 2.6.1 (3.1.0 available)
+  test_api 0.7.6 (0.7.8 available)
+Got dependencies!
+17 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+[+9154 ms] Found plugin shared_preferences at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences-2.5.4\
+[  +35 ms] Found plugin shared_preferences_windows at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_windows-2.4.1\
+[  +38 ms] Found plugin path_provider_windows at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_windows-2.3.0\
+[  +35 ms] Found plugin shared_preferences_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_web-2.4.3\
+[  +25 ms] Found plugin shared_preferences_linux at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_linux-2.4.1\
+[  +18 ms] Found plugin path_provider_linux at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_linux-2.2.1\
+[  +23 ms] Found plugin shared_preferences_foundation at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_foundation-2.5.6\
+[  +16 ms] Found plugin shared_preferences_android at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.18\
+[  +45 ms] Found plugin path_provider at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider-2.1.5\
+[  +14 ms] Found plugin path_provider_foundation at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_foundation-2.5.1\
+[  +15 ms] Found plugin path_provider_android at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.22\
+[ +117 ms] Found plugin flutter_secure_storage at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage-9.2.4\
+[  +16 ms] Found plugin flutter_secure_storage_windows at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_windows-3.1.2\
+[  +38 ms] Found plugin flutter_secure_storage_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_web-1.2.1\
+[  +14 ms] Found plugin flutter_secure_storage_macos at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_macos-3.1.3\
+[  +15 ms] Found plugin flutter_secure_storage_linux at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_linux-1.2.3\
+[  +59 ms] Found plugin firebase_messaging at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-16.1.0\
+[  +18 ms] Found plugin firebase_messaging_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging_web-4.1.1\
+[  +17 ms] Found plugin firebase_core at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\
+[  +10 ms] Found plugin firebase_core_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core_web-3.3.1\
+[  +79 ms] Found plugin sqflite at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite-2.4.2\
+[  +35 ms] Found plugin sqflite_darwin at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_darwin-2.4.2\
+[  +10 ms] Found plugin sqflite_android at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_android-2.4.2+2\
+[ +367 ms] Found plugin shared_preferences at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences-2.5.4\
+[   +9 ms] Found plugin shared_preferences_windows at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_windows-2.4.1\
+[  +11 ms] Found plugin path_provider_windows at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_windows-2.3.0\
+[  +27 ms] Found plugin shared_preferences_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_web-2.4.3\
+[  +16 ms] Found plugin shared_preferences_linux at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_linux-2.4.1\
+[   +7 ms] Found plugin path_provider_linux at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_linux-2.2.1\
+[   +8 ms] Found plugin shared_preferences_foundation at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_foundation-2.5.6\
+[   +3 ms] Found plugin shared_preferences_android at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.18\
+[  +16 ms] Found plugin path_provider at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider-2.1.5\
+[   +8 ms] Found plugin path_provider_foundation at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_foundation-2.5.1\
+[   +4 ms] Found plugin path_provider_android at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.22\
+[  +77 ms] Found plugin flutter_secure_storage at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage-9.2.4\
+[  +21 ms] Found plugin flutter_secure_storage_windows at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_windows-3.1.2\
+[  +42 ms] Found plugin flutter_secure_storage_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_web-1.2.1\
+[   +9 ms] Found plugin flutter_secure_storage_macos at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_macos-3.1.3\
+[   +9 ms] Found plugin flutter_secure_storage_linux at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage_linux-1.2.3\
+[  +33 ms] Found plugin firebase_messaging at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-16.1.0\
+[   +6 ms] Found plugin firebase_messaging_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging_web-4.1.1\
+[  +13 ms] Found plugin firebase_core at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\
+[   +5 ms] Found plugin firebase_core_web at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core_web-3.3.1\
+[  +57 ms] Found plugin sqflite at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite-2.4.2\
+[  +18 ms] Found plugin sqflite_darwin at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_darwin-2.4.2\
+[   +4 ms] Found plugin sqflite_android at C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_android-2.4.2+2\
+[  +63 ms] Generating D:\yodo\mobile\android\app\src\main\java\io\flutter\plugins\GeneratedPluginRegistrant.java
+[  +63 ms] Skipping generating GeneratedPluginRegistrant.java because it is up-to-date.
+[  +18 ms] Skipping generating GeneratedPluginRegistrant.h because it is up-to-date.
+[  +56 ms] Skipping generating GeneratedPluginRegistrant.m because it is up-to-date.
+[ +426 ms] executing: C:\Program Files\Android\Android Studio\jbr\bin\java -version
+[ +414 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jbr\bin\java -version
+[        ] openjdk version "21.0.8" 2025-07-15
+           OpenJDK Runtime Environment (build 21.0.8+-14196175-b1038.72)
+           OpenJDK 64-Bit Server VM (build 21.0.8+-14196175-b1038.72, mixed mode)
+[  +49 ms] executing: C:\Program Files\Android\Android Studio\jbr\bin\java --version
+[ +423 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jbr\bin\java --version
+[        ] openjdk 21.0.8 2025-07-15
+           OpenJDK Runtime Environment (build 21.0.8+-14196175-b1038.72)
+           OpenJDK 64-Bit Server VM (build 21.0.8+-14196175-b1038.72, mixed mode)
+[   +9 ms] Version of Java is different than impacted version, no migration attempted.
+[ +134 ms] CMake project not found, skipping support Android 15 16k page size migration.
+[  +19 ms] Using gradle from D:\yodo\mobile\android\gradlew.bat.
+[  +48 ms] LocalFile: 'D:\yodo\mobile\android\build.gradle' provides AGP version from classpath: 8.1.4
+[  +38 ms] Running Gradle task 'assembleRelease'...
+[   +2 ms] executing: [D:\yodo\mobile\android/] D:\yodo\mobile\android\gradlew.bat --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm,android-arm64,android-x64 -Ptarget=lib\main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9WRVJTSU9OPTMuMzUuNw==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049YWRjOTAxMDYyNQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MDM1MzE2NTY1YQ==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjI= -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=true assembleRelease
+[+6574 ms] Initialized native services in: D:\Gradle\native
+[  +96 ms] Initialized jansi services in: D:\Gradle\native
+[ +107 ms] Welcome to Gradle 8.3!
+[   +1 ms] Here are the highlights of this release:
+[  +10 ms]  - Faster Java compilation
+[        ]  - Reduced memory usage
+[        ]  - Support for running on Java 20
+[        ] For more details see https://docs.gradle.org/8.3/release-notes.html
+[ +782 ms] Received JVM installation metadata from 'C:\Program Files\Android\Android Studio\jbr': {JAVA_HOME=C:\Program Files\Android\Android Studio\jbr, JAVA_VERSION=21.0.8, JAVA_VENDOR=JetBrains s.r.o., RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.8+-14196175-b1038.72, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.8+-14196175-b1038.72, VM_VENDOR=JetBrains s.r.o., OS_ARCH=amd64}
+[+1703 ms] The client will now receive all logging from the daemon (pid: 13524). The daemon log file: D:\Gradle\daemon\8.3\daemon-13524.out.log
+[   +5 ms] Starting 2nd build in daemon [uptime: 20 mins 43.095 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 4 GiB, non-heap usage: 22% of 1 GiB]
+[        ] Using 8 worker leases.
+[   +3 ms] Now considering [D:\yodo\mobile\android, C:\src\flutter\flutter\packages\flutter_tools\gradle] as hierarchies to watch
+[   +1 ms] Watching the file system is configured to be enabled if available
+[   +1 ms] File system watching is active
+[   +1 ms] Starting Build
+[  +79 ms] Now considering [C:\src\flutter\flutter\packages\flutter_tools\gradle, D:\yodo\mobile\android] as hierarchies to watch
+[+1006 ms] > Configure project :gradle
+[  +10 ms] Evaluating project ':gradle' using build file 'C:\src\flutter\flutter\packages\flutter_tools\gradle\build.gradle.kts'.
+[   +1 ms] The configuration detachedConfiguration1 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration detachedConfiguration1 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration detachedConfiguration1 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration detachedConfiguration1 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +4 ms] The configuration detachedConfiguration2 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +5 ms] The configuration detachedConfiguration2 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration detachedConfiguration2 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration detachedConfiguration2 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :gradle:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :gradle:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :gradle:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :gradle:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] Using Kotlin Gradle Plugin gradle81 variant
+[  +12 ms] kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+[        ] kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+[        ] WARNING: Unsupported Kotlin plugin version.
+[        ] The `embedded-kotlin` and `kotlin-dsl` plugins rely on features of Kotlin `1.9.0` that might work differently than in the requested version `1.9.20`.
+[        ] file or directory 'C:\src\flutter\flutter\packages\flutter_tools\gradle\src\main\java', not found
+[        ] Caching disabled for Kotlin DSL accessors for project ':gradle' because:
+[   +1 ms]   Build cache is disabled
+[        ] Skipping Kotlin DSL accessors for project ':gradle' as it is up-to-date.
+[   +4 ms] The configuration detachedConfiguration1 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration detachedConfiguration1 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +3 ms] The configuration detachedConfiguration1 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration detachedConfiguration1 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration detachedConfiguration2 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration detachedConfiguration2 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration detachedConfiguration2 is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[  +21 ms] The configuration detachedConfiguration2 is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[  +11 ms] The configuration classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[ +405 ms] The configuration classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :gradle:mainSourceElements is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +4 ms] Resolve mutations for :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#258,included builds,5,main]) started.
+[   +1 ms] :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#258,included builds,5,main]) started.
+[   +1 ms] > Task :gradle:checkKotlinGradlePluginConfigurationErrors
+[        ] Caching disabled for task ':gradle:checkKotlinGradlePluginConfigurationErrors' because:
+[        ]   Build cache is disabled
+[   +1 ms] Task ':gradle:checkKotlinGradlePluginConfigurationErrors' is not up-to-date because:
+[        ]   Task has not declared any outputs despite executing actions.
+[        ] Resolve mutations for :gradle:compileKotlin (Thread[#259,Execution worker,5,main]) started.
+[   +2 ms] :gradle:compileKotlin (Thread[#259,Execution worker,5,main]) started.
+[ +248 ms] > Task :gradle:compileKotlin UP-TO-DATE
+[   +1 ms] Transforming gradle-api-8.3.jar with ClasspathEntrySnapshotTransform
+[   +3 ms] Transforming groovy-3.0.17.jar with ClasspathEntrySnapshotTransform
+[   +2 ms] Transforming groovy-ant-3.0.17.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming groovy-astbuilder-3.0.17.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming groovy-console-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-datetime-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-dateutil-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-groovydoc-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-json-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-nio-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-sql-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-templates-3.0.17.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming groovy-test-3.0.17.jar with ClasspathEntrySnapshotTransform
+[  +85 ms] Transforming groovy-xml-3.0.17.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming javaparser-core-3.17.0.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming kotlin-stdlib-1.9.0.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming kotlin-stdlib-common-1.9.0.jar with ClasspathEntrySnapshotTransform
+[   +6 ms] Transforming kotlin-reflect-1.9.0.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming kotlin-stdlib-jdk7-1.9.0.jar with ClasspathEntrySnapshotTransform
+[   +2 ms] Transforming kotlin-stdlib-jdk8-1.9.0.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming gradle-installation-beacon-8.3.jar with ClasspathEntrySnapshotTransform
+[   +2 ms] Transforming gradle-kotlin-dsl-extensions-8.3.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming gradle-kotlin-dsl-8.3.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming gradle-kotlin-dsl-tooling-models-8.3.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming annotation-jvm-1.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming gradle-8.9.1.jar with ClasspathEntrySnapshotTransform
+[ +134 ms] Transforming kotlin-reflect-1.9.0.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming kotlin-stdlib-jdk7-1.9.0.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming kotlinx-serialization-json-jvm-1.4.0.jar with ClasspathEntrySnapshotTransform
+[   +3 ms] Transforming kotlinx-serialization-core-jvm-1.4.0.jar with ClasspathEntrySnapshotTransform
+[   +7 ms] Transforming kotlin-stdlib-1.9.24.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming kotlin-stdlib-jdk8-1.9.0.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming kotlin-gradle-plugin-1.8.0-gradle76.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming builder-8.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming builder-model-8.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming gradle-api-8.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming kotlin-gradle-plugin-model-1.8.0.jar with ClasspathEntrySnapshotTransform
+[   +2 ms] Transforming kotlin-gradle-plugin-api-1.8.0-gradle76.jar with ClasspathEntrySnapshotTransform
+[   +5 ms] Transforming kotlin-gradle-plugin-api-1.8.0.jar with ClasspathEntrySnapshotTransform
+[  +49 ms] Transforming kotlin-tooling-core-1.8.0.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming annotations-13.0.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming manifest-merger-31.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming zipflinger-8.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming apksig-8.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming apkzlib-8.9.1.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming javawriter-2.5.0.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming asm-9.7.jar with ClasspathEntrySnapshotTransform
+[        ] Transforming kotlin-native-utils-1.8.0.jar with ClasspathEntrySnapshotTransform
+[  +13 ms] Transforming kotlin-project-model-1.8.0.jar with ClasspathEntrySnapshotTransform
+[   +1 ms] Transforming kotlin-util-io-1.8.0.jar with ClasspathEntrySnapshotTransform
+[        ] Caching disabled for task ':gradle:compileKotlin' because:
+[  +10 ms]   Build cache is disabled
+[   +1 ms] Skipping task ':gradle:compileKotlin' as it is up-to-date.
+[   +1 ms] Resolve mutations for :gradle:compileJava (Thread[#262,Execution worker Thread 4,5,main]) started.
+[   +1 ms] :gradle:compileJava (Thread[#262,Execution worker Thread 4,5,main]) started.
+[        ] > Task :gradle:compileJava NO-SOURCE
+[        ] Skipping task ':gradle:compileJava' as it has no source files and no previous output files.
+[        ] Resolve mutations for :gradle:compileGroovy (Thread[#262,Execution worker Thread 4,5,main]) started.
+[        ] :gradle:compileGroovy (Thread[#262,Execution worker Thread 4,5,main]) started.
+[   +4 ms] > Task :gradle:compileGroovy NO-SOURCE
+[   +2 ms] Skipping task ':gradle:compileGroovy' as it has no source files and no previous output files.
+[   +1 ms] Resolve mutations for :gradle:pluginDescriptors (Thread[#262,Execution worker Thread 4,5,main]) started.
+[   +1 ms] :gradle:pluginDescriptors (Thread[#262,Execution worker Thread 4,5,main]) started.
+[   +2 ms] > Task :gradle:pluginDescriptors UP-TO-DATE
+[        ] Caching disabled for task ':gradle:pluginDescriptors' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':gradle:pluginDescriptors' as it is up-to-date.
+[        ] Resolve mutations for :gradle:processResources (Thread[#262,Execution worker Thread 4,5,main]) started.
+[  +78 ms] :gradle:processResources (Thread[#262,Execution worker Thread 4,5,main]) started.
+[  +21 ms] > Task :gradle:processResources UP-TO-DATE
+[        ] Caching disabled for task ':gradle:processResources' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':gradle:processResources' as it is up-to-date.
+[        ] Resolve mutations for :gradle:classes (Thread[#262,Execution worker Thread 4,5,main]) started.
+[   +9 ms] :gradle:classes (Thread[#262,Execution worker Thread 4,5,main]) started.
+[   +1 ms] > Task :gradle:classes UP-TO-DATE
+[   +1 ms] Skipping task ':gradle:classes' as it has no actions.
+[        ] Resolve mutations for :gradle:jar (Thread[#262,Execution worker Thread 4,5,main]) started.
+[        ] :gradle:jar (Thread[#262,Execution worker Thread 4,5,main]) started.
+[        ] > Task :gradle:jar UP-TO-DATE
+[        ] Caching disabled for task ':gradle:jar' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':gradle:jar' as it is up-to-date.
+[        ] The configuration classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[  +14 ms] The configuration classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[ +412 ms] Settings evaluated using settings file 'D:\yodo\mobile\android\settings.gradle'.
+[   +2 ms] Projects loaded. Root project using build file 'D:\yodo\mobile\android\build.gradle'.
+[        ] Included projects: [root project 'android', project ':app', project ':firebase_core', project ':firebase_messaging', project ':flutter_secure_storage', project ':path_provider_android', project ':shared_preferences_android', project ':sqflite_android']
+[+2067 ms] > Configure project :app
+[        ] Evaluating project ':app' using build file 'D:\yodo\mobile\android\app\build.gradle'.
+[        ] Using default execution profile
+[   +6 ms] Using Kotlin Gradle Plugin gradle81 variant
+[   +6 ms] Warning: Flutter support for your project's Gradle version (8.3.0) will soon be dropped. Please upgrade your Gradle version to a version of at least 8.7.0 soon.
+[  +14 ms] Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+[   +1 ms] Potential fix: Your project's gradle version is typically defined in the gradle wrapper file. By default, this can be found at D:\yodo\mobile\android/gradle/wrapper/gradle-wrapper.properties. 
+[   +1 ms] For more information, see https://docs.gradle.org/current/userguide/gradle_wrapper.html.
+[   +1 ms] Warning: Flutter support for your project's Android Gradle Plugin version (Android Gradle Plugin version 8.1.4) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least Android Gradle Plugin version 8.6.0 soon.
+[        ] Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+[        ] Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (D:\yodo\mobile\android/settings.gradle), by a plugin with the id of com.android.application. 
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +6 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +2 ms] C/C++: ndk.dir in local.properties is not set
+[ +256 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[  +17 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[  +14 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +1 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +2 ms] C/C++: ndk.dir in local.properties is not set
+[   +2 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +2 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[   +4 ms] If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file (D:\yodo\mobile\android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+[   +2 ms] Warning: Flutter support for your project's Kotlin version (1.9.22) will soon be dropped. Please upgrade your Kotlin version to a version of at least 2.1.0 soon.
+[        ] Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+[   +3 ms] Potential fix: Your project's KGP version is typically defined in the plugins block of the `settings.gradle` file (D:\yodo\mobile\android/settings.gradle), by a plugin with the id of org.jetbrains.kotlin.android. 
+[  +12 ms] If you don't see a plugins block, your project was likely created with an older template version, in which case it is most likely defined in the top-level build.gradle file (D:\yodo\mobile\android/build.gradle) by the ext.kotlin_version property.
+[   +2 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +5 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[  +27 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +5 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[ +109 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[ +115 ms] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[   +5 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +3 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[   +6 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +4 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +2 ms] C/C++: ndk.dir in local.properties is not set
+[   +1 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +6 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +8 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +2 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +1 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +1 ms] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[ +476 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +2 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +1 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +1 ms] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +1 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +1 ms] C/C++: ndk.dir in local.properties is not set
+[  +46 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[  +15 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[  +10 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +3 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +1 ms] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[  +50 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[  +11 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +1 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +4 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +2 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +1 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +2 ms] C/C++: ndk.dir in local.properties is not set
+[   +5 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[   +7 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +2 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +1 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[   +1 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +2 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +2 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +8 ms] C/C++: ndk.dir in local.properties is not set
+[   +1 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +2 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +3 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +2 ms] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +5 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[   +1 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +4 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +2 ms] C/C++: android.ndkPath from module build.gradle is not set
+[   +1 ms] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +1 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[   +1 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[   +1 ms] C/C++: ndk.dir in local.properties is not set
+[   +8 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[ +105 ms] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[  +17 ms] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[  +27 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[  +17 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\User\AppData\Local\Android\Sdk
+[        ] WARNING: C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] C/C++: Ignoring invalid ABI 'riscv64' found in ABI metadata file 'C:\Users\User\AppData\Local\Android\Sdk\ndk\27.0.12077973\meta\abis.json'.
+[   +1 ms] Parsed shrinker version: 8.1.68
+[  +16 ms] > Configure project :
+[ +101 ms] Evaluating root project 'android' using build file 'D:\yodo\mobile\android\build.gradle'.
+[   +7 ms] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] > Configure project :firebase_core
+[  +44 ms] Evaluating project ':firebase_core' using build file 'C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\android\build.gradle'.
+[   +2 ms] Using default execution profile
+[        ] > Configure project :firebase_messaging
+[        ] Evaluating project ':firebase_messaging' using build file 'C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-16.1.0\android\build.gradle'.
+[        ] Using default execution profile
+[  +71 ms] > Configure project :flutter_secure_storage
+[   +2 ms] Evaluating project ':flutter_secure_storage' using build file 'C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_secure_storage-9.2.4\android\build.gradle'.
+[   +2 ms] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] Using default execution profile
+[ +882 ms] > Configure project :path_provider_android
+[        ] Evaluating project ':path_provider_android' using build file 'C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.22\android\build.gradle'.
+[   +2 ms] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +5 ms] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] Using default execution profile
+[   +2 ms] Warning: The plugin path_provider_android requires Android SDK version 36 or higher.
+[  +12 ms] For more information about build configuration, see https://flutter.dev/to/review-gradle-config.
+[ +974 ms] > Configure project :shared_preferences_android
+[   +4 ms] Evaluating project ':shared_preferences_android' using build file 'C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.18\android\build.gradle'.
+[   +1 ms] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] Using default execution profile
+[   +1 ms] Using Kotlin Gradle Plugin gradle81 variant
+[   +4 ms] Warning: The plugin shared_preferences_android requires Android SDK version 36 or higher.
+[   +3 ms] For more information about build configuration, see https://flutter.dev/to/review-gradle-config.
+[ +575 ms] > Configure project :sqflite_android
+[        ] Evaluating project ':sqflite_android' using build file 'C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_android-2.4.2+2\android\build.gradle'.
+[        ] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] Using default execution profile
+[        ] Warning: The plugin sqflite_android requires Android SDK version 36 or higher.
+[   +2 ms] Your project is configured to compile against Android SDK 34, but the following plugin(s) require to be compiled against a higher Android SDK version:
+[   +1 ms] - path_provider_android compiles against Android SDK 36
+[   +1 ms] - shared_preferences_android compiles against Android SDK 36
+[   +1 ms] - sqflite_android compiles against Android SDK 36
+[   +2 ms] Fix this issue by compiling against the highest Android SDK version (they are backward compatible).
+[   +1 ms] Add the following to D:\yodo\mobile\android\app\build.gradle:
+[        ]     android {
+[        ]         compileSdk = 36
+[        ] For more information about build configuration, see https://flutter.dev/to/review-gradle-config.
+[   +3 ms]         ...
+[   +1 ms]     }
+[   +1 ms] All projects evaluated.
+[ +109 ms] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +4 ms] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :app:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :app:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :app:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :app:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :app:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :app:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :app:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :app:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :app:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :app:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :app:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :app:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +3 ms] The configuration :firebase_core:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :firebase_core:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :firebase_core:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :firebase_core:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :firebase_core:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :firebase_core:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :firebase_core:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :firebase_core:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +3 ms] The configuration :firebase_core:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :firebase_core:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :firebase_core:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +3 ms] The configuration :firebase_core:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +6 ms] The configuration :firebase_messaging:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :firebase_messaging:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :firebase_messaging:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :firebase_messaging:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[ +114 ms] The configuration :firebase_messaging:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +3 ms] The configuration :firebase_messaging:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +3 ms] The configuration :firebase_messaging:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :firebase_messaging:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :firebase_messaging:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :firebase_messaging:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :firebase_messaging:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :firebase_messaging:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +5 ms] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :flutter_secure_storage:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :flutter_secure_storage:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[ +187 ms] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +3 ms] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :path_provider_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :path_provider_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[        ] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[        ] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +4 ms] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +3 ms] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :shared_preferences_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :shared_preferences_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[  +37 ms] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[ +508 ms] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[  +26 ms] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +2 ms] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +1 ms] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +7 ms] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +3 ms] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[   +2 ms] The configuration :sqflite_android:classpath is both resolvable and consumable. This is considered a legacy configuration and it will eventually only be possible to be one of these.
+[   +1 ms] The configuration :sqflite_android:classpath is both consumable and declarable. This combination is incorrect, only one of these flags should be set.
+[  +31 ms] Task name matched 'assembleRelease'
+[        ] Selected primary task 'assembleRelease' from project :
+[+1151 ms] SDK initialized in 94 ms
+[ +563 ms] WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 36
+[   +1 ms] This Android Gradle plugin (8.1.4) was tested up to compileSdk = 34.
+[   +1 ms] You are strongly encouraged to update your project to use a newer
+[   +1 ms] Android Gradle plugin that has been tested with compileSdk = 36.
+[   +1 ms] If you are already using the latest version of the Android Gradle plugin,
+[   +2 ms] you may need to wait until a newer version with support for compileSdk = 36 is available.
+[   +5 ms] To suppress this warning, add/update
+[        ]     android.suppressUnsupportedCompileSdk=36
+[        ] to this project's gradle.properties.
+[   +1 ms] SDK initialized in 30 ms
+[ +977 ms] Tasks to be executed: [task ':app:ReleaseMinSdkCheck', task ':firebase_messaging:preBuild', task ':firebase_messaging:preReleaseBuild', task ':firebase_messaging:mergeReleaseJniLibFolders', task ':firebase_messaging:mergeReleaseNativeLibs', task ':firebase_messaging:stripReleaseDebugSymbols', task ':firebase_messaging:copyReleaseJniLibsProjectAndLocalJars', task ':firebase_messaging:generateReleaseResValues', task ':firebase_messaging:extractDeepLinksForAarRelease', task ':firebase_core:preBuild', task ':firebase_core:preReleaseBuild', task ':firebase_core:generateReleaseBuildConfig', task ':firebase_core:generateReleaseResValues', task ':firebase_core:generateReleaseResources', task ':firebase_core:packageReleaseResources', task ':firebase_core:parseReleaseLocalResources', task ':firebase_core:processReleaseManifest', task ':firebase_core:generateReleaseRFile', task ':firebase_core:javaPreCompileRelease', task ':firebase_core:compileReleaseJavaWithJavac', task ':firebase_core:bundleLibCompileToJarRelease', task ':firebase_messaging:generateReleaseBuildConfig', task ':firebase_messaging:generateReleaseResources', task ':firebase_messaging:packageReleaseResources', task ':firebase_messaging:parseReleaseLocalResources', task ':firebase_messaging:processReleaseManifest', task ':firebase_messaging:generateReleaseRFile', task ':firebase_messaging:extractReleaseAnnotations', task ':firebase_messaging:javaPreCompileRelease', task ':firebase_messaging:compileReleaseJavaWithJavac', task ':firebase_messaging:mergeReleaseGeneratedProguardFiles', task ':firebase_messaging:mergeReleaseConsumerProguardFiles', task ':firebase_messaging:mergeReleaseShaders', task ':firebase_messaging:compileReleaseShaders', task ':firebase_messaging:generateReleaseAssets', task ':firebase_messaging:packageReleaseAssets', task ':firebase_messaging:prepareLintJarForPublish', task ':firebase_messaging:prepareReleaseArtProfile', task ':firebase_messaging:processReleaseJavaRes', task ':firebase_messaging:mergeReleaseJavaResource', task ':firebase_messaging:syncReleaseLibJars', task ':firebase_messaging:writeReleaseAarMetadata', task ':firebase_messaging:bundleReleaseLocalLintAar', task ':firebase_core:mergeReleaseJniLibFolders', task ':firebase_core:mergeReleaseNativeLibs', task ':firebase_core:stripReleaseDebugSymbols', task ':firebase_core:copyReleaseJniLibsProjectAndLocalJars', task ':firebase_core:extractDeepLinksForAarRelease', task ':firebase_core:extractReleaseAnnotations', task ':firebase_core:mergeReleaseGeneratedProguardFiles', task ':firebase_core:mergeReleaseConsumerProguardFiles', task ':firebase_core:mergeReleaseShaders', task ':firebase_core:compileReleaseShaders', task ':firebase_core:generateReleaseAssets', task ':firebase_core:packageReleaseAssets', task ':firebase_core:prepareLintJarForPublish', task ':firebase_core:prepareReleaseArtProfile', task ':firebase_core:processReleaseJavaRes', task ':firebase_core:mergeReleaseJavaResource', task ':firebase_core:syncReleaseLibJars', task ':firebase_core:writeReleaseAarMetadata', task ':firebase_core:bundleReleaseLocalLintAar', task ':flutter_secure_storage:preBuild', task ':flutter_secure_storage:preReleaseBuild', task ':flutter_secure_storage:mergeReleaseJniLibFolders', task ':flutter_secure_storage:mergeReleaseNativeLibs', task ':flutter_secure_storage:stripReleaseDebugSymbols', task ':flutter_secure_storage:copyReleaseJniLibsProjectAndLocalJars', task ':flutter_secure_storage:generateReleaseResValues', task ':flutter_secure_storage:extractDeepLinksForAarRelease', task ':flutter_secure_storage:generateReleaseBuildConfig', task ':flutter_secure_storage:generateReleaseResources', task ':flutter_secure_storage:packageReleaseResources', task ':flutter_secure_storage:parseReleaseLocalResources', task ':flutter_secure_storage:processReleaseManifest', task ':flutter_secure_storage:generateReleaseRFile', task ':flutter_secure_storage:extractReleaseAnnotations', task ':flutter_secure_storage:javaPreCompileRelease', task ':flutter_secure_storage:compileReleaseJavaWithJavac', task ':flutter_secure_storage:mergeReleaseGeneratedProguardFiles', task ':flutter_secure_storage:mergeReleaseConsumerProguardFiles', task ':flutter_secure_storage:mergeReleaseShaders', task ':flutter_secure_storage:compileReleaseShaders', task ':flutter_secure_storage:generateReleaseAssets', task ':flutter_secure_storage:packageReleaseAssets', task ':flutter_secure_storage:prepareLintJarForPublish', task ':flutter_secure_storage:prepareReleaseArtProfile', task ':flutter_secure_storage:processReleaseJavaRes', task ':flutter_secure_storage:mergeReleaseJavaResource', task ':flutter_secure_storage:syncReleaseLibJars', task ':flutter_secure_storage:writeReleaseAarMetadata', task ':flutter_secure_storage:bundleReleaseLocalLintAar', task ':path_provider_android:preBuild', task ':path_provider_android:preReleaseBuild', task ':path_provider_android:mergeReleaseJniLibFolders', task ':path_provider_android:mergeReleaseNativeLibs', task ':path_provider_android:stripReleaseDebugSymbols', task ':path_provider_android:copyReleaseJniLibsProjectAndLocalJars', task ':path_provider_android:generateReleaseResValues', task ':path_provider_android:extractDeepLinksForAarRelease', task ':path_provider_android:generateReleaseBuildConfig', task ':path_provider_android:generateReleaseResources', task ':path_provider_android:packageReleaseResources', task ':path_provider_android:parseReleaseLocalResources', task ':path_provider_android:processReleaseManifest', task ':path_provider_android:generateReleaseRFile', task ':path_provider_android:extractReleaseAnnotations', task ':path_provider_android:javaPreCompileRelease', task ':path_provider_android:compileReleaseJavaWithJavac', task ':path_provider_android:mergeReleaseGeneratedProguardFiles', task ':path_provider_android:mergeReleaseConsumerProguardFiles', task ':path_provider_android:mergeReleaseShaders', task ':path_provider_android:compileReleaseShaders', task ':path_provider_android:generateReleaseAssets', task ':path_provider_android:packageReleaseAssets', task ':path_provider_android:prepareLintJarForPublish', task ':path_provider_android:prepareReleaseArtProfile', task ':path_provider_android:processReleaseJavaRes', task ':path_provider_android:mergeReleaseJavaResource', task ':path_provider_android:syncReleaseLibJars', task ':path_provider_android:writeReleaseAarMetadata', task ':path_provider_android:bundleReleaseLocalLintAar', task ':shared_preferences_android:preBuild', task ':shared_preferences_android:preReleaseBuild', task ':shared_preferences_android:mergeReleaseJniLibFolders', task ':shared_preferences_android:mergeReleaseNativeLibs', task ':shared_preferences_android:stripReleaseDebugSymbols', task ':shared_preferences_android:copyReleaseJniLibsProjectAndLocalJars', task ':shared_preferences_android:generateReleaseResValues', task ':shared_preferences_android:extractDeepLinksForAarRelease', task ':shared_preferences_android:checkKotlinGradlePluginConfigurationErrors', task ':shared_preferences_android:generateReleaseBuildConfig', task ':shared_preferences_android:generateReleaseResources', task ':shared_preferences_android:packageReleaseResources', task ':shared_preferences_android:parseReleaseLocalResources', task ':shared_preferences_android:processReleaseManifest', task ':shared_preferences_android:generateReleaseRFile', task ':shared_preferences_android:compileReleaseKotlin', task ':shared_preferences_android:extractReleaseAnnotations', task ':shared_preferences_android:javaPreCompileRelease', task ':shared_preferences_android:compileReleaseJavaWithJavac', task ':shared_preferences_android:mergeReleaseGeneratedProguardFiles', task ':shared_preferences_android:mergeReleaseConsumerProguardFiles', task ':shared_preferences_android:mergeReleaseShaders', task ':shared_preferences_android:compileReleaseShaders', task ':shared_preferences_android:generateReleaseAssets', task ':shared_preferences_android:packageReleaseAssets', task ':shared_preferences_android:prepareLintJarForPublish', task ':shared_preferences_android:prepareReleaseArtProfile', task ':shared_preferences_android:processReleaseJavaRes', task ':shared_preferences_android:mergeReleaseJavaResource', task ':shared_preferences_android:syncReleaseLibJars', task ':shared_preferences_android:writeReleaseAarMetadata', task ':shared_preferences_android:bundleReleaseLocalLintAar', task ':sqflite_android:preBuild', task ':sqflite_android:preReleaseBuild', task ':sqflite_android:mergeReleaseJniLibFolders', task ':sqflite_android:mergeReleaseNativeLibs', task ':sqflite_android:stripReleaseDebugSymbols', task ':sqflite_android:copyReleaseJniLibsProjectAndLocalJars', task ':sqflite_android:generateReleaseResValues', task ':sqflite_android:extractDeepLinksForAarRelease', task ':sqflite_android:generateReleaseBuildConfig', task ':sqflite_android:generateReleaseResources', task ':sqflite_android:packageReleaseResources', task ':sqflite_android:parseReleaseLocalResources', task ':sqflite_android:processReleaseManifest', task ':sqflite_android:generateReleaseRFile', task ':sqflite_android:extractReleaseAnnotations', task ':sqflite_android:javaPreCompileRelease', task ':sqflite_android:compileReleaseJavaWithJavac', task ':sqflite_android:mergeReleaseGeneratedProguardFiles', task ':sqflite_android:mergeReleaseConsumerProguardFiles', task ':sqflite_android:mergeReleaseShaders', task ':sqflite_android:compileReleaseShaders', task ':sqflite_android:generateReleaseAssets', task ':sqflite_android:packageReleaseAssets', task ':sqflite_android:prepareLintJarForPublish', task ':sqflite_android:prepareReleaseArtProfile', task ':sqflite_android:processReleaseJavaRes', task ':sqflite_android:mergeReleaseJavaResource', task ':sqflite_android:syncReleaseLibJars', task ':sqflite_android:writeReleaseAarMetadata', task ':sqflite_android:bundleReleaseLocalLintAar', task ':app:buildKotlinToolingMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:preBuild', task ':app:preReleaseBuild', task ':app:generateReleaseBuildConfig', task ':app:compileFlutterBuildRelease', task ':app:packJniLibsflutterBuildRelease', task ':app:checkReleaseAarMetadata', task ':app:cleanMergeReleaseAssets', task ':app:mergeReleaseShaders', task ':app:compileReleaseShaders', task ':app:generateReleaseAssets', task ':app:mergeReleaseAssets', task ':app:copyFlutterAssetsRelease', task ':app:generateReleaseResValues', task ':app:processReleaseGoogleServices', task ':app:mapReleaseSourceSetPaths', task ':app:generateReleaseResources', task ':app:mergeReleaseResources', task ':app:createReleaseCompatibleScreenManifests', task ':app:extractDeepLinksRelease', task ':firebase_core:extractDeepLinksRelease', task ':firebase_messaging:extractDeepLinksRelease', task ':flutter_secure_storage:extractDeepLinksRelease', task ':path_provider_android:extractDeepLinksRelease', task ':shared_preferences_android:extractDeepLinksRelease', task ':sqflite_android:extractDeepLinksRelease', task ':app:processReleaseMainManifest', task ':app:processReleaseManifest', task ':app:processReleaseManifestForPackage', task ':app:processReleaseResources', task ':firebase_messaging:bundleLibCompileToJarRelease', task ':flutter_secure_storage:bundleLibCompileToJarRelease', task ':path_provider_android:bundleLibCompileToJarRelease', task ':shared_preferences_android:bundleLibCompileToJarRelease', task ':sqflite_android:bundleLibCompileToJarRelease', task ':app:compileReleaseKotlin', task ':app:javaPreCompileRelease', task ':app:compileReleaseJavaWithJavac', task ':app:extractProguardFiles', task ':firebase_core:bundleLibRuntimeToJarRelease', task ':firebase_core:createFullJarRelease', task ':firebase_core:writeReleaseLintModelMetadata', task ':firebase_messaging:bundleLibRuntimeToJarRelease', task ':firebase_messaging:createFullJarRelease', task ':firebase_messaging:writeReleaseLintModelMetadata', task ':flutter_secure_storage:bundleLibRuntimeToJarRelease', task ':flutter_secure_storage:createFullJarRelease', task ':flutter_secure_storage:writeReleaseLintModelMetadata', task ':path_provider_android:bundleLibRuntimeToJarRelease', task ':path_provider_android:createFullJarRelease', task ':path_provider_android:writeReleaseLintModelMetadata', task ':shared_preferences_android:bundleLibRuntimeToJarRelease', task ':shared_preferences_android:createFullJarRelease', task ':shared_preferences_android:writeReleaseLintModelMetadata', task ':sqflite_android:bundleLibRuntimeToJarRelease', task ':sqflite_android:createFullJarRelease', task ':sqflite_android:writeReleaseLintModelMetadata', task ':app:lintVitalAnalyzeRelease', task ':app:lintVitalReportRelease', task ':app:lintVitalRelease', task ':app:configureCMakeRelease[arm64-v8a]', task ':app:buildCMakeRelease[arm64-v8a]', task ':app:configureCMakeRelease[armeabi-v7a]', task ':app:buildCMakeRelease[armeabi-v7a]', task ':app:configureCMakeRelease[x86_64]', task ':app:buildCMakeRelease[x86_64]', task ':app:mergeReleaseJniLibFolders', task ':firebase_core:copyReleaseJniLibsProjectOnly', task ':firebase_messaging:copyReleaseJniLibsProjectOnly', task ':flutter_secure_storage:copyReleaseJniLibsProjectOnly', task ':path_provider_android:copyReleaseJniLibsProjectOnly', task ':shared_preferences_android:copyReleaseJniLibsProjectOnly', task ':sqflite_android:copyReleaseJniLibsProjectOnly', task ':app:mergeReleaseNativeLibs', task ':app:stripReleaseDebugSymbols', task ':app:extractReleaseNativeSymbolTables', task ':app:mergeReleaseNativeDebugMetadata', task ':firebase_messaging:exportReleaseConsumerProguardFiles', task ':firebase_core:exportReleaseConsumerProguardFiles', task ':flutter_secure_storage:exportReleaseConsumerProguardFiles', task ':path_provider_android:exportReleaseConsumerProguardFiles', task ':shared_preferences_android:exportReleaseConsumerProguardFiles', task ':sqflite_android:exportReleaseConsumerProguardFiles', task ':app:checkReleaseDuplicateClasses', task ':app:mergeReleaseArtProfile', task ':app:mergeReleaseGeneratedProguardFiles', task ':app:processReleaseJavaRes', task ':app:mergeReleaseJavaResource', task ':app:minifyReleaseWithR8', task ':app:compileReleaseArtProfile', task ':app:compressReleaseAssets', task ':app:processApplicationManifestReleaseForBundle', task ':app:bundleReleaseResources', task ':app:shrinkReleaseRes', task ':app:optimizeReleaseResources', task ':app:collectReleaseDependencies', task ':app:sdkReleaseDependencyData', task ':app:validateSigningRelease', task ':app:writeReleaseAppMetadata', task ':app:writeReleaseSigningConfigVersions', task ':app:packageRelease', task ':app:createReleaseApkListingFileRedirect', task ':app:assembleRelease', task ':firebase_core:bundleReleaseAar', task ':firebase_core:mapReleaseSourceSetPaths', task ':firebase_core:mergeReleaseResources', task ':firebase_core:verifyReleaseResources', task ':firebase_core:assembleRelease', task ':firebase_messaging:bundleReleaseAar', task ':firebase_core:compileReleaseLibraryResources', task ':firebase_messaging:mapReleaseSourceSetPaths', task ':firebase_messaging:mergeReleaseResources', task ':firebase_messaging:verifyReleaseResources', task ':firebase_messaging:assembleRelease', task ':flutter_secure_storage:bundleReleaseAar', task ':flutter_secure_storage:mapReleaseSourceSetPaths', task ':flutter_secure_storage:mergeReleaseResources', task ':flutter_secure_storage:verifyReleaseResources', task ':flutter_secure_storage:assembleRelease', task ':path_provider_android:bundleReleaseAar', task ':path_provider_android:mapReleaseSourceSetPaths', task ':path_provider_android:mergeReleaseResources', task ':path_provider_android:verifyReleaseResources', task ':path_provider_android:assembleRelease', task ':shared_preferences_android:bundleReleaseAar', task ':shared_preferences_android:mapReleaseSourceSetPaths', task ':shared_preferences_android:mergeReleaseResources', task ':shared_preferences_android:verifyReleaseResources', task ':shared_preferences_android:assembleRelease', task ':sqflite_android:bundleReleaseAar', task ':sqflite_android:mapReleaseSourceSetPaths', task ':sqflite_android:mergeReleaseResources', task ':sqflite_android:verifyReleaseResources', task ':sqflite_android:assembleRelease']
+[   +2 ms] Tasks that were excluded: []
+[   +1 ms] work action Parameters of ExtractAarTransform (Thread[#258,included builds,5,main]) started.
+[   +1 ms] work action Parameters of FilterShrinkerRulesTransform (Thread[#258,included builds,5,main]) started.
+[        ] Resolve mutations for :app:ReleaseMinSdkCheck (Thread[#258,included builds,5,main]) started.
+[        ] :app:ReleaseMinSdkCheck (Thread[#258,included builds,5,main]) started.
+[  +78 ms] > Task :app:ReleaseMinSdkCheck
+[        ] Caching disabled for task ':app:ReleaseMinSdkCheck' because:
+[        ]   Build cache is disabled
+[        ] Task ':app:ReleaseMinSdkCheck' is not up-to-date because:
+[   +1 ms]   Task has not declared any outputs despite executing actions.
+[        ] Resolve mutations for :firebase_messaging:preBuild (Thread[#258,included builds,5,main]) started.
+[        ] :firebase_messaging:preBuild (Thread[#258,included builds,5,main]) started.
+[        ] > Task :firebase_messaging:preBuild UP-TO-DATE
+[        ] Skipping task ':firebase_messaging:preBuild' as it has no actions.
+[        ] Resolve mutations for :firebase_messaging:preReleaseBuild (Thread[#258,included builds,5,main]) started.
+[        ] :firebase_messaging:preReleaseBuild (Thread[#258,included builds,5,main]) started.
+[   +4 ms] > Task :firebase_messaging:preReleaseBuild UP-TO-DATE
+[   +2 ms] Skipping task ':firebase_messaging:preReleaseBuild' as it has no actions.
+[   +1 ms] Resolve mutations for :firebase_messaging:mergeReleaseJniLibFolders (Thread[#258,included builds,5,main]) started.
+[        ] :firebase_messaging:mergeReleaseJniLibFolders (Thread[#258,included builds,5,main]) started.
+[   +2 ms] > Task :firebase_messaging:mergeReleaseJniLibFolders UP-TO-DATE
+[   +1 ms] Caching disabled for task ':firebase_messaging:mergeReleaseJniLibFolders' because:
+[   +1 ms]   Build cache is disabled
+[   +1 ms] Skipping task ':firebase_messaging:mergeReleaseJniLibFolders' as it is up-to-date.
+[        ] Resolve mutations for :firebase_messaging:mergeReleaseNativeLibs (Thread[#265,Execution worker Thread 7,5,main]) started.
+[        ] :firebase_messaging:mergeReleaseNativeLibs (Thread[#265,Execution worker Thread 7,5,main]) started.
+[   +1 ms] > Task :firebase_messaging:mergeReleaseNativeLibs NO-SOURCE
+[   +2 ms] Skipping task ':firebase_messaging:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+[   +1 ms] Resolve mutations for :firebase_messaging:stripReleaseDebugSymbols (Thread[#265,Execution worker Thread 7,5,main]) started.
+[   +2 ms] :firebase_messaging:stripReleaseDebugSymbols (Thread[#265,Execution worker Thread 7,5,main]) started.
+[   +1 ms] > Task :firebase_messaging:stripReleaseDebugSymbols NO-SOURCE
+[   +1 ms] Skipping task ':firebase_messaging:stripReleaseDebugSymbols' as it has no source files and no previous output files.
+[   +1 ms] Resolve mutations for :firebase_messaging:copyReleaseJniLibsProjectAndLocalJars (Thread[#265,Execution worker Thread 7,5,main]) started.
+[   +1 ms] :firebase_messaging:copyReleaseJniLibsProjectAndLocalJars (Thread[#265,Execution worker Thread 7,5,main]) started.
+[   +1 ms] > Task :firebase_messaging:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+[        ] Caching disabled for task ':firebase_messaging:copyReleaseJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':firebase_messaging:copyReleaseJniLibsProjectAndLocalJars' as it is up-to-date.
+[   +1 ms] Resolve mutations for :firebase_messaging:generateReleaseResValues (Thread[#265,Execution worker Thread 7,5,main]) started.
+[   +1 ms] :firebase_messaging:generateReleaseResValues (Thread[#265,Execution worker Thread 7,5,main]) started.
+[  +64 ms] > Task :firebase_messaging:generateReleaseResValues UP-TO-DATE
+[        ] Caching disabled for task ':firebase_messaging:generateReleaseResValues' because:
+[   +6 ms]   Build cache is disabled
+[   +2 ms] Skipping task ':firebase_messaging:generateReleaseResValues' as it is up-to-date.
+[        ] Resolve mutations for :firebase_messaging:extractDeepLinksForAarRelease (Thread[#260,Execution worker Thread 2,5,main]) started.
+[   +1 ms] :firebase_messaging:extractDeepLinksForAarRelease (Thread[#260,Execution worker Thread 2,5,main]) started.
+[        ] > Task :firebase_messaging:extractDeepLinksForAarRelease UP-TO-DATE
+[   +1 ms] Caching disabled for task ':firebase_messaging:extractDeepLinksForAarRelease' because:
+[   +1 ms]   Build cache is disabled
+[        ] Skipping task ':firebase_messaging:extractDeepLinksForAarRelease' as it is up-to-date.
+[        ] Resolve mutations for :firebase_core:preBuild (Thread[#260,Execution worker Thread 2,5,main]) started.
+[        ] :firebase_core:preBuild (Thread[#260,Execution worker Thread 2,5,main]) started.
+[        ] > Task :firebase_core:preBuild UP-TO-DATE
+[        ] Skipping task ':firebase_core:preBuild' as it has no actions.
+[        ] Resolve mutations for :firebase_core:preReleaseBuild (Thread[#260,Execution worker Thread 2,5,main]) started.
+[        ] :firebase_core:preReleaseBuild (Thread[#260,Execution worker Thread 2,5,main]) started.
+[   +4 ms] > Task :firebase_core:preReleaseBuild UP-TO-DATE
+[  +10 ms] Skipping task ':firebase_core:preReleaseBuild' as it has no actions.
+[   +4 ms] Resolve mutations for :firebase_core:generateReleaseBuildConfig (Thread[#260,Execution worker Thread 2,5,main]) started.
+[   +1 ms] :firebase_core:generateReleaseBuildConfig (Thread[#258,included builds,5,main]) started.
+[   +3 ms] > Task :firebase_core:generateReleaseBuildConfig UP-TO-DATE
+[        ] Caching disabled for task ':firebase_core:generateReleaseBuildConfig' because:
+[   +2 ms]   Build cache is disabled
+[   +2 ms] Skipping task ':firebase_core:generateReleaseBuildConfig' as it is up-to-date.
+[        ] Resolve mutations for :firebase_core:generateReleaseResValues (Thread[#258,included builds,5,main]) started.
+[        ] :firebase_core:generateReleaseResValues (Thread[#258,included builds,5,main]) started.
+[   +1 ms] > Task :firebase_core:generateReleaseResValues UP-TO-DATE
+[   +9 ms] Caching disabled for task ':firebase_core:generateReleaseResValues' because:
+[   +2 ms]   Build cache is disabled
+[   +1 ms] Skipping task ':firebase_core:generateReleaseResValues' as it is up-to-date.
+[   +1 ms] Resolve mutations for :firebase_core:generateReleaseResources (Thread[#258,included builds,5,main]) started.
+[   +1 ms] :firebase_core:generateReleaseResources (Thread[#258,included builds,5,main]) started.
+[   +1 ms] > Task :firebase_core:generateReleaseResources UP-TO-DATE
+[   +2 ms] Skipping task ':firebase_core:generateReleaseResources' as it has no actions.
+[   +2 ms] Resolve mutations for :firebase_core:packageReleaseResources (Thread[#258,included builds,5,main]) started.
+[   +1 ms] :firebase_core:packageReleaseResources (Thread[#258,included builds,5,main]) started.
+[        ] > Task :firebase_core:packageReleaseResources UP-TO-DATE
+[        ] Caching disabled for task ':firebase_core:packageReleaseResources' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':firebase_core:packageReleaseResources' as it is up-to-date.
+[   +1 ms] work action resolve release (project :firebase_core) (Thread[#258,included builds,5,main]) started.
+[   +1 ms] Resolve mutations for :firebase_core:parseReleaseLocalResources (Thread[#258,included builds,5,main]) started.
+[   +1 ms] :firebase_core:parseReleaseLocalResources (Thread[#258,included builds,5,main]) started.
+[   +9 ms] > Task :firebase_core:parseReleaseLocalResources UP-TO-DATE
+[        ] Transforming android.jar with PlatformAttrTransform
+[        ] Transforming android.jar with PlatformAttrTransform
+[        ] Caching disabled for task ':firebase_core:parseReleaseLocalResources' because:
+[   +1 ms]   Build cache is disabled
+[        ] Skipping task ':firebase_core:parseReleaseLocalResources' as it is up-to-date.
+[   +1 ms] Resolve mutations for :firebase_core:processReleaseManifest (Thread[#258,included builds,5,main]) started.
+[        ] :firebase_core:processReleaseManifest (Thread[#258,included builds,5,main]) started.
+[   +1 ms] > Task :firebase_core:processReleaseManifest UP-TO-DATE
+[        ] Caching disabled for task ':firebase_core:processReleaseManifest' because:
+[        ]   Build cache is disabled
+[        ] Skipping task ':firebase_core:processReleaseManifest' as it is up-to-date.
+[        ] work action resolve AndroidManifest.xml (project :firebase_core) (Thread[#260,Execution worker Thread 2,5,main]) started.
+[   +2 ms] work action resolve AndroidManifest.xml (project :firebase_core) (Thread[#260,Execution worker Thread 2,5,main]) started.
+[   +3 ms] Resolve mutations for :firebase_core:generateReleaseRFile (Thread[#260,Execution worker Thread 2,5,main]) started.
+[   +1 ms] :firebase_core:generateReleaseRFile (Thread[#259,Execution worker,5,main]) started.
+[ +687 ms] > Task :firebase_core:generateReleaseRFile UP-TO-DATE
+[        ] Transforming firebase-common-22.0.1.aar (com.google.firebase:firebase-common:22.0.1) with JetifyTransform
+[        ] Transforming firebase-common-22.0.1.aar (com.google.firebase:firebase-common:22.0.1) with ExtractAarTransform
+[        ] Transforming firebase-common-22.0.1.aar (com.google.firebase:firebase-common:22.0.1) with LibrarySymbolTableTransform
+[        ] Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with JetifyTransform
+[        ] Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with ExtractAarTransform
+[        ] Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with LibrarySymbolTableTransform
+[        ] Transforming activity-1.8.1.aar (androidx.activity:activity:1.8.1) with JetifyTransform
+[        ] Transforming activity-1.8.1.aar (androidx.activity:activity:1.8.1) with ExtractAarTransform
+[   +1 ms] Transforming activity-1.8.1.aar (androidx.activity:activity:1.8.1) with LibrarySymbolTableTransform
+[   +2 ms] Transforming lifecycle-livedata-2.7.0.aar (androidx.lifecycle:lifecycle-livedata:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-livedata-2.7.0.aar (androidx.lifecycle:lifecycle-livedata:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-livedata-2.7.0.aar (androidx.lifecycle:lifecycle-livedata:2.7.0) with LibrarySymbolTableTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with LibrarySymbolTableTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with JetifyTransform
+[        ] Transforming lifecycle-livedata-core-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-viewmodel-savedstate-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-viewmodel-savedstate-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-livedata-core-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-viewmodel-savedstate-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0) with LibrarySymbolTableTransform
+[        ] Transforming lifecycle-livedata-core-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core:2.7.0) with LibrarySymbolTableTransform
+[        ] Transforming window-java-1.2.0.aar (androidx.window:window-java:1.2.0) with JetifyTransform
+[   +1 ms] Transforming window-java-1.2.0.aar (androidx.window:window-java:1.2.0) with ExtractAarTransform
+[   +1 ms] Transforming window-1.2.0.aar (androidx.window:window:1.2.0) with JetifyTransform
+[        ] Transforming window-java-1.2.0.aar (androidx.window:window-java:1.2.0) with LibrarySymbolTableTransform
+[   +1 ms] Transforming window-1.2.0.aar (androidx.window:window:1.2.0) with ExtractAarTransform
+[   +2 ms] Transforming window-1.2.0.aar (androidx.window:window:1.2.0) with LibrarySymbolTableTransform
+[   +1 ms] Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+[   +2 ms] Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+[   +1 ms] Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+[        ] Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+[   +1 ms] Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+[   +3 ms] Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+[  +94 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with JetifyTransform
+[   +1 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with ExtractAarTransform
+[   +1 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with JetifyTransform
+[        ] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with LibrarySymbolTableTransform
+[   +8 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with ExtractAarTransform
+[        ] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with LibrarySymbolTableTransform
+[        ] Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with JetifyTransform
+[        ] Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with ExtractAarTransform
+[        ] Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with LibrarySymbolTableTransform
+[        ] Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with JetifyTransform
+[   +1 ms] Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
+[        ] Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with ExtractAarTransform
+[   +1 ms] Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+[        ] Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with LibrarySymbolTableTransform
+[        ] Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with LibrarySymbolTableTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with LibrarySymbolTableTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+[   +1 ms] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+[   +1 ms] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+[   +1 ms] Transforming lifecycle-runtime-2.7.0.aar (androidx.lifecycle:lifecycle-runtime:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-process-2.7.0.aar (androidx.lifecycle:lifecycle-process:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-process-2.7.0.aar (androidx.lifecycle:lifecycle-process:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-runtime-2.7.0.aar (androidx.lifecycle:lifecycle-runtime:2.7.0) with ExtractAarTransform
+[        ] Transforming lifecycle-runtime-2.7.0.aar (androidx.lifecycle:lifecycle-runtime:2.7.0) with LibrarySymbolTableTransform
+[        ] Transforming lifecycle-process-2.7.0.aar (androidx.lifecycle:lifecycle-process:2.7.0) with LibrarySymbolTableTransform
+[   +1 ms] Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with JetifyTransform
+[   +1 ms] Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
+[        ] Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
+[        ] Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with LibrarySymbolTableTransform
+[        ] Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
+[        ] Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with LibrarySymbolTableTransform
+[   +7 ms] Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with JetifyTransform
+[   +2 ms] Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
+[        ] Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with ExtractAarTransform
+[        ] Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
+[        ] Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with LibrarySymbolTableTransform
+[        ] Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with LibrarySymbolTableTransform
+[   +1 ms] Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with JetifyTransform
+[   +1 ms] Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
+[        ] Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with LibrarySymbolTableTransform
+[   +1 ms] Transforming tracing-1.2.0.aar (androidx.tracing:tracing:1.2.0) with JetifyTransform
+[   +5 ms] Transforming relinker-1.4.5.aar (com.getkeepsafe.relinker:relinker:1.4.5) with JetifyTransform
+[   +3 ms] Transforming firebase-components-19.0.0.aar (com.google.firebase:firebase-components:19.0.0) with JetifyTransform
+[   +1 ms] Transforming relinker-1.4.5.aar (com.getkeepsafe.relinker:relinker:1.4.5) with ExtractAarTransform
+[   +1 ms] Transforming relinker-1.4.5.aar (com.getkeepsafe.relinker:relinker:1.4.5) with LibrarySymbolTableTransform
+[   +1 ms] Transforming firebase-components-19.0.0.aar (com.google.firebase:firebase-components:19.0.0) with ExtractAarTransform
+[   +1 ms] Transforming tracing-1.2.0.aar (androidx.tracing:tracing:1.2.0) with ExtractAarTransform
+[        ] Transforming firebase-components-19.0.0.aar (com.google.firebase:firebase-components:19.0.0) with LibrarySymbolTableTransform
+[        ] Transforming tracing-1.2.0.aar (androidx.tracing:tracing:1.2.0) with LibrarySymbolTableTransform
+[   +3 ms] Transforming lifecycle-livedata-core-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-livedata-core-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0) with ExtractAarTransform
+[   +2 ms] Transforming lifecycle-livedata-core-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0) with LibrarySymbolTableTransform
+[   +1 ms] Transforming android.jar with PlatformAttrTransform
+[        ] Caching disabled for task ':firebase_core:generateReleaseRFile' because:
+[        ]   Build cache is disabled
+[   +2 ms] Skipping task ':firebase_core:generateReleaseRFile' as it is up-to-date.
+[   +1 ms] work action resolve package-aware-r.txt (project :firebase_core) (Thread[#259,Execution worker,5,main]) started.
+[        ] work action resolve package-aware-r.txt (project :firebase_core) (Thread[#259,Execution worker,5,main]) started.
+[   +1 ms] Resolve mutations for :firebase_core:javaPreCompileRelease (Thread[#259,Execution worker,5,main]) started.
+[        ] :firebase_core:javaPreCompileRelease (Thread[#259,Execution worker,5,main]) started.
+[        ] > Task :firebase_core:javaPreCompileRelease UP-TO-DATE
+[        ] Caching disabled for task ':firebase_core:javaPreCompileRelease' because:
+[   +4 ms]   Build cache is disabled
+[   +1 ms] Skipping task ':firebase_core:javaPreCompileRelease' as it is up-to-date.
+[   +1 ms] Resolve mutations for :firebase_core:compileReleaseJavaWithJavac (Thread[#259,Execution worker,5,main]) started.
+[   +1 ms] :firebase_core:compileReleaseJavaWithJavac (Thread[#259,Execution worker,5,main]) started.
+[+1790 ms] > Task :firebase_core:compileReleaseJavaWithJavac
+[        ] Transforming firebase-common-22.0.1.aar (com.google.firebase:firebase-common:22.0.1) with JetifyTransform
+[   +1 ms] Transforming firebase-common-22.0.1.aar (com.google.firebase:firebase-common:22.0.1) with AarToClassTransform
+[   +1 ms] Transforming flutter_embedding_release-1.0.0-035316565ad77281a75305515e4682e6c4c6f7ca.jar (io.flutter:flutter_embedding_release:1.0.0-035316565ad77281a75305515e4682e6c4c6f7ca) with JetifyTransform
+[        ] Transforming flutter_embedding_release-1.0.0-035316565ad77281a75305515e4682e6c4c6f7ca.jar (io.flutter:flutter_embedding_release:1.0.0-035316565ad77281a75305515e4682e6c4c6f7ca) with IdentityTransform
+[        ] Transforming activity-1.8.1.aar (androidx.activity:activity:1.8.1) with JetifyTransform
+[        ] Transforming activity-1.8.1.aar (androidx.activity:activity:1.8.1) with AarToClassTransform
+[   +1 ms] Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with JetifyTransform
+[        ] Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarToClassTransform
+[   +1 ms] Transforming lifecycle-livedata-core-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-livedata-core-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0) with AarToClassTransform
+[   +1 ms] Transforming lifecycle-livedata-2.7.0.aar (androidx.lifecycle:lifecycle-livedata:2.7.0) with JetifyTransform
+[        ] Transforming lifecycle-livedata-2.7.0.aar (androidx.lifecycle:lifecycle-livedata:2.7.0) with AarToClassTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with JetifyTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with AarToClassTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with JetifyTransform
+[        ] Transforming lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) with AarToClassTransform
+[        ] Transforming lifecycle-livedata-core-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core:2.7.0) with JetifyTransform
+[   +2 ms] Transforming lifecycle-livedata-core-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core:2.7.0) with AarToClassTransform
+[   +1 ms] Transforming lifecycle-viewmodel-savedstate-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-viewmodel-savedstate-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0) with AarToClassTransform
+[   +4 ms] Transforming window-java-1.2.0.aar (androidx.window:window-java:1.2.0) with JetifyTransform
+[        ] Transforming window-java-1.2.0.aar (androidx.window:window-java:1.2.0) with AarToClassTransform
+[   +1 ms] Transforming window-1.2.0.aar (androidx.window:window:1.2.0) with JetifyTransform
+[   +1 ms] Transforming window-1.2.0.aar (androidx.window:window:1.2.0) with AarToClassTransform
+[   +1 ms] Transforming kotlinx-coroutines-core-jvm-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0) with JetifyTransform
+[        ] Transforming kotlinx-coroutines-core-jvm-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0) with IdentityTransform
+[        ] Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+[        ] Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
+[        ] Transforming kotlinx-coroutines-android-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0) with JetifyTransform
+[        ] Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+[        ] Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
+[        ] Transforming kotlinx-coroutines-android-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0) with IdentityTransform
+[        ] Transforming kotlinx-coroutines-play-services-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0) with JetifyTransform
+[        ] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with JetifyTransform
+[   +1 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with AarToClassTransform
+[   +2 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with JetifyTransform
+[   +1 ms] Transforming fragment-1.7.1.aar (androidx.fragment:fragment:1.7.1) with AarToClassTransform
+[   +2 ms] Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with JetifyTransform
+[   +2 ms] Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarToClassTransform
+[        ] Transforming kotlinx-coroutines-play-services-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0) with IdentityTransform
+[        ] Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with JetifyTransform
+[   +1 ms] Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarToClassTransform
+[   +1 ms] Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
+[        ] Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+[        ] Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+[   +1 ms] Transforming lifecycle-runtime-2.7.0.aar (androidx.lifecycle:lifecycle-runtime:2.7.0) with JetifyTransform
+[   +1 ms] Transforming lifecycle-runtime-2.7.0.aar (androidx.lifecycle:lifecycle-runtime:2.7.0) with AarToClassTransform
+[   +1 ms] Transforming lifecycle-process-2.7.0.aar (androidx.lifecycle:lifecycle-process:2.7.0) with JetifyTransform
+[   +2 ms] Transforming lifecycle-process-2.7.0.aar (androidx.lifecycle:lifecycle-process:2.7.0) with AarToClassTransform
+[        ] Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
+[        ] Transforming lifecycle-common-java8-2.7.0.jar (androidx.lifecycle:lifecycle-common-java8:2.7.0) with JetifyTransform
+[        ] Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarToClassTransform
+[        ] Transforming lifecycle-common-java8-2.7.0.jar (androidx.lifecycle:lifecycle-common-java8:2.7.0) with IdentityTransform
+[        ] Transforming lifecycle-common-2.7.0.jar (androidx.lifecycle:lifecycle-common:2.7.0) with JetifyTransform
+[        ] Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with JetifyTransform
+[   +1 ms] Transforming lifecycle-common-2.7.0.jar (androidx.lifecycle:lifecycle-common:2.7.0) with IdentityTransform
+[   +1 ms] Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarToClassTransform
+[        ] Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with JetifyTransform
+[        ] Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with JetifyTransform
+[        ] Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+[        ] Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarToClassTransform
+[   +1 ms] Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
+[   +3 ms] Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarToClassTransform
+[   +1 ms] Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with JetifyTransform
+[   +2 ms] Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with IdentityTransform
+[   +1 ms] Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with JetifyTransform
+[        ] Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarToClassTransform
+[        ] Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with JetifyTransform
+[        ] Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with JetifyTransform
+[        ] Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with IdentityTransform
+[        ] Transforming tracing-1.2.0.aar (androidx.tracing:tracing:1.2.0) with JetifyTransform
+[        ] Transforming kotlin-stdlib-2.0.21.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.21) with JetifyTransform
+[        ] Transforming tracing-1.2.0.aar (androidx.tracing:tracing:1.2.0) with AarToClassTransform
+[        ] Transforming kotlin-stdlib-2.0.21.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.21) with IdentityTransform
+[        ] Transforming firebase-components-19.0.0.aar (com.google.firebase:firebase-components:19.0.0) with JetifyTransform
+[        ] Transforming firebase-components-19.0.0.aar (com.google.firebase:firebase-components:19.0.0) with AarToClassTransform
+[        ] Transforming relinker-1.4.5.aar (com.getkeepsafe.relinker:relinker:1.4.5) with JetifyTransform
+[        ] Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
+[        ] Transforming firebase-annotations-17.0.0.jar (com.google.firebase:firebase-annotations:17.0.0) with JetifyTransform
+[        ] Transforming firebase-annotations-17.0.0.jar (com.google.firebase:firebase-annotations:17.0.0) with IdentityTransform
+[        ] Transforming relinker-1.4.5.aar (com.getkeepsafe.relinker:relinker:1.4.5) with AarToClassTransform
+[   +4 ms] Transforming core-for-system-modules.jar with JdkImageTransform
+[   +2 ms] Caching disabled for JdkImageTransform: C:\Users\User\AppData\Local\Android\Sdk\platforms\android-34\core-for-system-modules.jar because:
+[        ]   Build cache is disabled
+[        ] JdkImageTransform: C:\Users\User\AppData\Local\Android\Sdk\platforms\android-34\core-for-system-modules.jar is not up-to-date because:
+[        ]   Task has failed previously.
+[        ] Starting process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe''. Working directory: C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\android Command: C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe --version
+[        ] Successfully started process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe''
+[   +1 ms] Starting process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\javac.exe''. Working directory: C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\android Command: C:\Program Files\Android\Android Studio\jbr\bin\javac.exe --system=none --patch-module=java.base=C:\Users\User\AppData\Local\Android\Sdk\platforms\android-34\core-for-system-modules.jar -d D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\module-info.java
+[        ] Successfully started process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\javac.exe''
+[+2789 ms] Starting process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jmod.exe''. Working directory: C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\android Command: C:\Program Files\Android\Android Studio\jbr\bin\jmod.exe create --module-version 21 --target-platform android --class-path D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\module.jar D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\jmod\java.base.jmod
+[  +91 ms] Successfully started process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jmod.exe''
+[+2200 ms] Starting process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe''. Working directory: C:\Users\User\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-4.3.0\android Command: C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe --module-path D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\jmod --add-modules java.base --output D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\jdkImage --disable-plugin system-modules
+[        ] Successfully started process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe''
+[+2707 ms] Error: jdk.tools.jlink.plugin.PluginException: ModuleTarget is malformed: platformString missing delimiter: android
+[   +1 ms] > Task :firebase_core:compileReleaseJavaWithJavac FAILED
+[  +98 ms] Could not execute [report metric STATISTICS_COLLECT_METRICS_OVERHEAD]
+[        ] Could not execute [report metric STATISTICS_COLLECT_METRICS_OVERHEAD]
+[   +2 ms] FAILURE: Build failed with an exception.
+[   +1 ms] * What went wrong:
+[        ] Execution failed for task ':firebase_core:compileReleaseJavaWithJavac'.
+[        ] > Could not resolve all files for configuration ':firebase_core:androidJdkImage'.
+[        ]    > Failed to transform core-for-system-modules.jar to match attributes {artifactType=_internal_android_jdk_image, org.gradle.libraryelements=jar, org.gradle.usage=java-runtime}.
+[        ]       > Execution failed for JdkImageTransform: C:\Users\User\AppData\Local\Android\Sdk\platforms\android-34\core-for-system-modules.jar.
+[        ]          > Error while executing process C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe with arguments {--module-path D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\jmod --add-modules java.base --output D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\jdkImage --disable-plugin system-modules}
+[        ] * Try:
+[        ] > Run with --debug option to get more log output.
+[        ] > Run with --scan to get full insights.
+[        ] > Get more help at https://help.gradle.org.
+[        ] * Exception is:
+[   +2 ms] org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':firebase_core:compileReleaseJavaWithJavac'.
+[   +2 ms] 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
+[   +2 ms] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+[   +1 ms] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+[   +1 ms] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+[   +1 ms] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[   +1 ms] 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+[   +1 ms] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[        ] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[        ] 	at java.base/java.lang.Thread.run(Unknown Source)
+[   +2 ms] Caused by: org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration$ArtifactResolveException: Could not resolve all files for configuration ':firebase_core:androidJdkImage'.
+[   +1 ms] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.mapFailure(DefaultConfiguration.java:1717)
+[   +1 ms] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.access$3500(DefaultConfiguration.java:173)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.mapFailure(DefaultConfiguration.java:2450)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.ResolutionHost.rethrowFailure(ResolutionHost.java:30)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:74)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.getFiles(AbstractFileCollection.java:130)
+[   +4 ms] 	at org.gradle.api.internal.file.AbstractFileCollection$FileCollectionElementsFactory.create(AbstractFileCollection.java:231)
+[   +3 ms] 	at org.gradle.api.internal.file.AbstractFileCollection$FileCollectionElementsFactory.create(AbstractFileCollection.java:219)
+[   +5 ms] 	at org.gradle.api.internal.provider.BuildableBackedProvider.calculateOwnValue(BuildableBackedProvider.java:81)
+[   +1 ms] 	at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:108)
+[        ] 	at org.gradle.api.internal.provider.TransformBackedProvider.calculateOwnValue(TransformBackedProvider.java:82)
+[  +46 ms] 	at org.gradle.api.internal.provider.AbstractMinimalProvider.getOrNull(AbstractMinimalProvider.java:98)
+[   +2 ms] 	at org.gradle.api.internal.provider.ProviderResolutionStrategy$1.resolve(ProviderResolutionStrategy.java:27)
+[   +1 ms] 	at org.gradle.api.internal.file.collections.ProviderBackedFileCollection.visitChildren(ProviderBackedFileCollection.java:64)
+[   +4 ms] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:133)
+[   +1 ms] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:366)
+[   +2 ms] 	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:77)
+[        ] 	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
+[        ] 	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:285)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:366)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:366)
+[   +1 ms] 	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
+[        ] 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
+[        ] 	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:328)
+[        ] 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(CaptureStateBeforeExecutionStep.java:123)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.lambda$captureExecutionState$1(CaptureStateBeforeExecutionStep.java:82)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+[   +9 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.captureExecutionState(CaptureStateBeforeExecutionStep.java:76)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.lambda$execute$0(CaptureStateBeforeExecutionStep.java:70)
+[        ] 	at java.base/java.util.Optional.map(Unknown Source)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:70)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
+[   +5 ms] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
+[        ] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:86)
+[        ] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
+[        ] 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
+[        ] 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
+[        ] 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+[   +2 ms] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+[        ] 	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
+[        ] 	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:66)
+[        ] 	at java.base/java.util.Optional.orElseGet(Unknown Source)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:66)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
+[   +2 ms] 	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:293)
+[   +1 ms] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+[   +3 ms] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
+[   +1 ms] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+[   +1 ms] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+[   +1 ms] 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:47)
+[        ] 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:34)
+[        ] 	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
+[   +1 ms] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:146)
+[        ] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+[        ] 	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+[        ] 	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+[        ] 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+[        ] 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+[        ] 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+[   +3 ms] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+[   +2 ms] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+[   +1 ms] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+[   +6 ms] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+[   +1 ms] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+[   +4 ms] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+[   +1 ms] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+[   +2 ms] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[   +1 ms] 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+[   +1 ms] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[   +1 ms] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[        ] 	at java.base/java.lang.Thread.run(Unknown Source)
+[        ] Caused by: org.gradle.api.internal.artifacts.transform.TransformException: Failed to transform core-for-system-modules.jar to match attributes {artifactType=_internal_android_jdk_image, org.gradle.libraryelements=jar, org.gradle.usage=java-runtime}.
+[   +1 ms] 	at org.gradle.api.internal.artifacts.transform.TransformingAsyncArtifactListener$TransformedArtifact.lambda$visit$4(TransformingAsyncArtifactListener.java:243)
+[        ] 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
+[        ] 	at org.gradle.api.internal.artifacts.transform.TransformingAsyncArtifactListener$TransformedArtifact.visit(TransformingAsyncArtifactListener.java:235)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ParallelResolveArtifactSet$VisitingSet$StartVisitAction.visitResults(ParallelResolveArtifactSet.java:100)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ParallelResolveArtifactSet$VisitingSet.visit(ParallelResolveArtifactSet.java:69)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration.visitArtifacts(DefaultLenientConfiguration.java:305)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration.access$600(DefaultLenientConfiguration.java:75)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration$3.run(DefaultLenientConfiguration.java:252)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration.visitArtifactsWithBuildOperation(DefaultLenientConfiguration.java:249)
+[   +6 ms] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration.access$300(DefaultLenientConfiguration.java:75)
+[   +1 ms] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration$2.lambda$visitArtifacts$0(DefaultLenientConfiguration.java:152)
+[   +1 ms] 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsUnmanagedWorkerThread(DefaultWorkerLeaseService.java:140)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration$2.visitArtifacts(DefaultLenientConfiguration.java:152)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.SelectedArtifactSet.visitFiles(SelectedArtifactSet.java:34)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:72)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.getFiles(AbstractFileCollection.java:130)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection$FileCollectionElementsFactory.create(AbstractFileCollection.java:231)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection$FileCollectionElementsFactory.create(AbstractFileCollection.java:219)
+[        ] 	at org.gradle.api.internal.provider.BuildableBackedProvider.calculateOwnValue(BuildableBackedProvider.java:81)
+[        ] 	at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:108)
+[        ] 	at org.gradle.api.internal.provider.TransformBackedProvider.calculateOwnValue(TransformBackedProvider.java:82)
+[        ] 	at org.gradle.api.internal.provider.AbstractMinimalProvider.getOrNull(AbstractMinimalProvider.java:98)
+[        ] 	at org.gradle.api.internal.provider.ProviderResolutionStrategy$1.resolve(ProviderResolutionStrategy.java:27)
+[        ] 	at org.gradle.api.internal.file.collections.ProviderBackedFileCollection.visitChildren(ProviderBackedFileCollection.java:64)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:366)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:77)
+[        ] 	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
+[        ] 	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:285)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:133)
+[   +2 ms] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:366)
+[   +3 ms] 	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:133)
+[   +1 ms] 	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:133)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:366)
+[        ] 	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
+[        ] 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
+[        ] 	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:328)
+[        ] 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(CaptureStateBeforeExecutionStep.java:123)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.lambda$captureExecutionState$1(CaptureStateBeforeExecutionStep.java:82)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.captureExecutionState(CaptureStateBeforeExecutionStep.java:76)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.lambda$execute$0(CaptureStateBeforeExecutionStep.java:70)
+[   +9 ms] 	at java.base/java.util.Optional.map(Unknown Source)
+[   +2 ms] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:70)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
+[   +1 ms] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
+[   +1 ms] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:86)
+[        ] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
+[        ] 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
+[        ] 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
+[        ] 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+[        ] 	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
+[        ] 	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:66)
+[   +5 ms] 	at java.base/java.util.Optional.orElseGet(Unknown Source)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:66)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:38)
+[   +1 ms] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
+[        ] 	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:293)
+[        ] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+[        ] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
+[        ] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+[        ] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+[        ] 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:47)
+[        ] 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:34)
+[        ] 	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
+[        ] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:146)
+[        ] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+[        ] 	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+[        ] 	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+[        ] 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+[        ] 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+[        ] 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+[   +1 ms] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+[        ] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[   +1 ms] 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+[   +1 ms] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[        ] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[   +3 ms] 	at java.base/java.lang.Thread.run(Unknown Source)
+[   +3 ms] Caused by: org.gradle.api.internal.artifacts.transform.TransformException: Execution failed for JdkImageTransform: C:\Users\User\AppData\Local\Android\Sdk\platforms\android-34\core-for-system-modules.jar.
+[        ] 	at org.gradle.api.internal.artifacts.transform.DefaultTransformInvocationFactory.lambda$createInvocation$1(DefaultTransformInvocationFactory.java:116)
+[        ] 	at org.gradle.internal.Try$Failure.mapFailure(Try.java:273)
+[        ] 	at org.gradle.api.internal.artifacts.transform.DefaultTransformInvocationFactory.lambda$createInvocation$2(DefaultTransformInvocationFactory.java:116)
+[   +1 ms] 	at org.gradle.internal.Deferrable$1.applyAndRequireNonNull(Deferrable.java:63)
+[   +1 ms] 	at org.gradle.internal.Deferrable$1.completeAndGet(Deferrable.java:59)
+[        ] 	at org.gradle.internal.Deferrable$1.completeAndGet(Deferrable.java:59)
+[        ] 	at org.gradle.api.internal.artifacts.transform.TransformingAsyncArtifactListener$TransformedArtifact.finalizeValue(TransformingAsyncArtifactListener.java:209)
+[        ] 	at org.gradle.api.internal.artifacts.transform.TransformingAsyncArtifactListener$TransformedArtifact.run(TransformingAsyncArtifactListener.java:147)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor$QueueWorker.execute(DefaultBuildOperationExecutor.java:238)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.runOperation(DefaultBuildOperationQueue.java:272)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.doRunBatch(DefaultBuildOperationQueue.java:253)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.lambda$runBatch$0(DefaultBuildOperationQueue.java:238)
+[   +1 ms] 	at org.gradle.internal.resources.AbstractResourceLockRegistry.whileDisallowingLockChanges(AbstractResourceLockRegistry.java:50)
+[   +1 ms] 	at org.gradle.internal.work.DefaultWorkerLeaseService.whileDisallowingProjectLockChanges(DefaultWorkerLeaseService.java:236)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.lambda$runBatch$1(DefaultBuildOperationQueue.java:238)
+[        ] 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:126)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.runBatch(DefaultBuildOperationQueue.java:224)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.run(DefaultBuildOperationQueue.java:192)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationQueue.waitForCompletion(DefaultBuildOperationQueue.java:105)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.executeInParallel(DefaultBuildOperationExecutor.java:143)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.runAll(DefaultBuildOperationExecutor.java:102)
+[        ] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ParallelResolveArtifactSet$VisitingSet.visit(ParallelResolveArtifactSet.java:66)
+[        ] 	... 116 more
+[        ] Caused by: org.gradle.internal.operations.BuildOperationInvocationException: Error while executing process C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe with arguments {--module-path D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\jmod --add-modules java.base --output D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\jdkImage --disable-plugin system-modules}
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.throwAsBuildOperationInvocationException(DefaultBuildOperationRunner.java:192)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.access$100(DefaultBuildOperationRunner.java:24)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:75)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[   +2 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[   +1 ms] 	at org.gradle.api.internal.artifacts.transform.AbstractTransformExecution.executeWithinTransformerListener(AbstractTransformExecution.java:132)
+[   +1 ms] 	at org.gradle.api.internal.artifacts.transform.AbstractTransformExecution.execute(AbstractTransformExecution.java:125)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+[        ] 	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+[        ] 	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+[        ] 	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
+[        ] 	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
+[   +1 ms] 	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+[   +2 ms] 	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:50)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:28)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.executeDelegateBroadcastingChanges(CaptureStateAfterExecutionStep.java:100)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:72)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:50)
+[        ] 	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+[        ] 	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+[        ] 	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:179)
+[        ] 	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:70)
+[        ] 	at org.gradle.internal.Either$Right.fold(Either.java:175)
+[   +1 ms] 	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:59)
+[        ] 	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:68)
+[        ] 	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:46)
+[        ] 	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:25)
+[        ] 	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
+[        ] 	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:91)
+[        ] 	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:55)
+[        ] 	at java.base/java.util.Optional.orElseGet(Unknown Source)
+[        ] 	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:55)
+[        ] 	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:37)
+[        ] 	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+[        ] 	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+[        ] 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+[        ] 	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:77)
+[        ] 	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:94)
+[        ] 	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:49)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:71)
+[        ] 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
+[   +2 ms] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
+[   +2 ms] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:81)
+[   +1 ms] 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
+[        ] 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
+[        ] 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
+[        ] 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
+[   +1 ms] 	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$0(ExecuteWorkBuildOperationFiringStep.java:52)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$1(ExecuteWorkBuildOperationFiringStep.java:50)
+[        ] 	at java.base/java.util.Optional.map(Unknown Source)
+[   +2 ms] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:50)
+[   +1 ms] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
+[   +1 ms] 	at org.gradle.internal.execution.workspace.impl.DefaultImmutableWorkspaceProvider.lambda$withWorkspace$3(DefaultImmutableWorkspaceProvider.java:140)
+[   +1 ms] 	at org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess.withFileLock(LockOnDemandCrossProcessCacheAccess.java:90)
+[        ] 	at org.gradle.cache.internal.DefaultCacheCoordinator.withFileLock(DefaultCacheCoordinator.java:219)
+[        ] 	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.withFileLock(DefaultPersistentDirectoryStore.java:179)
+[        ] 	at org.gradle.cache.internal.DefaultCacheFactory$ReferenceTrackingCache.withFileLock(DefaultCacheFactory.java:214)
+[        ] 	at org.gradle.internal.execution.workspace.impl.DefaultImmutableWorkspaceProvider.withWorkspace(DefaultImmutableWorkspaceProvider.java:137)
+[        ] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+[        ] 	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
+[   +1 ms] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+[        ] 	at org.gradle.internal.execution.steps.IdentityCacheStep.lambda$executeDeferred$0(IdentityCacheStep.java:49)
+[        ] 	at org.gradle.cache.Cache.lambda$get$0(Cache.java:31)
+[        ] 	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(Unknown Source)
+[        ] 	at org.gradle.cache.ManualEvictionInMemoryCache.get(ManualEvictionInMemoryCache.java:30)
+[        ] 	at org.gradle.cache.internal.DefaultCrossBuildInMemoryCacheFactory$CrossBuildCacheRetainingDataFromPreviousBuild.get(DefaultCrossBuildInMemoryCacheFactory.java:255)
+[        ] 	at org.gradle.cache.Cache.get(Cache.java:31)
+[        ] 	at org.gradle.internal.execution.steps.IdentityCacheStep.lambda$executeDeferred$1(IdentityCacheStep.java:47)
+[        ] 	at org.gradle.internal.Deferrable$3.completeAndGet(Deferrable.java:117)
+[        ] 	... 138 more
+[        ] Caused by: com.android.ide.common.process.ProcessException: Error while executing process C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe with arguments {--module-path D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\temp\jmod --add-modules java.base --output D:\Gradle\caches\transforms-3\59dbe3cfc4efc834c37482e388295153\transformed\output\jdkImage --disable-plugin system-modules}
+[        ] 	at com.android.build.gradle.internal.process.GradleProcessResult.buildProcessException(GradleProcessResult.java:73)
+[        ] 	at com.android.build.gradle.internal.process.GradleProcessResult.assertNormalExitValue(GradleProcessResult.java:48)
+[   +1 ms] 	at com.android.build.gradle.internal.dependency.JdkTools.linkJmodsIntoJdkImage(JdkImageTransformDelegate.kt:253)
+[   +1 ms] 	at com.android.build.gradle.internal.dependency.JdkImageTransformDelegate.run(JdkImageTransformDelegate.kt:61)
+[        ] 	at com.android.build.gradle.internal.dependency.JdkImageTransform.transform(JdkImageTransform.kt:81)
+[   +1 ms] 	at org.gradle.api.internal.artifacts.transform.DefaultTransform.transform(DefaultTransform.java:273)
+[   +1 ms] 	at org.gradle.api.internal.artifacts.transform.AbstractTransformExecution$2.call(AbstractTransformExecution.java:138)
+[        ] 	at org.gradle.api.internal.artifacts.transform.AbstractTransformExecution$2.call(AbstractTransformExecution.java:132)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[   +1 ms] 	... 239 more
+[        ] Caused by: org.gradle.process.internal.ExecException: Process 'command 'C:\Program Files\Android\Android Studio\jbr\bin\jlink.exe'' finished with non-zero exit value 1
+[        ] 	at org.gradle.process.internal.DefaultExecHandle$ExecResultImpl.assertNormalExitValue(DefaultExecHandle.java:431)
+[        ] 	at com.android.build.gradle.internal.process.GradleProcessResult.assertNormalExitValue(GradleProcessResult.java:46)
+[        ] 	... 248 more
+[        ] BUILD FAILED in 31s
+[        ] 18 actionable tasks: 3 executed, 15 up-to-date
+[        ] Watched directory hierarchies: [C:\src\flutter\flutter\packages\flutter_tools\gradle]
+[ +809 ms] Running Gradle task 'assembleRelease'... (completed in 34,6s)
+[  +71 ms] 
+           ┌─ Flutter Fix ────────────────────────────────────────────────────────────────────────────────────┐
+           │ [!] This is likely due to a known bug in Android Gradle Plugin (AGP) versions less than 8.2.1,   │
+           │ when                                                                                             │
+           │   1. setting a value for SourceCompatibility and                                                 │
+           │   2. using Java 21 or above.                                                                     │
+           │ To fix this error, please upgrade your AGP version to at least 8.2.1. The version of AGP that    │
+           │ your project uses is likely defined in:                                                          │
+           │ D:\yodo\mobile\android\settings.gradle,                                                          │
+           │ in the 'plugins' closure (by the number following "com.android.application").                    │
+           │  Alternatively, if your project was created with an older version of the templates, it is likely │
+           │ in the buildscript.dependencies closure of the top-level build.gradle:                           │
+           │ D:\yodo\mobile\android\build.gradle,                                                             │
+           │ as the number following "com.android.tools.build:gradle:".                                       │
+           │                                                                                                  │
+           │ For more information, see:                                                                       │
+           │ https://issuetracker.google.com/issues/294137077                                                 │
+           │ https://github.com/flutter/flutter/issues/156304                                                 │
+           └──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+[ +114 ms] "flutter apk" took 48 335ms.
+[ +220 ms] Gradle task assembleRelease failed with exit code 1
+[  +13 ms] 
+           #0      throwToolExit (package:flutter_tools/src/base/common.dart:34:3)
+           #1      AndroidGradleBuilder.buildGradleApp (package:flutter_tools/src/android/gradle.dart:600:7)
+           <asynchronous suspension>
+           #2      AndroidGradleBuilder.buildApk (package:flutter_tools/src/android/gradle.dart:239:5)
+           <asynchronous suspension>
+           #3      BuildApkCommand.runCommand (package:flutter_tools/src/commands/build_apk.dart:131:5)
+           <asynchronous suspension>
+           #4      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1581:27)
+           <asynchronous suspension>
+           #5      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #6      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+           <asynchronous suspension>
+           #7      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:503:9)
+           <asynchronous suspension>
+           #8      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #9      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:438:5)
+           <asynchronous suspension>
+           #10     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:98:11)
+           <asynchronous suspension>
+           #11     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #12     main (package:flutter_tools/executable.dart:101:3)
+           <asynchronous suspension>
+
+
+[        ] Running 1 shutdown hook
+[   +3 ms] Shutdown hooks complete
+[ +209 ms] exiting with code 1

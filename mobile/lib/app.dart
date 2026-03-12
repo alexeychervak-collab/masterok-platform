@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/core/router/router.dart';
-import 'package:yodo/core/theme/app_theme.dart';
+import 'package:masterok/core/router/router.dart';
+import 'package:masterok/core/theme/app_theme.dart';
 
-class YodoApp extends ConsumerWidget {
-  const YodoApp({super.key});
+class MasterokApp extends ConsumerWidget {
+  const MasterokApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
     
     return MaterialApp.router(
-      title: 'YODO',
+      title: 'МастерОК',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,

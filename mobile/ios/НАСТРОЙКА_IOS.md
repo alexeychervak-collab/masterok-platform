@@ -1,4 +1,4 @@
-# 🍎 STROYKA - ПОЛНАЯ НАСТРОЙКА iOS
+# 🍎 МастерОК - ПОЛНАЯ НАСТРОЙКА iOS
 
 ## ✅ ВСЁ УЖЕ ГОТОВО!
 
@@ -18,11 +18,11 @@
 
 ### 2. Info.plist ✅
 ```xml
-- Bundle ID: com.stroyka.app
-- Display Name: STROYKA
+- Bundle ID: com.masterok.app
+- Display Name: МастерОК
 - Permissions (Camera, Photos, Location)
 - Firebase integration
-- Deep linking (stroyka://)
+- Deep linking (masterok://)
 - Background modes
 ```
 
@@ -69,7 +69,7 @@ open Runner.xcworkspace
 1. Выбрать проект `Runner` в Navigator
 2. Target `Runner` → Signing & Capabilities
 3. **Team:** Выбрать свою команду разработчика
-4. **Bundle Identifier:** `com.stroyka.app`
+4. **Bundle Identifier:** `com.masterok.app`
 5. ✅ Automatically manage signing
 
 ### Шаг 4: Сборка Archive
@@ -101,7 +101,7 @@ Organizer → Archives → Latest Archive
 ### После Upload в Xcode:
 
 1. Открыть https://appstoreconnect.apple.com
-2. Мои приложения → STROYKA → TestFlight
+2. Мои приложения → МастерОК → TestFlight
 3. Дождаться обработки (10-30 минут)
 4. "Управление соответствием" → Заполнить
 5. Добавить тестировщиков
@@ -130,7 +130,7 @@ TestFlight → Внешнее тестирование
 ### Bundle Identifier
 
 ```
-com.stroyka.app
+com.masterok.app
 ```
 
 Должен совпадать:
@@ -223,9 +223,9 @@ Xcode сам создаст и обновит профили
 
 ```
 1. https://console.firebase.google.com
-2. Project: STROYKA
+2. Project: МастерОК
 3. Add app → iOS
-4. Bundle ID: com.stroyka.app
+4. Bundle ID: com.masterok.app
 5. Download GoogleService-Info.plist
 ```
 
@@ -300,7 +300,7 @@ flutter devices
 ### Важные настройки:
 
 ```
-PRODUCT_BUNDLE_IDENTIFIER = com.stroyka.app
+PRODUCT_BUNDLE_IDENTIFIER = com.masterok.app
 IPHONEOS_DEPLOYMENT_TARGET = 15.0
 SWIFT_VERSION = 5.0
 DEVELOPMENT_TEAM = [Your Team ID]
@@ -373,7 +373,7 @@ open -a Simulator
 ## 📝 ЧЕКЛИСТ ПЕРЕД ARCHIVE
 
 - [ ] Team выбрана
-- [ ] Bundle ID правильный (com.stroyka.app)
+- [ ] Bundle ID правильный (com.masterok.app)
 - [ ] Version и Build номер увеличены
 - [ ] GoogleService-Info.plist (production)
 - [ ] YooKassa production keys в коде
@@ -388,7 +388,7 @@ open -a Simulator
 
 ## 🚀 ГОТОВО К СБОРКЕ!
 
-Всё настроено для успешной сборки iOS версии STROYKA!
+Всё настроено для успешной сборки iOS версии МастерОК!
 
 ### Следующие шаги:
 
@@ -415,7 +415,10 @@ open -a Simulator
 ---
 
 *Создано: 04.01.2026*  
-*Проект: STROYKA*  
+*Проект: МастерОК*  
 *iOS Version: 1.0.0*  
 *Готово к сборке ✅*
+
+
+
 

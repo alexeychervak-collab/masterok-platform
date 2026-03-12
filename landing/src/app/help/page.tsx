@@ -76,7 +76,7 @@ const quickLinks = [
   { icon: Book, title: 'База знаний', desc: 'Статьи и руководства', link: '/blog' },
   { icon: MessageCircle, title: 'Онлайн-чат', desc: 'Ответим за 5 минут', link: '#chat' },
   { icon: Phone, title: 'Телефон', desc: '8 800 123-45-67', link: 'tel:88001234567' },
-  { icon: Mail, title: 'Email', desc: 'support@yodo.ru', link: 'mailto:support@yodo.ru' },
+  { icon: Mail, title: 'Email', desc: 'support@masterok.ru', link: 'mailto:support@masterok.ru' },
 ]
 
 export default function HelpPage() {

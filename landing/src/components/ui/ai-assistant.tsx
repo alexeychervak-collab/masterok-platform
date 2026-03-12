@@ -39,7 +39,7 @@ export default function AIAssistant() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Здравствуйте! 👋 Я AI-помощник YoDo. Помогу подобрать специалиста или ответить на вопросы о наших услугах. Чем могу помочь?',
+      text: 'Здравствуйте! 👋 Я AI-помощник МастерОК. Помогу подобрать специалиста или ответить на вопросы о наших услугах. Чем могу помочь?',
       sender: 'ai',
       timestamp: new Date()
     }

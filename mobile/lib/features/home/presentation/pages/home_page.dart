@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:yodo/core/theme/app_colors.dart';
-import 'package:yodo/features/home/presentation/widgets/category_card.dart';
-import 'package:yodo/features/home/presentation/widgets/specialist_card.dart';
-import 'package:yodo/features/home/presentation/widgets/promo_banner.dart';
-import 'package:yodo/features/home/presentation/widgets/search_bar_widget.dart';
+import 'package:masterok/core/theme/app_colors.dart';
+import 'package:masterok/features/home/presentation/widgets/category_card.dart';
+import 'package:masterok/features/home/presentation/widgets/specialist_card.dart';
+import 'package:masterok/features/home/presentation/widgets/promo_banner.dart';
+import 'package:masterok/features/home/presentation/widgets/search_bar_widget.dart';
+import 'package:masterok/features/home/presentation/widgets/welcome_banner.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -168,13 +169,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                   ),
 
+                  // Welcome Banner
+                  const WelcomeBanner(),
+
+                  const SizedBox(height: 16),
+
                   // Search Bar
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     child: SearchBarWidget(),
                   ),
 
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 20),
 
                   // Promo Banner
                   const PromoBanner(),
@@ -345,12 +351,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         ShaderMask(
           shaderCallback: (bounds) => AppColors.primaryGradient.createShader(bounds),
           child: const Text(
-            'YODO',
+            'МастерОК',
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 22,
               fontWeight: FontWeight.w800,
               color: Colors.white,
-              letterSpacing: 1,
+              letterSpacing: 0.5,
             ),
           ),
         ),

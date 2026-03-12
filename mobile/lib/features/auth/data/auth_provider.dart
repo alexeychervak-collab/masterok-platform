@@ -1,6 +1,6 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/core/models/user.dart';
-import 'package:yodo/core/services/auth_service.dart';
+﻿import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:masterok/core/models/user.dart';
+import 'package:masterok/core/services/auth_service.dart';
 
 // Current user state
 final currentUserProvider = StateNotifierProvider<CurrentUserNotifier, AsyncValue<User?>>((ref) {
@@ -68,6 +68,18 @@ class CurrentUserNotifier extends StateNotifier<AsyncValue<User?>> {
     state = const AsyncValue.data(null);
   }
 
+  Future<void> deleteAccount() async {
+    state = const AsyncValue.loading();
+    try {
+      final authService = _ref.read(authServiceProvider);
+      await authService.deleteAccount();
+      state = const AsyncValue.data(null);
+    } catch (e, stack) {
+      state = AsyncValue.error(e, stack);
+      rethrow;
+    }
+  }
+
   void refresh() {
     _loadCurrentUser();
   }
@@ -82,4 +94,7 @@ final isAuthenticatedProvider = Provider<bool>((ref) {
     error: (_, __) => false,
   );
 });
+
+
+
 

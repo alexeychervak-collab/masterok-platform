@@ -61,13 +61,13 @@ export default function SpecialistCardEnhanced({
     setIsFavorite(!isFavorite);
     
     // Save to localStorage
-    const favorites = JSON.parse(localStorage.getItem('yodo_favorites') || '[]');
+    const favorites = JSON.parse(localStorage.getItem('masterok_favorites') || '[]');
     if (isFavorite) {
       const updated = favorites.filter((fav: any) => fav.id !== id);
-      localStorage.setItem('yodo_favorites', JSON.stringify(updated));
+      localStorage.setItem('masterok_favorites', JSON.stringify(updated));
     } else {
       favorites.push({ id, name, specialty, rating, hourlyRate });
-      localStorage.setItem('yodo_favorites', JSON.stringify(favorites));
+      localStorage.setItem('masterok_favorites', JSON.stringify(favorites));
     }
   };
 

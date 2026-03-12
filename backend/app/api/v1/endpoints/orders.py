@@ -72,38 +72,42 @@ async def create_order(
     user_id: str = Depends(get_current_user_id),
     db: AsyncSession = Depends(get_db)
 ):
-    # Get service
-    result = await db.execute(select(Service).where(Service.id == data.service_id))
-    service = result.scalar_one_or_none()
-    
-    if not service:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Услуга не найдена"
-        )
-    
-    # Calculate prices
-    total_price = service.price
+    # Маркетплейс-флоу: заказ создаётся без специалиста
+    total_price = data.budget or 0.0
     platform_fee = total_price * (settings.PLATFORM_FEE_PERCENT / 100)
     specialist_price = total_price - platform_fee
-    
+
+    # Если указан service_id — берём цену из сервиса
+    if data.service_id:
+        result = await db.execute(select(Service).where(Service.id == data.service_id))
+        service = result.scalar_one_or_none()
+        if service:
+            total_price = service.price
+            platform_fee = total_price * (settings.PLATFORM_FEE_PERCENT / 100)
+            specialist_price = total_price - platform_fee
+
     order = Order(
         id=str(uuid.uuid4()),
         client_id=user_id,
         specialist_id=data.specialist_id,
         service_id=data.service_id,
+        title=data.title,
         description=data.description,
         address=data.address,
+        budget=data.budget,
+        budget_max=data.budget_max,
+        deadline=data.deadline,
         scheduled_at=data.scheduled_at,
-        total_price=total_price,
-        specialist_price=specialist_price,
-        platform_fee=platform_fee,
+        total_price=total_price if total_price > 0 else None,
+        specialist_price=specialist_price if specialist_price > 0 else None,
+        platform_fee=platform_fee if platform_fee > 0 else None,
+        status=OrderStatus.PUBLISHED if not data.specialist_id else OrderStatus.PENDING,
     )
-    
+
     db.add(order)
     await db.commit()
     await db.refresh(order)
-    
+
     return OrderResponse.model_validate(order)
 
 

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:yodo/core/theme/app_colors.dart';
+import 'package:masterok/core/theme/app_colors.dart';
+import 'package:masterok/features/auth/data/auth_provider.dart';
+import 'package:masterok/features/orders/data/orders_provider.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends ConsumerWidget {
   const ProfilePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final userAsync = ref.watch(currentUserProvider);
+    final user = userAsync.valueOrNull;
     return Scaffold(
       backgroundColor: AppColors.background,
       body: CustomScrollView(
@@ -69,7 +74,7 @@ class ProfilePage extends StatelessWidget {
                                   Icons.settings_outlined,
                                   color: Colors.white,
                                 ),
-                                onPressed: () {},
+                                onPressed: () => context.push('/settings'),
                               ),
                             ],
                           ),
@@ -111,12 +116,16 @@ class ProfilePage extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(width: 16),
-                              const Expanded(
+                              Expanded(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Гость',
+                                      user == null
+                                          ? 'Гость'
+                                          : '${user.firstName ?? ''} ${user.lastName ?? ''}'.trim().isEmpty
+                                              ? user.email
+                                              : '${user.firstName ?? ''} ${user.lastName ?? ''}'.trim(),
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 22,
@@ -125,7 +134,7 @@ class ProfilePage extends StatelessWidget {
                                     ),
                                     SizedBox(height: 4),
                                     Text(
-                                      'Войдите в аккаунт',
+                                      user == null ? 'Войдите в аккаунт' : 'Аккаунт активен',
                                       style: TextStyle(
                                         color: Colors.white70,
                                         fontSize: 14,
@@ -151,30 +160,96 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  // Auth Buttons
-                  Row(
-                    children: [
-                      Expanded(
-                        child: _buildAuthButton(
-                          context,
-                          title: 'Войти',
-                          icon: Icons.login,
-                          isPrimary: true,
-                          onTap: () => context.push('/login'),
+                  // Auth Buttons / Logout
+                  if (user == null)
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildAuthButton(
+                            context,
+                            title: 'Войти',
+                            icon: Icons.login,
+                            isPrimary: true,
+                            onTap: () => context.push('/login'),
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _buildAuthButton(
-                          context,
-                          title: 'Регистрация',
-                          icon: Icons.person_add_outlined,
-                          isPrimary: false,
-                          onTap: () => context.push('/register'),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: _buildAuthButton(
+                            context,
+                            title: 'Регистрация',
+                            icon: Icons.person_add_outlined,
+                            isPrimary: false,
+                            onTap: () => context.push('/register'),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
+                      ],
+                    )
+                  else
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildAuthButton(
+                            context,
+                            title: 'Выйти',
+                            icon: Icons.logout,
+                            isPrimary: false,
+                            onTap: () async {
+                              await ref.read(currentUserProvider.notifier).logout();
+                              if (!context.mounted) return;
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Вы вышли из аккаунта')),
+                              );
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: _buildAuthButton(
+                            context,
+                            title: 'Удалить аккаунт',
+                            icon: Icons.delete_outline,
+                            isPrimary: false,
+                            onTap: () async {
+                              final ok = await showDialog<bool>(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Удалить аккаунт?'),
+                                  content: const Text(
+                                    'Аккаунт будет удалён. Локальные данные (заказы/сессия) будут очищены.',
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(context, false),
+                                      child: const Text('Отмена'),
+                                    ),
+                                    ElevatedButton(
+                                      onPressed: () => Navigator.pop(context, true),
+                                      style: ElevatedButton.styleFrom(backgroundColor: AppColors.error),
+                                      child: const Text('Удалить'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                              if (ok != true) return;
+
+                              // Очистим локальные заказы
+                              final user = ref.read(currentUserProvider).valueOrNull;
+                              final userId = user?.id ?? 0;
+                              await ref.read(localOrdersStorageProvider).saveForUser(userId, []);
+                              ref.invalidate(localOrdersProvider);
+                              ref.invalidate(myOrdersProvider);
+
+                              await ref.read(currentUserProvider.notifier).deleteAccount();
+                              if (!context.mounted) return;
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Аккаунт удалён')),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   
                   const SizedBox(height: 32),
 
@@ -183,7 +258,7 @@ class ProfilePage extends StatelessWidget {
                     icon: Icons.favorite_outline,
                     title: 'Избранное',
                     subtitle: '12 специалистов',
-                    onTap: () {},
+                    onTap: () => context.push('/favorites'),
                   ),
                   _buildMenuItem(
                     icon: Icons.history,
@@ -196,51 +271,59 @@ class ProfilePage extends StatelessWidget {
                     title: 'Уведомления',
                     subtitle: '3 новых',
                     badge: true,
-                    onTap: () {},
+                    onTap: () => context.push('/notifications'),
                   ),
                   _buildMenuItem(
                     icon: Icons.payment_outlined,
                     title: 'Способы оплаты',
                     subtitle: 'Карты и счета',
-                    onTap: () {},
+                    onTap: () => context.push('/payment-methods'),
+                  ),
+                  _buildMenuItem(
+                    icon: Icons.workspace_premium_outlined,
+                    title: 'PRO подписка',
+                    subtitle: 'Управление подпиской',
+                    onTap: () => context.push('/pro'),
                   ),
                   _buildMenuItem(
                     icon: Icons.help_outline,
                     title: 'Помощь и поддержка',
                     subtitle: 'FAQ, чат, контакты',
-                    onTap: () {},
+                    onTap: () => context.push('/support'),
                   ),
                   _buildMenuItem(
                     icon: Icons.info_outline,
                     title: 'О приложении',
                     subtitle: 'Версия 1.0.0',
-                    onTap: () {},
+                    onTap: () {
+                      showAboutDialog(
+                        context: context,
+                        applicationName: 'МастерОК',
+                        applicationVersion: '1.0.0',
+                        applicationLegalese: '© МастерОК',
+                      );
+                    },
                   ),
 
                   const SizedBox(height: 24),
 
                   // Become Specialist Banner
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Color(0xFF8B5CF6),
-                          Color(0xFFEC4899),
+                  GestureDetector(
+                    onTap: () => context.push('/register?role=specialist'),
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        gradient: AppColors.primaryGradient,
+                        borderRadius: BorderRadius.circular(24),
+                        boxShadow: [
+                          BoxShadow(
+                            color: AppColors.primary.withOpacity(0.25),
+                            blurRadius: 20,
+                            offset: const Offset(0, 10),
+                          ),
                         ],
                       ),
-                      borderRadius: BorderRadius.circular(24),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.primary.withOpacity(0.3),
-                          blurRadius: 20,
-                          offset: const Offset(0, 10),
-                        ),
-                      ],
-                    ),
-                    child: Row(
+                      child: Row(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(14),
@@ -291,6 +374,7 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
                     ),
                   ),
 

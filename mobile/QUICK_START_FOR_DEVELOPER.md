@@ -1,6 +1,6 @@
 # ⚡ Быстрый старт для разработчика - Сборка APK
 
-> **Цель:** Собрать готовый APK файл приложения YODO за 15 минут
+> **Цель:** Собрать готовый APK файл приложения МастерОК за 15 минут
 
 ## 📋 Что нужно установить (один раз)
 
@@ -61,7 +61,7 @@ flutter doctor
 
 **Windows:**
 ```bash
-cd D:\yodo\mobile
+cd D:\masterok\mobile
 build-apk.bat
 ```
 
@@ -72,7 +72,7 @@ build-apk.bat
 
 **Mac/Linux:**
 ```bash
-cd /path/to/yodo/mobile
+cd /path/to/masterok/mobile
 chmod +x build-apk.sh
 ./build-apk.sh
 ```
@@ -81,7 +81,7 @@ chmod +x build-apk.sh
 
 ```bash
 # 1. Перейдите в папку
-cd D:\yodo\mobile
+cd D:\masterok\mobile
 
 # 2. Проверьте Flutter
 flutter doctor
@@ -99,8 +99,8 @@ sdk.dir=C:\\Users\\YourName\\AppData\\Local\\Android\\Sdk
 flutter build apk --release
 
 # 6. Найдите APK
-# Windows: D:\yodo\mobile\build\app\outputs\flutter-apk\app-release.apk
-# Mac/Linux: /path/to/yodo/mobile/build/app/outputs/flutter-apk/app-release.apk
+# Windows: D:\masterok\mobile\build\app\outputs\flutter-apk\app-release.apk
+# Mac/Linux: /path/to/masterok/mobile/build/app/outputs/flutter-apk/app-release.apk
 ```
 
 ---
@@ -235,7 +235,7 @@ flutter build apk --split-per-abi --release
 
 ```bash
 # 1. Проверка
-cd D:\yodo\mobile
+cd D:\masterok\mobile
 flutter doctor
 
 # 2. Установка зависимостей
@@ -285,7 +285,7 @@ adb install -r build\app\outputs\flutter-apk\app-release.apk
 
 4. **Обратитесь за помощью:**
    - Откройте issue на GitHub
-   - Email: support@yodo.ru
+   - Email: support@masterok.ru
    - Приложите вывод `flutter doctor -v`
 
 ---
@@ -319,4 +319,6 @@ Success
 ---
 
 **Успешной сборки! 🚀**
+
+
 

@@ -24,7 +24,7 @@ router = APIRouter(prefix="/api/push", tags=["push-notifications"])
 VAPID_PRIVATE_KEY = os.getenv("VAPID_PRIVATE_KEY")
 VAPID_PUBLIC_KEY = os.getenv("VAPID_PUBLIC_KEY")
 VAPID_CLAIMS = {
-    "sub": f"mailto:{os.getenv('ADMIN_EMAIL', 'admin@yodo.ru')}"
+    "sub": f"mailto:{os.getenv('ADMIN_EMAIL', 'admin@masterok.ru')}"
 }
 
 class SubscribeRequest(BaseModel):

@@ -19,9 +19,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="YODO API",
-    description="API для платформы поиска специалистов YODO",
-    version="1.0.0",
+    title="МастерОК API",
+    description="API платформы строительных услуг МастерОК",
+    version="2.0.0",
     docs_url="/docs",
     redoc_url="/redoc",
     lifespan=lifespan,
@@ -43,8 +43,8 @@ app.include_router(api_router, prefix="/api/v1")
 @app.get("/")
 async def root():
     return {
-        "name": "YODO API",
-        "version": "1.0.0",
+        "name": "МастерОК API",
+        "version": "2.0.0",
         "status": "running",
     }
 

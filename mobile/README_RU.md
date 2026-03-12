@@ -1,8 +1,8 @@
-# 📱 YODO Mobile App - Полное руководство
+# 📱 МастерОК Mobile App - Полное руководство
 
 ## 🎯 О приложении
 
-**YODO** - современное мобильное приложение для iOS и Android для поиска специалистов и заказа услуг. Приложение построено на Flutter и полностью готово к production.
+**МастерОК** - современное мобильное приложение для iOS и Android для поиска специалистов и заказа услуг. Приложение построено на Flutter и полностью готово к production.
 
 ## ✨ Возможности
 
@@ -123,7 +123,7 @@ const String baseUrl = 'http://10.0.2.2:8000/api/v1';  // Android Emulator
 // const String baseUrl = 'http://localhost:8000/api/v1';  // iOS Simulator
 
 // Для production:
-// const String baseUrl = 'https://api.yodo.ru/api/v1';
+// const String baseUrl = 'https://api.masterok.ru/api/v1';
 ```
 
 ### 3. Запустите приложение
@@ -163,7 +163,9 @@ flutter build apk --debug
 # Release APK
 flutter build apk --release
 
-# Split APKs (по архитектурам)
+# Split APKs (по архитектурам, опционально)
+# Используйте только если понимаете, как распространять несколько APK.
+# Для прямой установки пользователям лучше универсальный app-release.apk (без SAI/.apks).
 flutter build apk --split-per-abi --release
 
 # App Bundle для Google Play
@@ -351,9 +353,9 @@ MIT License - см. LICENSE файл
 
 ## 👥 Поддержка
 
-- **Email:** support@yodo.ru
-- **Telegram:** @yodo_support
-- **GitHub Issues:** [github.com/yodo/issues](https://github.com)
+- **Email:** support@masterok.ru
+- **Telegram:** @masterok_support
+- **GitHub Issues:** [github.com/masterok/issues](https://github.com)
 
 ## 🗺️ Roadmap
 
@@ -374,4 +376,6 @@ MIT License - см. LICENSE файл
 Приложение полностью готово к production. Следуйте инструкциям в [BUILD_APK.md](BUILD_APK.md) для сборки и публикации.
 
 **Удачи с запуском! 🚀**
+
+
 

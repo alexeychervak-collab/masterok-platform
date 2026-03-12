@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# YoDo Marketplace Deployment Script
+# MasterOK Marketplace Deployment Script
 # Deploy to: alexei@158.255.6.22
 
 set -e  # Exit on error
 
-echo "🚀 Starting YoDo Marketplace deployment..."
+echo "🚀 Starting MasterOK Marketplace deployment..."
 
 # Configuration
 SERVER_USER="alexei"
 SERVER_IP="158.255.6.22"
-SERVER_PATH="/home/alexei/yodo-marketplace"
-PROJECT_NAME="yodo-landing"
+SERVER_PATH="/home/alexei/masterok-marketplace"
+PROJECT_NAME="masterok-landing"
 
 echo "📦 Building production version..."
 
@@ -43,7 +43,7 @@ rsync -avz --exclude 'node_modules' \
 # Install dependencies and restart on server
 echo "🔧 Installing dependencies on server..."
 ssh ${SERVER_USER}@${SERVER_IP} << 'ENDSSH'
-cd /home/alexei/yodo-marketplace
+cd /home/alexei/masterok-marketplace
 
 # Install Node.js dependencies
 npm install --production
@@ -55,8 +55,8 @@ pkill -f "node.*next" || true
 # Start the application with PM2 (if installed) or nohup
 if command -v pm2 &> /dev/null; then
     echo "Using PM2 to manage the application..."
-    pm2 delete yodo-landing || true
-    pm2 start npm --name "yodo-landing" -- start -- -p 3000
+    pm2 delete masterok-landing || true
+    pm2 start npm --name "masterok-landing" -- start -- -p 3000
     pm2 save
 else
     echo "Starting with nohup..."
@@ -74,7 +74,7 @@ echo "📊 To check logs:"
 echo "   ssh ${SERVER_USER}@${SERVER_IP} 'cd ${SERVER_PATH} && tail -f app.log'"
 echo ""
 echo "🔄 To restart the application:"
-echo "   ssh ${SERVER_USER}@${SERVER_IP} 'cd ${SERVER_PATH} && pm2 restart yodo-landing'"
+echo "   ssh ${SERVER_USER}@${SERVER_IP} 'cd ${SERVER_PATH} && pm2 restart masterok-landing'"
 
 
 

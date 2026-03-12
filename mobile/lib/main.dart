@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/app.dart';
+import 'package:masterok/app.dart';
+import 'dart:developer' as developer;
 
 void main() async {
+  // Обработка ошибок Flutter
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.presentError(details);
+    developer.log(
+      'Flutter Error: ${details.exception}',
+      name: 'МастерОК',
+      error: details.exception,
+      stackTrace: details.stack,
+    );
+  };
+
   WidgetsFlutterBinding.ensureInitialized();
   
   // Set system UI overlay style
@@ -24,7 +36,7 @@ void main() async {
   
   runApp(
     const ProviderScope(
-      child: YodoApp(),
+      child: MasterokApp(),
     ),
   );
 }

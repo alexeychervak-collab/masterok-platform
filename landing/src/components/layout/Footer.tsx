@@ -35,9 +35,9 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'Telegram', href: 'https://t.me/yodo', icon: '📱' },
-  { name: 'VK', href: 'https://vk.com/yodo', icon: '💬' },
-  { name: 'Instagram', href: 'https://instagram.com/yodo', icon: '📷' },
+  { name: 'Telegram', href: 'https://t.me/masterok', icon: '📱' },
+  { name: 'VK', href: 'https://vk.com/masterok', icon: '💬' },
+  { name: 'Instagram', href: 'https://instagram.com/masterok', icon: '📷' },
 ]
 
 export function Footer() {
@@ -81,7 +81,7 @@ export function Footer() {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
-                YODO
+                МастерОК
               </span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
@@ -92,9 +92,9 @@ export function Footer() {
                 <Phone className="h-4 w-4" />
                 8 800 123-45-67
               </a>
-              <a href="mailto:support@yodo.ru" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="mailto:support@masterok.ru" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="h-4 w-4" />
-                support@yodo.ru
+                support@masterok.ru
               </a>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
@@ -126,7 +126,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="py-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} YODO. Все права защищены.
+            © {new Date().getFullYear()} МастерОК. Все права защищены.
           </p>
           <div className="flex items-center gap-4">
             {socialLinks.map((link) => (

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:yodo/core/models/specialist.dart';
-import 'package:yodo/core/theme/app_colors.dart';
+import 'package:masterok/core/models/specialist.dart';
+import 'package:masterok/core/theme/app_colors.dart';
 
 class SpecialistCardCompact extends StatelessWidget {
   final Specialist specialist;
@@ -194,4 +194,7 @@ class SpecialistCardCompact extends StatelessWidget {
     );
   }
 }
+
+
+
 

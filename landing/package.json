@@ -1,8 +1,8 @@
 {
-  "name": "yodo-landing",
+  "name": "masterok-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "YODO - Landing Page & Admin Panel",
+  "description": "МастерОК - Landing Page & Admin Panel",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

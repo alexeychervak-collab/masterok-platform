@@ -37,6 +37,7 @@ class Specialist(Base, TimestampMixin):
     services = relationship("Service", back_populates="specialist", cascade="all, delete-orphan")
     orders = relationship("Order", back_populates="specialist")
     reviews = relationship("Review", back_populates="specialist")
+    bids = relationship("OrderBid", back_populates="specialist")
 
 
 class SpecialistSkill(Base, TimestampMixin):

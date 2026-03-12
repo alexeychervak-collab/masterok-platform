@@ -2,7 +2,7 @@
 chcp 65001 >nul
 echo.
 echo ========================================
-echo   🔧 Настройка сервера YoDo
+echo   🔧 Настройка сервера МастерОК
 echo ========================================
 echo.
 echo Сервер: Tema@188.68.223.230
@@ -16,8 +16,8 @@ echo.
 
 ssh %SERVER_USER%@%SERVER_IP% "bash -s" << 'ENDSSH'
     echo "Создание директорий..."
-    mkdir -p /home/Tema/yodo/backend
-    mkdir -p /home/Tema/yodo/landing
+    mkdir -p /home/Tema/masterok/backend
+    mkdir -p /home/Tema/masterok/landing
     
     echo "Проверка установленных пакетов..."
     
@@ -50,7 +50,7 @@ ssh %SERVER_USER%@%SERVER_IP% "bash -s" << 'ENDSSH'
     echo ""
     echo "✅ Сервер настроен!"
     echo "Структура директорий:"
-    ls -la /home/Tema/yodo/
+    ls -la /home/Tema/masterok/
 ENDSSH
 
 if errorlevel 1 (

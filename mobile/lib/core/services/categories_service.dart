@@ -1,7 +1,7 @@
-import 'package:dio/dio.dart';
+﻿import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/core/network/api_client.dart';
-import 'package:yodo/core/models/category.dart';
+import 'package:masterok/core/network/api_client.dart';
+import 'package:masterok/core/models/category.dart';
 
 final categoriesServiceProvider = Provider<CategoriesService>((ref) {
   return CategoriesService(ref.read(dioProvider));
@@ -44,4 +44,7 @@ class CategoriesService {
     return 'Произошла ошибка при загрузке категорий';
   }
 }
+
+
+
 

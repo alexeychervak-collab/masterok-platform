@@ -1,8 +1,8 @@
 {
-  "name": "yodo-marketplace",
+  "name": "masterok-marketplace",
   "version": "2.0.0",
   "private": true,
-  "description": "YoDo Marketplace - улучшенная версия с умным поиском и интерактивными функциями",
+  "description": "MasterOK Marketplace - улучшенная версия с умным поиском и интерактивными функциями",
   "scripts": {
     "dev": "cd landing && npm run dev",
     "build": "cd landing && npm run build",
@@ -18,7 +18,7 @@
     "construction",
     "specialists"
   ],
-  "author": "YoDo Team",
+  "author": "MasterOK Team",
   "license": "MIT"
 }
 

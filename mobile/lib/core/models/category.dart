@@ -43,3 +43,5 @@ class Category extends Equatable {
   List<Object?> get props => [id, name, slug, description, icon, servicesCount];
 }
 
+
+

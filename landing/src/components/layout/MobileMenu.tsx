@@ -199,7 +199,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Footer */}
             <div className="border-t border-gray-200 p-4 bg-gray-50 mt-auto">
               <div className="text-xs text-gray-500 text-center">
-                <p className="mb-2">YoDo Marketplace</p>
+                <p className="mb-2">МастерОК</p>
                 <div className="flex justify-center gap-4">
                   <Link href="/about" className="hover:text-teal-600">О нас</Link>
                   <Link href="/help" className="hover:text-teal-600">Помощь</Link>

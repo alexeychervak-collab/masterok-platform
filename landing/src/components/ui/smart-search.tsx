@@ -64,7 +64,7 @@ export default function SmartSearch({
 
   // Load search history from localStorage
   useEffect(() => {
-    const history = localStorage.getItem('yodo_search_history');
+    const history = localStorage.getItem('masterok_search_history');
     if (history) {
       setSearchHistory(JSON.parse(history).slice(0, 5));
     }
@@ -80,7 +80,7 @@ export default function SmartSearch({
     ].slice(0, 10);
     
     setSearchHistory(newHistory);
-    localStorage.setItem('yodo_search_history', JSON.stringify(newHistory));
+    localStorage.setItem('masterok_search_history', JSON.stringify(newHistory));
   }, [searchHistory]);
 
   // Filter suggestions based on query
@@ -159,7 +159,7 @@ export default function SmartSearch({
 
   const handleClearHistory = () => {
     setSearchHistory([]);
-    localStorage.removeItem('yodo_search_history');
+    localStorage.removeItem('masterok_search_history');
   };
 
   const clearSearch = () => {

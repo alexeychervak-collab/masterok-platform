@@ -18,7 +18,7 @@ type Settings = {
 function loadSettings(): Settings {
   if (typeof window === 'undefined') return { smsEnabled: true, pushEnabled: false, proPlan: 'free' }
   try {
-    const raw = localStorage.getItem('yodo_settings')
+    const raw = localStorage.getItem('masterok_settings')
     if (!raw) return { smsEnabled: true, pushEnabled: false, proPlan: 'free' }
     return { smsEnabled: true, pushEnabled: false, proPlan: 'free', ...JSON.parse(raw) }
   } catch {
@@ -28,7 +28,7 @@ function loadSettings(): Settings {
 
 function saveSettings(s: Settings) {
   try {
-    localStorage.setItem('yodo_settings', JSON.stringify(s))
+    localStorage.setItem('masterok_settings', JSON.stringify(s))
   } catch {
     // ignore
   }

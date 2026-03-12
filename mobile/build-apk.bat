@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ========================================
-echo 📱 YODO Mobile App - Сборка APK
+echo 📱 МастерОК Mobile App - Сборка APK
 echo ========================================
 echo.
 
@@ -135,4 +135,6 @@ echo.
 echo 🎉 Готово!
 echo.
 pause
+
+
 

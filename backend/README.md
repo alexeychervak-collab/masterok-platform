@@ -1,6 +1,6 @@
-# YODO Backend API
+# МастерОК Backend API
 
-Python FastAPI бэкенд для платформы YODO.
+Python FastAPI бэкенд для платформы МастерОК.
 
 ## Технологии
 
@@ -29,7 +29,7 @@ uvicorn app.main:app --reload
 Создайте `.env` файл:
 
 ```env
-DATABASE_URL=postgresql+asyncpg://user:password@localhost:5432/yodo
+DATABASE_URL=postgresql+asyncpg://user:password@localhost:5432/masterok
 SECRET_KEY=your-secret-key
 DEBUG=true
 YOOKASSA_SHOP_ID=
@@ -63,8 +63,8 @@ app/
 ## Docker
 
 ```bash
-docker build -t yodo-api .
-docker run -p 8000:8000 yodo-api
+docker build -t masterok-api .
+docker run -p 8000:8000 masterok-api
 ```
 
 ## Endpoints

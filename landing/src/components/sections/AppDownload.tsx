@@ -121,7 +121,7 @@ export function AppDownload() {
                     <div className="flex items-center justify-between mb-6">
                       <div>
                         <p className="text-white/60 text-xs">Добро пожаловать</p>
-                        <p className="text-white font-bold text-lg">YODO</p>
+                        <p className="text-white font-bold text-lg">МастерОК</p>
                       </div>
                       <div className="w-10 h-10 bg-white/20 rounded-full" />
                     </div>

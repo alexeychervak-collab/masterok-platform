@@ -1,4 +1,4 @@
-// Push Notifications Service для YoDo
+// Push Notifications Service для МастерОК
 // Использует Web Push API и Service Workers
 
 export interface PushNotificationPayload {

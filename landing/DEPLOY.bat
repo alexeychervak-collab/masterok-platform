@@ -2,7 +2,7 @@
 chcp 65001 >nul
 echo.
 echo ========================================
-echo   🚀 YoDo Marketplace Deployment
+echo   🚀 MasterOK Marketplace Deployment
 echo ========================================
 echo.
 

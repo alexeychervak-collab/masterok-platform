@@ -173,7 +173,7 @@ export default function FindOrdersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="text-2xl font-bold text-primary-600">
-              YoDo
+              МастерОК
             </Link>
             <nav className="hidden md:flex gap-6">
               <Link href="/specialist/dashboard" className="text-gray-600 hover:text-gray-900">

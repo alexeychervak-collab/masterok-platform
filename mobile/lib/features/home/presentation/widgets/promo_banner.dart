@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yodo/core/theme/app_colors.dart';
+import 'package:go_router/go_router.dart';
+import 'package:masterok/core/theme/app_colors.dart';
 
 class PromoBanner extends StatelessWidget {
   const PromoBanner({super.key});
@@ -10,15 +11,7 @@ class PromoBanner extends StatelessWidget {
       height: 160,
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF8B5CF6),
-            Color(0xFFEC4899),
-            Color(0xFFF97316),
-          ],
-        ),
+        gradient: AppColors.primaryGradient,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
@@ -96,21 +89,28 @@ class PromoBanner extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 8,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
+                      Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => context.push('/promo'),
                           borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          'Получить',
-                          style: TextStyle(
-                            color: AppColors.primary,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 8,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              'Получить',
+                              style: TextStyle(
+                                color: AppColors.primary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
                           ),
                         ),
                       ),

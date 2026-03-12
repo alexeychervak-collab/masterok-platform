@@ -3,7 +3,7 @@ chcp 65001 >nul
 cls
 
 echo ═══════════════════════════════════════════════════════════════════
-echo           🏗️  STROYKA - ПОЛНАЯ СБОРКА RELEASE  🏗️
+echo           🏗️  МастерОК - ПОЛНАЯ СБОРКА RELEASE  🏗️
 echo ═══════════════════════════════════════════════════════════════════
 echo.
 echo Этот скрипт соберёт полностью готовое приложение для публикации:
@@ -34,7 +34,7 @@ echo.
 
 echo [Шаг 4/6] Создание Keystore (если не существует)...
 echo ────────────────────────────────────────────────────────────────
-if not exist "android\app\stroyka-keystore.jks" (
+if not exist "android\app\masterok-keystore.jks" (
     cd android
     call create-keystore.bat
     cd ..
@@ -46,12 +46,11 @@ echo.
 
 echo [Шаг 5/6] Сборка Release APK...
 echo ────────────────────────────────────────────────────────────────
-flutter build apk --release --split-per-abi
+REM ВАЖНО: для продакшена/прямой установки делаем один универсальный APK (без SAI/.apks)
+flutter build apk --release
 echo.
 echo ✅ APK собран!
-echo    📦 armeabi-v7a: build\app\outputs\flutter-apk\app-armeabi-v7a-release.apk
-echo    📦 arm64-v8a:   build\app\outputs\flutter-apk\app-arm64-v8a-release.apk
-echo    📦 x86_64:      build\app\outputs\flutter-apk\app-x86_64-release.apk
+echo    📦 APK: build\app\outputs\flutter-apk\app-release.apk
 echo.
 
 echo [Шаг 6/6] Сборка App Bundle (AAB)...
@@ -68,7 +67,7 @@ echo ═════════════════════════
 echo.
 echo 📱 ANDROID:
 echo    APK (для прямой установки):
-echo      • build\app\outputs\flutter-apk\app-arm64-v8a-release.apk
+echo      • build\app\outputs\flutter-apk\app-release.apk
 echo.
 echo    AAB (для Google Play):
 echo      • build\app\outputs\bundle\release\app-release.aab
@@ -87,4 +86,7 @@ echo.
 echo ═══════════════════════════════════════════════════════════════════
 
 pause
+
+
+
 

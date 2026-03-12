@@ -1,32 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:async';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:yodo/core/theme/app_colors.dart';
-import 'package:yodo/features/home/presentation/widgets/specialist_card.dart';
+import 'package:masterok/core/theme/app_colors.dart';
+import 'package:masterok/core/data/mock_data.dart';
+import 'package:masterok/core/models/specialist.dart';
+import 'package:masterok/features/home/presentation/widgets/specialist_card.dart';
+import 'package:masterok/features/specialists/data/specialists_provider.dart';
 
-class SpecialistsPage extends StatefulWidget {
-  const SpecialistsPage({super.key});
+class SpecialistsPage extends ConsumerStatefulWidget {
+  final String? initialCategory;
+  final String? initialSearch;
+  final bool focusSearch;
+
+  const SpecialistsPage({super.key, this.initialCategory, this.initialSearch, this.focusSearch = false});
 
   @override
-  State<SpecialistsPage> createState() => _SpecialistsPageState();
+  ConsumerState<SpecialistsPage> createState() => _SpecialistsPageState();
 }
 
-class _SpecialistsPageState extends State<SpecialistsPage> {
+class _SpecialistsPageState extends ConsumerState<SpecialistsPage> {
   final _searchController = TextEditingController();
+  final _searchFocusNode = FocusNode();
   String _selectedCategory = 'Все';
   String _sortBy = 'rating';
   bool _showFilters = false;
+  Timer? _debounce;
+  String _searchQuery = '';
   
-  final _categories = [
-    'Все',
-    'Ремонт',
-    'Электрика',
-    'Сантехника',
-    'Уборка',
-    'Репетиторы',
-    'Дизайн',
-    'IT',
-  ];
+  late final List<String> _categories;
 
   final _sortOptions = [
     {'value': 'rating', 'label': 'По рейтингу'},
@@ -36,7 +39,98 @@ class _SpecialistsPageState extends State<SpecialistsPage> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    _categories = [
+      'Все',
+      ...MockData.categories.map((c) => c.name).toSet(),
+      // Несколько "витринных" категорий, даже если их нет в списке категорий.
+      'Сборка мебели',
+      'Плитка',
+      'Потолки',
+      'Сварка',
+      'Грузчики',
+      'Переезд',
+    ];
+    final c = widget.initialCategory;
+    if (c != null && c.trim().isNotEmpty) {
+      _selectedCategory = c;
+    }
+    final s = widget.initialSearch;
+    if (s != null && s.trim().isNotEmpty) {
+      final trimmed = s.trim();
+      _searchController.text = trimmed;
+      _searchQuery = trimmed;
+    }
+    if (widget.focusSearch) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _searchFocusNode.requestFocus();
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    _searchController.dispose();
+    _searchFocusNode.dispose();
+    super.dispose();
+  }
+
+  void _onSearchChanged(String value) {
+    _debounce?.cancel();
+    _debounce = Timer(const Duration(milliseconds: 250), () {
+      if (!mounted) return;
+      setState(() {
+        _searchQuery = value.trim();
+      });
+    });
+  }
+
+  List<Specialist> _fallbackFiltered(SpecialistsFilter filter, List<Specialist> local) {
+    // В fallback берём максимально "наполненный" список:
+    // - локально зарегистрированные специалисты
+    // - витринные mock специалисты
+    var specialists = [...local, ...MockData.specialists];
+
+    if (filter.category != null && filter.category!.trim().isNotEmpty) {
+      final catLower = filter.category!.toLowerCase();
+      specialists = specialists
+          .where((s) =>
+              s.skills.any((skill) => skill.toLowerCase().contains(catLower)) ||
+              s.title.toLowerCase().contains(catLower))
+          .toList();
+    }
+
+    if (filter.search != null && filter.search!.trim().isNotEmpty) {
+      final searchLower = filter.search!.toLowerCase();
+      specialists = specialists
+          .where((s) =>
+              s.firstName.toLowerCase().contains(searchLower) ||
+              s.lastName.toLowerCase().contains(searchLower) ||
+              s.title.toLowerCase().contains(searchLower) ||
+              (s.bio ?? '').toLowerCase().contains(searchLower))
+          .toList();
+    }
+
+    if (filter.minRating != null) {
+      specialists = specialists.where((s) => s.rating >= filter.minRating!).toList();
+    }
+
+    return specialists;
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final filter = SpecialistsFilter(
+      category: _selectedCategory == 'Все' ? null : _selectedCategory,
+      search: _searchQuery.isEmpty ? null : _searchQuery,
+      minRating: null,
+    );
+    final localSpecialistsAsync = ref.watch(localSpecialistsProvider);
+    final localSpecialists = localSpecialistsAsync.valueOrNull ?? const <Specialist>[];
+    final specialistsAsync = ref.watch(filteredSpecialistsProvider(filter));
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
@@ -80,22 +174,40 @@ class _SpecialistsPageState extends State<SpecialistsPage> {
                                 ),
                               ),
                               const Spacer(),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                  vertical: 6,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: AppColors.primary.withOpacity(0.1),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Text(
-                                  '15 234',
-                                  style: TextStyle(
-                                    color: AppColors.primary,
-                                    fontWeight: FontWeight.w600,
+                              specialistsAsync.when(
+                                data: (items) => Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 12,
+                                    vertical: 6,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.primary.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Text(
+                                    '${items.length}',
+                                    style: TextStyle(
+                                      color: AppColors.primary,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ),
+                                loading: () => Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 12,
+                                    vertical: 6,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.primary.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: const SizedBox(
+                                    width: 18,
+                                    height: 18,
+                                    child: CircularProgressIndicator(strokeWidth: 2),
+                                  ),
+                                ),
+                                error: (_, __) => const SizedBox.shrink(),
                               ),
                             ],
                           ),
@@ -114,6 +226,8 @@ class _SpecialistsPageState extends State<SpecialistsPage> {
                                   ),
                                   child: TextField(
                                     controller: _searchController,
+                                    focusNode: _searchFocusNode,
+                                    onChanged: _onSearchChanged,
                                     decoration: InputDecoration(
                                       hintText: 'Поиск специалиста...',
                                       hintStyle: TextStyle(color: AppColors.textSecondary),
@@ -313,12 +427,30 @@ class _SpecialistsPageState extends State<SpecialistsPage> {
                         color: AppColors.textSecondary,
                       ),
                     ),
-                    Text(
-                      '1 234 специалиста',
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.textPrimary,
+                    specialistsAsync.when(
+                      data: (items) => Text(
+                        '${items.length} специалистов',
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.textPrimary,
+                        ),
+                      ),
+                      loading: () => const Text(
+                        'загрузка...',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.textPrimary,
+                        ),
+                      ),
+                      error: (_, __) => const Text(
+                        'ошибка',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.textPrimary,
+                        ),
                       ),
                     ),
                   ],
@@ -329,74 +461,150 @@ class _SpecialistsPageState extends State<SpecialistsPage> {
             // Results List
             SliverPadding(
               padding: const EdgeInsets.all(20),
-              sliver: SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    final specialists = [
-                      {
-                        'name': 'Алексей Петров',
-                        'title': 'Электрик',
-                        'rating': 4.9,
-                        'reviews': 128,
-                        'price': 'от 2 000 ₽',
-                        'badge': 'top',
-                        'online': true,
-                      },
-                      {
-                        'name': 'Мария Иванова',
-                        'title': 'Дизайнер интерьеров',
-                        'rating': 5.0,
-                        'reviews': 89,
-                        'price': 'от 15 000 ₽',
-                        'badge': null,
-                        'online': true,
-                      },
-                      {
-                        'name': 'Дмитрий Смирнов',
-                        'title': 'Сантехник',
-                        'rating': 4.8,
-                        'reviews': 203,
-                        'price': 'от 1 500 ₽',
-                        'badge': 'fast',
-                        'online': false,
-                      },
-                      {
-                        'name': 'Елена Козлова',
-                        'title': 'Репетитор английского',
-                        'rating': 4.9,
-                        'reviews': 156,
-                        'price': 'от 1 200 ₽/час',
-                        'badge': null,
-                        'online': true,
-                      },
-                      {
-                        'name': 'Андрей Николаев',
-                        'title': 'Мастер по ремонту',
-                        'rating': 4.7,
-                        'reviews': 312,
-                        'price': 'от 3 000 ₽',
-                        'badge': 'top',
-                        'online': false,
-                      },
-                    ];
-                    
-                    final s = specialists[index % specialists.length];
-                    
-                    return Padding(
-                      padding: const EdgeInsets.only(bottom: 16),
-                      child: SpecialistCard(
-                        name: s['name'] as String,
-                        title: s['title'] as String,
-                        rating: s['rating'] as double,
-                        reviews: s['reviews'] as int,
-                        price: s['price'] as String,
-                        badge: s['badge'] as String?,
-                        isOnline: s['online'] as bool,
-                        onTap: () => context.push('/specialist/$index'),
+              sliver: specialistsAsync.when(
+                data: (items) {
+                  if (items.isEmpty) {
+                    return SliverToBoxAdapter(
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: AppColors.border),
+                        ),
+                        child: Text(
+                          'По вашему запросу ничего не найдено',
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       ),
                     );
-                  },
-                  childCount: 10,
+                  }
+                  final sorted = [...items];
+                  switch (_sortBy) {
+                    case 'rating':
+                      sorted.sort((a, b) => b.rating.compareTo(a.rating));
+                      break;
+                    case 'reviews':
+                      sorted.sort((a, b) => b.reviewsCount.compareTo(a.reviewsCount));
+                      break;
+                    case 'price_low':
+                      sorted.sort((a, b) => (a.hourlyRate ?? double.infinity).compareTo(b.hourlyRate ?? double.infinity));
+                      break;
+                    case 'price_high':
+                      sorted.sort((a, b) => (b.hourlyRate ?? -1).compareTo(a.hourlyRate ?? -1));
+                      break;
+                  }
+                  return SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        final s = sorted[index];
+                        final price = s.hourlyRate != null
+                            ? 'от ${s.hourlyRate!.toStringAsFixed(0)} ₽/час'
+                            : 'Цена по договорённости';
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: SpecialistCard(
+                            name: s.fullName,
+                            title: s.title,
+                            rating: s.rating,
+                            reviews: s.reviewsCount,
+                            price: price,
+                            imageUrl: s.avatar,
+                            badge: s.isVerified ? 'top' : null,
+                            isOnline: s.isOnline,
+                            onTap: () => context.push('/specialist/${s.id}'),
+                          ),
+                        );
+                      },
+                      childCount: sorted.length,
+                    ),
+                  );
+                },
+                loading: () {
+                  // Важно для UX/скорости: пока идёт запрос — показываем заполненный список из mock,
+                  // чтобы экран не выглядел "пустым" и не казался зависшим.
+                  final items = _fallbackFiltered(filter, localSpecialists);
+                  final sorted = [...items];
+                  switch (_sortBy) {
+                    case 'rating':
+                      sorted.sort((a, b) => b.rating.compareTo(a.rating));
+                      break;
+                    case 'reviews':
+                      sorted.sort((a, b) => b.reviewsCount.compareTo(a.reviewsCount));
+                      break;
+                    case 'price_low':
+                      sorted.sort((a, b) => (a.hourlyRate ?? double.infinity).compareTo(b.hourlyRate ?? double.infinity));
+                      break;
+                    case 'price_high':
+                      sorted.sort((a, b) => (b.hourlyRate ?? -1).compareTo(a.hourlyRate ?? -1));
+                      break;
+                  }
+                  return SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        final s = sorted[index];
+                        final price = s.hourlyRate != null
+                            ? 'от ${s.hourlyRate!.toStringAsFixed(0)} ₽/час'
+                            : 'Цена по договорённости';
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: Stack(
+                            children: [
+                              SpecialistCard(
+                                name: s.fullName,
+                                title: s.title,
+                                rating: s.rating,
+                                reviews: s.reviewsCount,
+                                price: price,
+                                imageUrl: s.avatar,
+                                badge: s.isVerified ? 'top' : null,
+                                isOnline: s.isOnline,
+                                onTap: () => context.push('/specialist/${s.id}'),
+                              ),
+                              Positioned(
+                                right: 12,
+                                top: 12,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.primary.withOpacity(0.10),
+                                    borderRadius: BorderRadius.circular(999),
+                                    border: Border.all(color: AppColors.primary.withOpacity(0.20)),
+                                  ),
+                                  child: const Text(
+                                    'Обновляем…',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.primary,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                      childCount: sorted.length.clamp(0, 20),
+                    ),
+                  );
+                },
+                error: (e, _) => SliverToBoxAdapter(
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: AppColors.border),
+                    ),
+                    child: Text(
+                      'Не удалось загрузить специалистов: $e',
+                      style: TextStyle(color: AppColors.textSecondary),
+                    ),
+                  ),
                 ),
               ),
             ),

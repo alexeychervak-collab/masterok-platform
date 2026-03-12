@@ -1,7 +1,7 @@
 #!/bin/bash
-# STROYKA - Final Server Setup with systemd
+# МастерОК - Final Server Setup with systemd
 
-echo "🚀 STROYKA Final Server Setup"
+echo "🚀 МастерОК Final Server Setup"
 
 # 1. Kill existing processes
 echo "⏹️  Stopping existing processes..."
@@ -10,17 +10,17 @@ pkill -f "npm start"
 
 # 2. Setup Backend systemd service
 echo "🔧 Setting up Backend service..."
-sudo tee /etc/systemd/system/stroyka-backend.service > /dev/null << 'EOF'
+sudo tee /etc/systemd/system/masterok-backend.service > /dev/null << 'EOF'
 [Unit]
-Description=STROYKA Backend API
+Description=МастерОК Backend API
 After=network.target
 
 [Service]
 Type=simple
 User=$USER
-WorkingDirectory=$HOME/stroyka-platform/backend
-Environment="PATH=$HOME/stroyka-platform/backend/venv/bin"
-ExecStart=$HOME/stroyka-platform/backend/venv/bin/uvicorn app.main_simple:app --host 0.0.0.0 --port 8000
+WorkingDirectory=$HOME/masterok-platform/backend
+Environment="PATH=$HOME/masterok-platform/backend/venv/bin"
+ExecStart=$HOME/masterok-platform/backend/venv/bin/uvicorn app.main_simple:app --host 0.0.0.0 --port 8000
 Restart=always
 
 [Install]
@@ -29,15 +29,15 @@ EOF
 
 # 3. Setup Frontend systemd service
 echo "🔧 Setting up Frontend service..."
-sudo tee /etc/systemd/system/stroyka-frontend.service > /dev/null << 'EOF'
+sudo tee /etc/systemd/system/masterok-frontend.service > /dev/null << 'EOF'
 [Unit]
-Description=STROYKA Frontend
+Description=МастерОК Frontend
 After=network.target
 
 [Service]
 Type=simple
 User=$USER
-WorkingDirectory=$HOME/stroyka-platform/landing
+WorkingDirectory=$HOME/masterok-platform/landing
 Environment="PATH=/usr/bin:/usr/local/bin"
 Environment="NODE_ENV=production"
 Environment="NEXT_PUBLIC_API_URL=http://localhost:8000"
@@ -49,14 +49,14 @@ WantedBy=multi-user.target
 EOF
 
 # 4. Replace $USER and $HOME with actual values
-sudo sed -i "s|\$USER|$USER|g" /etc/systemd/system/stroyka-backend.service
-sudo sed -i "s|\$HOME|$HOME|g" /etc/systemd/system/stroyka-backend.service
-sudo sed -i "s|\$USER|$USER|g" /etc/systemd/system/stroyka-frontend.service
-sudo sed -i "s|\$HOME|$HOME|g" /etc/systemd/system/stroyka-frontend.service
+sudo sed -i "s|\$USER|$USER|g" /etc/systemd/system/masterok-backend.service
+sudo sed -i "s|\$HOME|$HOME|g" /etc/systemd/system/masterok-backend.service
+sudo sed -i "s|\$USER|$USER|g" /etc/systemd/system/masterok-frontend.service
+sudo sed -i "s|\$HOME|$HOME|g" /etc/systemd/system/masterok-frontend.service
 
 # 5. Nginx configuration
 echo "🌐 Configuring Nginx..."
-sudo tee /etc/nginx/sites-available/stroyka > /dev/null << 'EOF'
+sudo tee /etc/nginx/sites-available/masterok > /dev/null << 'EOF'
 server {
     listen 80;
     server_name _;
@@ -94,16 +94,16 @@ server {
 }
 EOF
 
-sudo ln -sf /etc/nginx/sites-available/stroyka /etc/nginx/sites-enabled/
+sudo ln -sf /etc/nginx/sites-available/masterok /etc/nginx/sites-enabled/
 sudo rm -f /etc/nginx/sites-enabled/default
 
 # 6. Reload systemd and start services
 echo "🔄 Starting services..."
 sudo systemctl daemon-reload
-sudo systemctl enable stroyka-backend
-sudo systemctl enable stroyka-frontend
-sudo systemctl restart stroyka-backend
-sudo systemctl restart stroyka-frontend
+sudo systemctl enable masterok-backend
+sudo systemctl enable masterok-frontend
+sudo systemctl restart masterok-backend
+sudo systemctl restart masterok-frontend
 
 # 7. Test Nginx and restart
 echo "✅ Testing Nginx..."
@@ -114,22 +114,22 @@ sleep 5
 
 echo ""
 echo "📊 Service Status:"
-sudo systemctl status stroyka-backend --no-pager -l | head -15
+sudo systemctl status masterok-backend --no-pager -l | head -15
 echo ""
-sudo systemctl status stroyka-frontend --no-pager -l | head -15
+sudo systemctl status masterok-frontend --no-pager -l | head -15
 echo ""
 
 # 9. Show logs
 echo "📝 Recent Backend Logs:"
-sudo journalctl -u stroyka-backend -n 20 --no-pager
+sudo journalctl -u masterok-backend -n 20 --no-pager
 
 echo ""
 echo "📝 Recent Frontend Logs:"
-sudo journalctl -u stroyka-frontend -n 20 --no-pager
+sudo journalctl -u masterok-frontend -n 20 --no-pager
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "✅ STROYKA DEPLOYED!"
+echo "✅ МастерОК DEPLOYED!"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo "🌐 Access your platform:"
@@ -138,9 +138,12 @@ echo "   API Docs:  http://YOUR_SERVER_IP/docs"
 echo "   Backend:   http://YOUR_SERVER_IP/api/v1/"
 echo ""
 echo "📊 Useful commands:"
-echo "   sudo systemctl status stroyka-backend"
-echo "   sudo systemctl status stroyka-frontend"
-echo "   sudo journalctl -u stroyka-backend -f"
-echo "   sudo journalctl -u stroyka-frontend -f"
+echo "   sudo systemctl status masterok-backend"
+echo "   sudo systemctl status masterok-frontend"
+echo "   sudo journalctl -u masterok-backend -f"
+echo "   sudo journalctl -u masterok-frontend -f"
 echo ""
+
+
+
 

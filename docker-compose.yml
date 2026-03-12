@@ -4,17 +4,17 @@ services:
   # PostgreSQL Database
   postgres:
     image: postgres:16-alpine
-    container_name: yodo-db
+    container_name: masterok-db
     environment:
-      POSTGRES_USER: yodo
-      POSTGRES_PASSWORD: yodo_password
-      POSTGRES_DB: yodo
+      POSTGRES_USER: masterok
+      POSTGRES_PASSWORD: masterok_password
+      POSTGRES_DB: masterok
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U yodo"]
+      test: ["CMD-SHELL", "pg_isready -U masterok"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -24,9 +24,9 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: yodo-api
+    container_name: masterok-api
     environment:
-      DATABASE_URL: postgresql+asyncpg://yodo:yodo_password@postgres:5432/yodo
+      DATABASE_URL: postgresql+asyncpg://masterok:masterok_password@postgres:5432/masterok
       SECRET_KEY: your-secret-key-change-in-production
       DEBUG: "true"
     ports:
@@ -43,10 +43,10 @@ services:
     build:
       context: ./landing
       dockerfile: Dockerfile.dev
-    container_name: yodo-landing
+    container_name: masterok-landing
     environment:
-      POSTGRES_PRISMA_URL: postgresql://yodo:yodo_password@postgres:5432/yodo
-      POSTGRES_URL_NON_POOLING: postgresql://yodo:yodo_password@postgres:5432/yodo
+      POSTGRES_PRISMA_URL: postgresql://masterok:masterok_password@postgres:5432/masterok
+      POSTGRES_URL_NON_POOLING: postgresql://masterok:masterok_password@postgres:5432/masterok
     ports:
       - "3000:3000"
     depends_on:

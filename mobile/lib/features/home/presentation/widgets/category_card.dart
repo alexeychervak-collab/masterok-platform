@@ -5,6 +5,7 @@ class CategoryCard extends StatelessWidget {
   final String title;
   final Gradient gradient;
   final String count;
+  final VoidCallback? onTap;
 
   const CategoryCard({
     super.key,
@@ -12,6 +13,7 @@ class CategoryCard extends StatelessWidget {
     required this.title,
     required this.gradient,
     required this.count,
+    this.onTap,
   });
 
   @override
@@ -21,7 +23,7 @@ class CategoryCard extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {},
+          onTap: onTap,
           borderRadius: BorderRadius.circular(20),
           child: Container(
             width: 90,

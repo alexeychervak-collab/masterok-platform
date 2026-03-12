@@ -13,7 +13,7 @@ type ClientOrder = OrderMock & { status?: 'draft' | 'published' | 'in_progress' 
 function normalizeOrdersFromStorage(): ClientOrder[] {
   if (typeof window === 'undefined') return []
   try {
-    const raw = localStorage.getItem('yodo_client_orders')
+    const raw = localStorage.getItem('masterok_client_orders')
     if (!raw) return []
     const parsed = JSON.parse(raw)
     return Array.isArray(parsed) ? parsed : []

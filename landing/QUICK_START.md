@@ -1,10 +1,10 @@
-# 🚀 YoDo Marketplace - Быстрый старт
+# 🚀 MasterOK Marketplace - Быстрый старт
 
 ## ⚡ Самый быстрый способ
 
 ### На локальном компьютере:
 ```bash
-cd D:\yodo\landing
+cd D:\masterok\landing
 npm install --force
 npm run dev
 ```
@@ -29,7 +29,7 @@ DEPLOY.bat
 
 ### 2. Ошибка при сборке
 ```bash
-cd D:\yodo\landing
+cd D:\masterok\landing
 rm -rf node_modules
 rm package-lock.json
 npm install --force

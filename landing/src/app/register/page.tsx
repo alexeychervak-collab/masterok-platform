@@ -10,7 +10,7 @@ export default function RegisterPage() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <Link href="/" className="inline-flex items-center gap-2">
-            <span className="text-2xl font-bold text-primary-600">YoDo</span>
+            <span className="text-2xl font-bold text-primary-600">МастерОК</span>
             <Sparkles className="w-5 h-5 text-primary-600" />
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">Регистрация</h1>

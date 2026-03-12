@@ -23,7 +23,7 @@ export default function OrderDealPage({ params }: { params: { id: string } }) {
             orderId={order.id}
             orderTitle={order.title}
             amount={amount}
-            specialistName={specialistsMock[0]?.name || 'Специалист YoDo'}
+            specialistName={specialistsMock[0]?.name || 'Специалист МастерОК'}
             specialistAvatar={specialistsMock[0]?.avatarUrl}
             clientName={order.client.name}
           />

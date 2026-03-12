@@ -1,4 +1,4 @@
-# 📱 STROYKA - ПУБЛИКАЦИЯ В МАГАЗИНАХ
+# 📱 МастерОК - ПУБЛИКАЦИЯ В МАГАЗИНАХ
 
 > **Инструкции по публикации в Google Play и App Store (TestFlight)**
 
@@ -33,7 +33,7 @@ flutter build appbundle --release
 1. Открыть https://play.google.com/console
 2. "Создать приложение"
 3. Заполнить:
-   - **Название:** STROYKA - Строительные услуги
+   - **Название:** МастерОК - Строительные услуги
    - **Язык по умолчанию:** Русский
    - **Тип:** Приложение
    - **Бесплатное/Платное:** Бесплатное
@@ -47,7 +47,7 @@ flutter build appbundle --release
 Платформа для поиска проверенных строительных специалистов
 
 Полное описание:
-STROYKA - современная платформа для поиска строительных специалистов 
+МастерОК - современная платформа для поиска строительных специалистов 
 и ремонтных услуг в России.
 
 Возможности:
@@ -114,7 +114,7 @@ STROYKA - современная платформа для поиска стро
 4. Заполнить "Что нового":
 
 ```
-Первая версия приложения STROYKA!
+Первая версия приложения МастерОК!
 
 ✨ Возможности:
 • Поиск строительных специалистов
@@ -144,11 +144,11 @@ STROYKA - современная платформа для поиска стро
 
 #### Privacy Policy
 
-**URL:** https://stroyka.ru/privacy
+**URL:** https://masterok.ru/privacy
 
 **Содержание:**
 ```markdown
-# Политика конфиденциальности STROYKA
+# Политика конфиденциальности МастерОК
 
 Последнее обновление: 04.01.2026
 
@@ -166,7 +166,7 @@ STROYKA - современная платформа для поиска стро
 Все данные защищены и передаются по HTTPS.
 Платежи обрабатываются через ЮKassa.
 
-Контакты: support@stroyka.ru
+Контакты: support@masterok.ru
 ```
 
 ### Шаг 6: Отправка на модерацию
@@ -178,7 +178,7 @@ STROYKA - современная платформа для поиска стро
 ### Шаг 7: После публикации
 
 - ✅ Приложение появится в поиске через 2-3 часа
-- ✅ URL: `https://play.google.com/store/apps/details?id=com.stroyka.app`
+- ✅ URL: `https://play.google.com/store/apps/details?id=com.masterok.app`
 
 ---
 
@@ -203,11 +203,11 @@ open Runner.xcworkspace
 
 1. **Signing & Capabilities**
    - Team: выбрать свою команду
-   - Bundle Identifier: `com.stroyka.app`
+   - Bundle Identifier: `com.masterok.app`
    - Signing: Automatically manage signing
 
 2. **General**
-   - Display Name: `STROYKA`
+   - Display Name: `МастерОК`
    - Version: `1.0.0`
    - Build: `1`
 
@@ -221,23 +221,23 @@ open Runner.xcworkspace
 2. "Мои приложения" → "+" → "Новое приложение"
 3. Заполнить:
    - **Платформа:** iOS
-   - **Название:** STROYKA
+   - **Название:** МастерОК
    - **Основной язык:** Русский
-   - **Bundle ID:** com.stroyka.app
-   - **SKU:** stroyka-ios
+   - **Bundle ID:** com.masterok.app
+   - **SKU:** masterok-ios
 
 ### Шаг 3: Заполнение метаданных
 
 #### Информация о приложении
 
 ```
-Название: STROYKA - Строительные услуги
+Название: МастерОК - Строительные услуги
 
 Подзаголовок (30 символов):
 Найди своего мастера
 
 Описание:
-STROYKA - современная платформа для поиска строительных специалистов 
+МастерОК - современная платформа для поиска строительных специалистов 
 и ремонтных услуг в России.
 
 Возможности:
@@ -255,7 +255,7 @@ STROYKA - современная платформа для поиска стро
 Платежи через систему эскроу - деньги специалисту только после 
 подтверждения выполнения работ.
 
-Контакты: support@stroyka.ru
+Контакты: support@masterok.ru
 ```
 
 #### Ключевые слова (100 символов)
@@ -309,7 +309,7 @@ STROYKA - современная платформа для поиска стро
 4. "Информация для тестировщиков":
 
 ```
-Спасибо за тестирование STROYKA!
+Спасибо за тестирование МастерОК!
 
 Что тестировать:
 1. Регистрация / Вход
@@ -321,7 +321,7 @@ STROYKA - современная платформа для поиска стро
 Известные проблемы:
 - Платежи работают в тестовом режиме
 
-Обратная связь: dev@stroyka.ru
+Обратная связь: dev@masterok.ru
 ```
 
 ### Шаг 6: Добавление тестировщиков
@@ -417,7 +417,7 @@ YOOKASSA_SECRET_KEY=live_REAL_SECRET_KEY
 
 ```dart
 // lib/core/network/api_client.dart
-static const String baseUrl = 'https://api.stroyka.ru'; // Production URL
+static const String baseUrl = 'https://api.masterok.ru'; // Production URL
 ```
 
 ---
@@ -494,12 +494,12 @@ pod install
 
 **Android:**
 ```
-https://play.google.com/store/apps/details?id=com.stroyka.app
+https://play.google.com/store/apps/details?id=com.masterok.app
 ```
 
 **iOS:**
 ```
-https://apps.apple.com/app/stroyka/idXXXXXXXXXX
+https://apps.apple.com/app/masterok/idXXXXXXXXXX
 ```
 
 **Удачи с публикацией! 🚀**
@@ -508,5 +508,8 @@ https://apps.apple.com/app/stroyka/idXXXXXXXXXX
 
 *Создано: 04.01.2026*  
 *Версия: 1.0.0*  
-*Проект: STROYKA*
+*Проект: МастерОК*
+
+
+
 

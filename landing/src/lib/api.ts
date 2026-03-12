@@ -15,21 +15,21 @@ class ApiClient {
     
     // Load token from localStorage if available
     if (typeof window !== 'undefined') {
-      this.token = localStorage.getItem('yodo_auth_token');
+      this.token = localStorage.getItem('masterok_auth_token');
     }
   }
 
   setToken(token: string) {
     this.token = token;
     if (typeof window !== 'undefined') {
-      localStorage.setItem('yodo_auth_token', token);
+      localStorage.setItem('masterok_auth_token', token);
     }
   }
 
   clearToken() {
     this.token = null;
     if (typeof window !== 'undefined') {
-      localStorage.removeItem('yodo_auth_token');
+      localStorage.removeItem('masterok_auth_token');
     }
   }
 

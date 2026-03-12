@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:yodo/core/theme/app_colors.dart';
-import 'package:yodo/features/auth/data/auth_provider.dart';
+import 'package:masterok/core/theme/app_colors.dart';
+import 'package:masterok/features/auth/data/auth_provider.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
   const LoginPage({super.key});
@@ -129,7 +129,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () => context.push('/forgot-password'),
                 child: const Text('Забыли пароль?'),
               ),
             ),
@@ -174,7 +174,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: () => context.push('/phone-login'),
                 icon: const Icon(Icons.phone_android),
                 label: const Text('Войти по номеру телефона'),
               ),
@@ -199,8 +199,9 @@ class _LoginPageState extends ConsumerState<LoginPage> {
           ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   Future<void> _handleLogin() async {
     if (!_formKey.currentState!.validate()) return;

@@ -6,11 +6,13 @@ from app.db.base import Base, TimestampMixin
 
 class OrderStatus(str, enum.Enum):
     PENDING = "pending"
+    PUBLISHED = "published"
     ACCEPTED = "accepted"
     IN_PROGRESS = "in_progress"
     COMPLETED = "completed"
     CANCELLED = "cancelled"
     DISPUTED = "disputed"
+    PAYMENT_PENDING = "payment_pending"
 
 
 class PaymentStatus(str, enum.Enum):
@@ -25,9 +27,13 @@ class Order(Base, TimestampMixin):
     
     id = Column(String, primary_key=True)
     client_id = Column(String, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    specialist_id = Column(String, ForeignKey("specialists.id", ondelete="CASCADE"), nullable=False)
-    service_id = Column(String, ForeignKey("services.id", ondelete="CASCADE"), nullable=False)
+    specialist_id = Column(String, ForeignKey("specialists.id", ondelete="CASCADE"), nullable=True)
+    service_id = Column(String, ForeignKey("services.id", ondelete="CASCADE"), nullable=True)
+    title = Column(String, nullable=True)
     description = Column(Text, nullable=True)
+    budget = Column(Float, nullable=True)
+    budget_max = Column(Float, nullable=True)
+    deadline = Column(DateTime, nullable=True)
     address = Column(String, nullable=True)
     scheduled_at = Column(DateTime, nullable=True)
     completed_at = Column(DateTime, nullable=True)
@@ -42,6 +48,8 @@ class Order(Base, TimestampMixin):
     specialist = relationship("Specialist", back_populates="orders")
     service = relationship("Service", back_populates="orders")
     review = relationship("Review", back_populates="order", uselist=False)
+    bids = relationship("OrderBid", back_populates="order", cascade="all, delete-orphan")
+    payments = relationship("Payment", back_populates="order", cascade="all, delete-orphan")
 
 
 

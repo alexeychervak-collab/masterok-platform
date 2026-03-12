@@ -1,4 +1,4 @@
-# 🚀 YoDo Marketplace - Улучшения и Новые Возможности
+# 🚀 MasterOK Marketplace - Улучшения и Новые Возможности
 
 ## ✨ Что было добавлено
 
@@ -92,7 +92,7 @@
   - Блестящий эффект (shimmer)
   - Floating анимации
 
-- **Новая секция "Почему выбирают YoDo":**
+- **Новая секция "Почему выбирают МастерОК":**
   - Анимированная статистика
   - 6 ключевых преимуществ
   - Параллакс эффекты
@@ -203,7 +203,7 @@ docker-compose up
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_APP_NAME=YoDo Marketplace
+NEXT_PUBLIC_APP_NAME=MasterOK Marketplace
 ```
 
 ## 🎨 Дизайн система
@@ -285,7 +285,7 @@ landing/
 
 ---
 
-Создано с ❤️ для YoDo Marketplace
+Создано с ❤️ для MasterOK Marketplace
 
 
 

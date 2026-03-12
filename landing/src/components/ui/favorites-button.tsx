@@ -15,7 +15,7 @@ export default function FavoritesButton({ specialistId, className = '' }: Favori
 
   // Load favorites from localStorage
   useEffect(() => {
-    const favorites = localStorage.getItem('yodo_favorites');
+    const favorites = localStorage.getItem('masterok_favorites');
     if (favorites) {
       const favoritesArray = JSON.parse(favorites);
       setIsFavorite(favoritesArray.includes(specialistId));
@@ -26,7 +26,7 @@ export default function FavoritesButton({ specialistId, className = '' }: Favori
     e.preventDefault();
     e.stopPropagation();
     
-    const favorites = localStorage.getItem('yodo_favorites');
+    const favorites = localStorage.getItem('masterok_favorites');
     let favoritesArray = favorites ? JSON.parse(favorites) : [];
     
     if (isFavorite) {
@@ -39,7 +39,7 @@ export default function FavoritesButton({ specialistId, className = '' }: Favori
       setTimeout(() => setIsAnimating(false), 600);
     }
     
-    localStorage.setItem('yodo_favorites', JSON.stringify(favoritesArray));
+    localStorage.setItem('masterok_favorites', JSON.stringify(favoritesArray));
     setIsFavorite(!isFavorite);
 
     // Dispatch custom event for other components to listen

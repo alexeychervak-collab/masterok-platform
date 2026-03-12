@@ -21,7 +21,7 @@ export default function SearchHistoryDropdown({ onSelect }: SearchHistoryDropdow
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const savedHistory = localStorage.getItem('yodo_search_history');
+    const savedHistory = localStorage.getItem('masterok_search_history');
     if (savedHistory) {
       setHistory(JSON.parse(savedHistory).slice(0, 8));
     }
@@ -38,7 +38,7 @@ export default function SearchHistoryDropdown({ onSelect }: SearchHistoryDropdow
   }, []);
 
   const clearHistory = () => {
-    localStorage.removeItem('yodo_search_history');
+    localStorage.removeItem('masterok_search_history');
     setHistory([]);
   };
 
@@ -46,7 +46,7 @@ export default function SearchHistoryDropdown({ onSelect }: SearchHistoryDropdow
     e.stopPropagation();
     const newHistory = history.filter(h => h !== item);
     setHistory(newHistory);
-    localStorage.setItem('yodo_search_history', JSON.stringify(newHistory));
+    localStorage.setItem('masterok_search_history', JSON.stringify(newHistory));
   };
 
   return (

@@ -47,3 +47,5 @@ class Review extends Equatable {
   List<Object?> get props => [id, specialistId, clientName, clientAvatar, rating, comment, createdAt];
 }
 
+
+

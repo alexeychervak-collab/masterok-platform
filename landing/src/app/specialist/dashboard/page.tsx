@@ -131,7 +131,7 @@ export default function SpecialistDashboard() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
               <Link href="/" className="text-2xl font-bold text-primary-600">
-                YoDo
+                МастерОК
               </Link>
               <nav className="hidden md:flex gap-6">
                 <Link href="/specialist/dashboard" className="text-primary-600 font-medium">

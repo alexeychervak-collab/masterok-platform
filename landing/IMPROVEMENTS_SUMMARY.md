@@ -1,4 +1,4 @@
-# 🎉 YoDo Marketplace - Обновления и Улучшения
+# 🎉 MasterOK Marketplace - Обновления и Улучшения
 
 ## 📅 Дата обновления: 31 декабря 2025
 
@@ -248,7 +248,7 @@ landing/
 
 ### Локально
 ```bash
-cd D:\yodo\landing
+cd D:\masterok\landing
 npm install --force
 npm run dev
 ```

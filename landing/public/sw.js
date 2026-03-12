@@ -1,7 +1,7 @@
-// Service Worker для Push-уведомлений YoDo
+// Service Worker для Push-уведомлений МастерОК
 // Обрабатывает входящие Push сообщения и клики по уведомлениям
 
-const CACHE_NAME = 'yodo-v1';
+const CACHE_NAME = 'masterok-v1';
 const urlsToCache = [
   '/',
   '/specialist/dashboard',
@@ -56,7 +56,7 @@ self.addEventListener('push', (event) => {
   console.log('[SW] Push notification received:', event);
   
   let notificationData = {
-    title: 'YoDo',
+    title: 'МастерОК',
     body: 'У вас новое уведомление',
     icon: '/icons/icon-192x192.png',
     badge: '/icons/badge-72x72.png',

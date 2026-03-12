@@ -1,7 +1,7 @@
-import 'package:dio/dio.dart';
+﻿import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/core/network/api_client.dart';
-import 'package:yodo/core/models/order.dart';
+import 'package:masterok/core/network/api_client.dart';
+import 'package:masterok/core/models/order.dart';
 
 final ordersServiceProvider = Provider<OrdersService>((ref) {
   return OrdersService(ref.read(dioProvider));
@@ -92,4 +92,7 @@ class OrdersService {
     return 'Произошла ошибка при работе с заказами';
   }
 }
+
+
+
 

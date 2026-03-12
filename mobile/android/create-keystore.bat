@@ -1,5 +1,5 @@
 @echo off
-echo Creating Android Keystore for STROYKA...
+echo Creating Android Keystore for MasterOK...
 echo.
 
 keytool -genkey -v ^
@@ -7,18 +7,21 @@ keytool -genkey -v ^
   -keyalg RSA ^
   -keysize 2048 ^
   -validity 10000 ^
-  -storepass stroyka123456 ^
-  -keypass stroyka123456 ^
-  -alias stroyka-key ^
-  -keystore app\stroyka-keystore.jks ^
-  -dname "CN=STROYKA, OU=Development, O=STROYKA Platform, L=Moscow, ST=Moscow, C=RU"
+  -storepass masterok123456 ^
+  -keypass masterok123456 ^
+  -alias masterok-key ^
+  -keystore app\masterok-keystore.jks ^
+  -dname "CN=MasterOK, OU=Development, O=MasterOK Platform, L=Moscow, ST=Moscow, C=RU"
 
 echo.
-echo ✅ Keystore created: app\stroyka-keystore.jks
+echo ✅ Keystore created: app\masterok-keystore.jks
 echo.
-echo Store Password: stroyka123456
-echo Key Password: stroyka123456
-echo Alias: stroyka-key
+echo Store Password: masterok123456
+echo Key Password: masterok123456
+echo Alias: masterok-key
 echo.
 pause
+
+
+
 

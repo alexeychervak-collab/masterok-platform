@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:yodo/core/theme/app_colors.dart';
+import 'package:masterok/core/theme/app_colors.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:go_router/go_router.dart';
+import 'package:masterok/core/data/mock_data.dart';
 
 class SpecialistDetailPage extends StatefulWidget {
   final String id;
@@ -81,7 +84,11 @@ class _SpecialistDetailPageState extends State<SpecialistDetailPage>
                         size: 20,
                         color: _isExpanded ? Colors.white : Colors.black,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Добавлено в избранное')),
+                        );
+                      },
                     ),
                   ),
                 ),
@@ -97,7 +104,9 @@ class _SpecialistDetailPageState extends State<SpecialistDetailPage>
                         size: 20,
                         color: _isExpanded ? Colors.white : Colors.black,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Share.share('Посмотрите профиль специалиста в МастерОК');
+                      },
                     ),
                   ),
                 ),
@@ -799,7 +808,15 @@ class _SpecialistDetailPageState extends State<SpecialistDetailPage>
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      final id = int.tryParse(widget.id);
+                      final name = id == null
+                          ? 'Специалист'
+                          : (MockData.specialists.where((s) => s.id == id).isNotEmpty
+                              ? MockData.specialists.firstWhere((s) => s.id == id).fullName
+                              : 'Специалист');
+                      context.push('/chat/${widget.id}?name=${Uri.encodeComponent(name)}');
+                    },
                     borderRadius: BorderRadius.circular(16),
                     child: const Center(
                       child: Row(

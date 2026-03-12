@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:yodo/core/theme/app_colors.dart';
+﻿import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:masterok/core/theme/app_colors.dart';
 
 class SpecialistCard extends StatelessWidget {
   final String name;
@@ -7,6 +8,7 @@ class SpecialistCard extends StatelessWidget {
   final double rating;
   final int reviews;
   final String price;
+  final String? imageUrl;
   final String? badge;
   final bool isOnline;
   final VoidCallback onTap;
@@ -18,6 +20,7 @@ class SpecialistCard extends StatelessWidget {
     required this.rating,
     required this.reviews,
     required this.price,
+    this.imageUrl,
     this.badge,
     this.isOnline = false,
     required this.onTap,
@@ -63,15 +66,43 @@ class SpecialistCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Center(
-                      child: Text(
-                        name[0].toUpperCase(),
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(18),
+                      child: imageUrl == null
+                          ? Center(
+                              child: Text(
+                                name.isNotEmpty ? name[0].toUpperCase() : '•',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          : CachedNetworkImage(
+                              imageUrl: imageUrl!,
+                              fit: BoxFit.cover,
+                              placeholder: (_, __) => Center(
+                                child: Text(
+                                  name.isNotEmpty ? name[0].toUpperCase() : '•',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              errorWidget: (_, __, ___) => Center(
+                                child: Text(
+                                  name.isNotEmpty ? name[0].toUpperCase() : '•',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
                     ),
                   ),
                   if (isOnline)

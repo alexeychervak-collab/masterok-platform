@@ -35,10 +35,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-              <span className="text-white font-bold text-xl">Y</span>
+              <span className="text-white font-bold text-xl">М</span>
             </div>
             <span className="text-xl font-bold tracking-tight" style={{ color: 'rgb(38, 37, 30)' }}>
-              YODO
+              МастерОК
             </span>
           </Link>
 

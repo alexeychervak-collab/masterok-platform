@@ -1,6 +1,6 @@
-# YODO Mobile App
+# МастерОК Mobile App
 
-Flutter мобильное приложение для платформы YODO.
+Flutter мобильное приложение для платформы МастерОК.
 
 ## Требования
 
@@ -59,7 +59,7 @@ flutter build ios --release
 
 Приложение использует API бэкенда:
 - Development: `http://localhost:8000/api/v1`
-- Production: `https://api.yodo.ru/api/v1`
+- Production: `https://api.masterok.ru/api/v1`
 
 Настройте URL в `lib/core/network/api_client.dart`
 

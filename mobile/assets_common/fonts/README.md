@@ -7,7 +7,7 @@ D:\Пиица\app\assets_common\fonts\SanFrancisco\
 
 В эту папку:
 ```
-d:\yodo\mobile\assets_common\fonts\SanFrancisco\
+d:\masterok\mobile\assets_common\fonts\SanFrancisco\
 ```
 
 Или скачайте с официального сайта Apple.
@@ -32,4 +32,7 @@ d:\yodo\mobile\assets_common\fonts\SanFrancisco\
 - SFProText-Semibold.ttf (600)
 - SFProText-Bold.ttf (700)
 - SFProText-Heavy.ttf (800)
+
+
+
 

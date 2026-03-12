@@ -188,7 +188,7 @@ export default function RegisterSpecialistPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-block mb-4">
-            <span className="text-2xl font-bold text-primary-600">YoDo</span>
+            <span className="text-2xl font-bold text-primary-600">МастерОК</span>
           </Link>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             Регистрация специалиста

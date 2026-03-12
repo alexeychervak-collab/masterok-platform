@@ -37,8 +37,8 @@ export default function LoginPage() {
     setIsSubmitting(true)
     try {
       // TODO: backend auth (JWT)
-      localStorage.setItem('yodo_role', role)
-      localStorage.setItem('yodo_user', JSON.stringify({ role, email, phone }))
+      localStorage.setItem('masterok_role', role)
+      localStorage.setItem('masterok_user', JSON.stringify({ role, email, phone }))
       await new Promise((r) => setTimeout(r, 600))
       router.push(role === 'specialist' ? '/specialist/dashboard' : '/create-order')
     } finally {
@@ -56,7 +56,7 @@ export default function LoginPage() {
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-bold text-primary-600">
-            YoDo
+            МастерОК
           </Link>
           <h1 className="text-3xl font-bold mt-4">Вход</h1>
           <p className="text-gray-600 mt-2">Войдите как заказчик или специалист</p>

@@ -1,8 +1,8 @@
-import 'package:dio/dio.dart';
+﻿import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yodo/core/network/api_client.dart';
-import 'package:yodo/core/models/specialist.dart';
-import 'package:yodo/core/models/review.dart';
+import 'package:masterok/core/network/api_client.dart';
+import 'package:masterok/core/models/specialist.dart';
+import 'package:masterok/core/models/review.dart';
 
 final specialistsServiceProvider = Provider<SpecialistsService>((ref) {
   return SpecialistsService(ref.read(dioProvider));
@@ -71,4 +71,7 @@ class SpecialistsService {
     return 'Произошла ошибка при загрузке данных';
   }
 }
+
+
+
 

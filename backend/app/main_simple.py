@@ -1,5 +1,5 @@
 """
-STROYKA Backend - Упрощённая версия для быстрого старта
+МастерОК Backend - Упрощённая версия для быстрого старта
 Без PostgreSQL, с SQLite
 """
 
@@ -9,7 +9,7 @@ from contextlib import asynccontextmanager
 
 # Создаём приложение
 app = FastAPI(
-    title="STROYKA API",
+    title="МастерОК API",
     description="API для платформы строительных услуг",
     version="1.0.0"
 )
@@ -28,7 +28,7 @@ app.add_middleware(
 async def root():
     """Главная страница API"""
     return {
-        "message": "STROYKA API v1.0.0",
+        "message": "МастерОК API v1.0.0",
         "status": "running",
         "docs": "/docs"
     }
@@ -94,4 +94,7 @@ async def get_categories():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
+
 

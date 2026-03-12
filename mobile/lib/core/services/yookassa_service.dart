@@ -2,12 +2,12 @@ import 'package:yookassa_payments_flutter/yookassa_payments_flutter.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as developer;
 
-/// YooKassa Payment Service для STROYKA
+/// YooKassa Payment Service для МастерОК
 /// Интеграция безопасных платежей с эскроу
 class YooKassaService {
   static const String _clientApplicationKey = 'test_YOUR_CLIENT_KEY'; // Заменить на реальный
   static const String _shopId = 'YOUR_SHOP_ID'; // Заменить на реальный
-  static const String _returnUrl = 'stroyka://payment/success';
+  static const String _returnUrl = 'masterok://payment/success';
 
   /// Инициализация YooKassa SDK
   Future<void> initialize() async {
@@ -220,4 +220,7 @@ enum PaymentStatus {
   cancelled,
   failed,
 }
+
+
+
 

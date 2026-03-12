@@ -85,3 +85,4 @@ android/local.properties
 # Documentation generated
 docs/_build/
 site/
+.github/workflows/build-apk.yml

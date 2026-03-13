@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Text, Integer, Boolean
+from sqlalchemy import Column, String, Text, Integer, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 from app.db.base import Base, TimestampMixin
 
@@ -26,7 +26,7 @@ class Skill(Base, TimestampMixin):
     id = Column(String, primary_key=True)
     name = Column(String, nullable=False)
     slug = Column(String, unique=True, nullable=False, index=True)
-    category_id = Column(String, nullable=False)
+    category_id = Column(String, ForeignKey("categories.id", ondelete="CASCADE"), nullable=False)
     
     # Relationships
     category = relationship("Category", back_populates="skills")

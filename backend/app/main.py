@@ -10,9 +10,18 @@ from app.db.base import Base
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup
+    # Startup: create tables
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
+    # Auto-seed if database is empty
+    try:
+        from app.seed import seed_database
+        await seed_database()
+    except Exception as e:
+        import logging
+        logging.getLogger(__name__).warning(f"Seed skipped: {e}")
+
     yield
     # Shutdown
     await engine.dispose()

@@ -25,6 +25,8 @@ class Settings(BaseSettings):
     CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://localhost:8000",
+        "http://77.105.168.219",
+        "http://77.105.168.219:3000",
         "https://masterok.ru",
         "https://*.masterok.ru",
         "https://*.vercel.app",

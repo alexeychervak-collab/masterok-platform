@@ -12,6 +12,8 @@ const footerLinks = {
       { name: 'Найти заказы', href: '/specialist/find-orders' },
       { name: 'Как это работает', href: '/how-it-works' },
       { name: 'Тарифы', href: '/pricing' },
+      { name: 'Безопасная сделка', href: '/safe-deal' },
+      { name: 'FAQ', href: '/faq' },
     ],
   },
   company: {
@@ -21,6 +23,8 @@ const footerLinks = {
       { name: 'Контакты', href: '/contacts' },
       { name: 'Вакансии', href: '/careers' },
       { name: 'Блог', href: '/blog' },
+      { name: 'Для бизнеса', href: '/business' },
+      { name: 'Истории успеха', href: '/success-stories' },
     ],
   },
   legal: {

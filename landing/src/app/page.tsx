@@ -894,15 +894,32 @@ export default function EnhancedHomePage() {
             {[
               {
                 title: 'Для заказчиков',
-                links: ['Как это работает', 'Найти специалистов', 'Разместить проект', 'Тарифы', 'Безопасная сделка']
+                links: [
+                  { text: 'Как это работает', href: '/how-it-works' },
+                  { text: 'Найти специалистов', href: '/search' },
+                  { text: 'Разместить проект', href: '/create-order' },
+                  { text: 'Тарифы', href: '/pricing' },
+                  { text: 'Безопасная сделка', href: '/safe-deal' },
+                ]
               },
               {
                 title: 'Для специалистов',
-                links: ['Найти заказы', 'Стать специалистом', 'Истории успеха', 'Тарифы PRO']
+                links: [
+                  { text: 'Найти заказы', href: '/specialist/find-orders' },
+                  { text: 'Стать специалистом', href: '/register-specialist' },
+                  { text: 'Истории успеха', href: '/success-stories' },
+                  { text: 'Тарифы PRO', href: '/pricing' },
+                ]
               },
               {
                 title: 'Компания',
-                links: ['О нас', 'Контакты', 'Блог', 'Вакансии', 'Для бизнеса']
+                links: [
+                  { text: 'О нас', href: '/about' },
+                  { text: 'Контакты', href: '/contacts' },
+                  { text: 'Блог', href: '/blog' },
+                  { text: 'Вакансии', href: '/careers' },
+                  { text: 'Для бизнеса', href: '/business' },
+                ]
               }
             ].map((section, i) => (
               <div key={i}>
@@ -911,10 +928,10 @@ export default function EnhancedHomePage() {
                   {section.links.map((link, j) => (
                     <li key={j}>
                       <Link
-                        href="/"
+                        href={link.href}
                         className="text-gray-400 hover:text-white transition-colors"
                       >
-                        {link}
+                        {link.text}
                       </Link>
                     </li>
                   ))}
@@ -925,7 +942,7 @@ export default function EnhancedHomePage() {
 
           <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">
-              © 2025 МастерОК. Все права защищены.
+              © 2026 МастерОК. Все права защищены.
             </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

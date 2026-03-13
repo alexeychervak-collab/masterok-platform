@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "TodoWrite(*)",
+      "mcp__*"
+    ]
+  },
+  "plugins": {
+    "installed": [
+      "context7@claude-plugins-official",
+      "frontend-design@claude-plugins-official",
+      "code-review@claude-plugins-official",
+      "ralph-loop@claude-plugins-official",
+      "code-simplifier@claude-plugins-official",
+      "commit-commands@claude-plugins-official",
+      "feature-dev@claude-plugins-official",
+      "security-guidance@claude-plugins-official",
+      "claude-md-management@claude-plugins-official",
+      "playwright@claude-plugins-official",
+      "github@claude-plugins-official"
+    ]
+  }
+}

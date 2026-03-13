@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { specialistsMock, projectSections } from '@/lib/mock-data';
+import { fetchSpecialists } from '@/lib/api-adapter';
 
 interface Specialist {
   id: string;
@@ -59,8 +60,41 @@ function SearchContent() {
   const query = searchParams?.get('q') || '';
 
   const [specialists, setSpecialists] = useState<Specialist[]>(mockSpecialists);
+  const [allSpecialists, setAllSpecialists] = useState<Specialist[]>(mockSpecialists);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('relevance');
+
+  // Try to load from API on mount; fallback is already set via mockSpecialists
+  useEffect(() => {
+    let cancelled = false;
+    fetchSpecialists().then(({ specialists: apiData }) => {
+      if (!cancelled && apiData.length > 0) {
+        const mapped: Specialist[] = apiData.map((s: any) => ({
+          id: s.id,
+          name: s.name,
+          title: s.title,
+          rating: s.rating,
+          reviewCount: s.reviewCount,
+          completedJobs: s.completedJobs,
+          hourlyRate: s.hourlyRate,
+          fixedPrice: s.fixedPrice,
+          location: s.location || s.city || '',
+          avatar: s.initials || s.name?.split(' ').map((w: string) => w[0]).join('').slice(0, 2).toUpperCase() || '',
+          avatarUrl: s.avatarUrl,
+          verified: s.verified,
+          topRated: s.topRated,
+          responseTime: s.responseTime,
+          skills: s.skills || [],
+          availability: s.availability || 'offline',
+          description: s.description || '',
+        }));
+        setAllSpecialists(mapped);
+        setSpecialists(mapped);
+      }
+    }).catch(() => {/* keep mock data */});
+    return () => { cancelled = true; };
+  }, []);
+
   const [filters, setFilters] = useState({
     minRating: 0,
     maxPrice: Infinity,
@@ -85,7 +119,7 @@ function SearchContent() {
 
   // Filter and sort specialists
   useEffect(() => {
-    let filtered = mockSpecialists.filter(s => {
+    let filtered = allSpecialists.filter(s => {
       if (filters.minRating && s.rating < filters.minRating) return false;
       if (filters.verified === 'yes' && !s.verified) return false;
       if (filters.verified === 'no' && s.verified) return false;
@@ -155,7 +189,7 @@ function SearchContent() {
     }
 
     setSpecialists(filtered);
-  }, [query, filters, sortBy]);
+  }, [query, filters, sortBy, allSpecialists]);
 
   return (
     <div className="min-h-screen bg-gray-50">

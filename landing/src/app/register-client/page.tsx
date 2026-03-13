@@ -4,11 +4,14 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Mail, Phone, User, Lock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Mail, Phone, User, Lock, ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
+import { useAuth } from '@/contexts/AuthContext'
 
 export default function RegisterClientPage() {
   const router = useRouter()
+  const { register } = useAuth()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -20,12 +23,22 @@ export default function RegisterClientPage() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
     try {
-      // TODO: backend registration
-      localStorage.setItem('masterok_role', 'client')
-      localStorage.setItem('masterok_user', JSON.stringify({ name: form.name || 'Заказчик' }))
-      await new Promise((r) => setTimeout(r, 700))
-      router.push('/create-order')
+      const result = await register({
+        name: form.name,
+        email: form.email,
+        password: form.password,
+        phone: form.phone || undefined,
+      })
+      if (result.success) {
+        localStorage.setItem('masterok_role', 'client')
+        router.push('/create-order')
+      } else {
+        setError(result.error || 'Ошибка регистрации')
+      }
+    } catch {
+      setError('Ошибка соединения с сервером')
     } finally {
       setIsSubmitting(false)
     }
@@ -43,6 +56,12 @@ export default function RegisterClientPage() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+          {error && (
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 shrink-0" /> {error}
+            </div>
+          )}
+
           <form onSubmit={onSubmit} className="space-y-4">
             <div className="relative">
               <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -19,6 +19,7 @@ import {
   Award
 } from 'lucide-react';
 import { ordersMock, projectSections } from '@/lib/mock-data';
+import { fetchOrders } from '@/lib/api-adapter';
 
 interface Order {
   id: string;
@@ -66,8 +67,20 @@ const categories = [
 ];
 
 export default function FindOrdersPage() {
-  const [orders] = useState<Order[]>(mockOrders);
+  const [orders, setOrders] = useState<Order[]>(mockOrders);
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Try to load from API on mount; fallback is already set via mockOrders
+  useEffect(() => {
+    let cancelled = false;
+    fetchOrders().then((apiOrders) => {
+      if (!cancelled && apiOrders.length > 0) {
+        setOrders(apiOrders as Order[]);
+      }
+    }).catch(() => {/* keep mock data */});
+    return () => { cancelled = true; };
+  }, []);
+
   const [selectedCategory, setSelectedCategory] = useState('Все категории');
   const [priceRange, setPriceRange] = useState({ min: 0, max: 200000 });
   const [showFilters, setShowFilters] = useState(false);

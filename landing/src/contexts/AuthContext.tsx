@@ -34,6 +34,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const checkAuth = async () => {
+    // Skip API call during SSR or when no token is stored
+    if (typeof window === 'undefined') {
+      setLoading(false);
+      return;
+    }
+
+    const token = localStorage.getItem('masterok_auth_token');
+    if (!token) {
+      setLoading(false);
+      return;
+    }
+
     try {
       const response = await api.getCurrentUser();
       if (response.data) {
@@ -116,6 +128,3 @@ export function useAuth() {
   }
   return context;
 }
-
-
-

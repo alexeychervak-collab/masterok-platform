@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/v1';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api/v1';
 
 interface ApiResponse<T> {
   data?: T;
@@ -52,11 +52,30 @@ class ApiClient {
         headers,
       });
 
-      const data = await response.json();
+      // Handle 401 — token may be expired
+      if (response.status === 401) {
+        this.clearToken();
+        return {
+          error: 'Unauthorized — please log in again',
+          status: 401,
+        };
+      }
+
+      let data: any;
+      try {
+        data = await response.json();
+      } catch {
+        // Response is not valid JSON (e.g. HTML error page, empty body)
+        return {
+          error: response.ok ? undefined : `Server error (${response.status})`,
+          status: response.status,
+          ...(response.ok ? { data: null as unknown as T } : {}),
+        };
+      }
 
       if (!response.ok) {
         return {
-          error: data.detail || 'Something went wrong',
+          error: data.detail || data.message || 'Something went wrong',
           status: response.status,
         };
       }
@@ -75,18 +94,11 @@ class ApiClient {
 
   // Auth endpoints
   async login(email: string, password: string) {
-    const formData = new URLSearchParams();
-    formData.append('username', email);
-    formData.append('password', password);
-
-    return this.request<{ access_token: string; token_type: string }>(
+    return this.request<{ access_token: string; token_type: string; user: any }>(
       '/auth/login',
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: formData,
+        body: JSON.stringify({ email, password }),
       }
     );
   }
@@ -94,18 +106,17 @@ class ApiClient {
   async register(data: {
     email: string;
     password: string;
-    full_name: string;
+    name: string;
     phone?: string;
-    user_type: 'client' | 'specialist';
   }) {
-    return this.request('/auth/register', {
+    return this.request<{ access_token: string; token_type: string; user: any }>('/auth/register', {
       method: 'POST',
       body: JSON.stringify(data),
     });
   }
 
   async getCurrentUser() {
-    return this.request('/auth/me', {
+    return this.request('/users/me', {
       method: 'GET',
     });
   }
@@ -227,12 +238,8 @@ class ApiClient {
   }
 
   // Reviews endpoints
-  async getReviews(specialistId?: string) {
-    const endpoint = specialistId
-      ? `/reviews/?specialist_id=${specialistId}`
-      : '/reviews/';
-
-    return this.request(endpoint, {
+  async getReviews(specialistId: string, page: number = 1, perPage: number = 20) {
+    return this.request(`/reviews/specialist/${specialistId}?page=${page}&per_page=${perPage}`, {
       method: 'GET',
     });
   }
@@ -268,6 +275,3 @@ class ApiClient {
 
 export const api = new ApiClient(API_BASE_URL);
 export default api;
-
-
-

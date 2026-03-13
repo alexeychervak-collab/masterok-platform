@@ -4,15 +4,18 @@ import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Mail, Phone, Lock, ArrowRight, ShieldCheck, Briefcase, Users } from 'lucide-react'
+import { Mail, Phone, Lock, ArrowRight, ShieldCheck, Briefcase, Users, AlertCircle } from 'lucide-react'
+import { useAuth } from '@/contexts/AuthContext'
 
 type Role = 'client' | 'specialist'
 
 export default function LoginPage() {
   const router = useRouter()
+  const { login } = useAuth()
   const [role, setRole] = useState<Role>('client')
   const [mode, setMode] = useState<'email' | 'sms'>('email')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -35,12 +38,25 @@ export default function LoginPage() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
     try {
-      // TODO: backend auth (JWT)
-      localStorage.setItem('masterok_role', role)
-      localStorage.setItem('masterok_user', JSON.stringify({ role, email, phone }))
-      await new Promise((r) => setTimeout(r, 600))
-      router.push(role === 'specialist' ? '/specialist/dashboard' : '/create-order')
+      if (mode === 'email') {
+        const result = await login(email, password)
+        if (result.success) {
+          localStorage.setItem('masterok_role', role)
+          router.push(role === 'specialist' ? '/specialist/dashboard' : '/create-order')
+        } else {
+          setError(result.error || 'Неверный email или пароль')
+        }
+      } else {
+        // SMS mode — demo fallback
+        localStorage.setItem('masterok_role', role)
+        localStorage.setItem('masterok_user', JSON.stringify({ role, phone }))
+        await new Promise((r) => setTimeout(r, 600))
+        router.push(role === 'specialist' ? '/specialist/dashboard' : '/create-order')
+      }
+    } catch {
+      setError('Ошибка соединения с сервером')
     } finally {
       setIsSubmitting(false)
     }
@@ -106,6 +122,12 @@ export default function LoginPage() {
               SMS-код
             </button>
           </div>
+
+          {error && (
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 shrink-0" /> {error}
+            </div>
+          )}
 
           <form onSubmit={onSubmit} className="space-y-4">
             {mode === 'email' ? (

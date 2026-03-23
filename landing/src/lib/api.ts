@@ -219,10 +219,13 @@ class ApiClient {
   }
 
   async createOrder(data: {
-    service_id: string;
+    title?: string;
     description: string;
     budget?: number;
+    budget_max?: number;
+    address?: string;
     deadline?: string;
+    service_id?: string;
   }) {
     return this.request('/orders/', {
       method: 'POST',

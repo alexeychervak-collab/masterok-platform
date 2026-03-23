@@ -1,269 +1,243 @@
-// Service Worker для Push-уведомлений МастерОК
-// Обрабатывает входящие Push сообщения и клики по уведомлениям
+// Service Worker для МастерОК PWA
+// Кэширование, офлайн-поддержка, Push-уведомления
 
-const CACHE_NAME = 'masterok-v1';
-const urlsToCache = [
+const CACHE_VERSION = 'masterok-v2';
+const STATIC_CACHE = `static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
+
+const PRECACHE_URLS = [
   '/',
+  '/offline',
   '/specialist/dashboard',
   '/specialist/messages',
   '/specialist/orders',
-  '/icons/icon-192x192.png',
-  '/icons/badge-72x72.png'
 ];
 
-// Установка Service Worker
+const STATIC_EXTENSIONS = ['.js', '.css', '.png', '.jpg', '.jpeg', '.svg', '.webp', '.woff', '.woff2', '.ttf', '.eot', '.ico'];
+
+// ─── Install ───────────────────────────────────────────────
 self.addEventListener('install', (event) => {
-  console.log('[SW] Installing Service Worker...', event);
-  
+  console.log('[SW] Installing...');
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('[SW] Caching app shell');
-        return cache.addAll(urlsToCache);
+        console.log('[SW] Pre-caching app shell');
+        return cache.addAll(PRECACHE_URLS);
       })
-      .catch((error) => {
-        console.error('[SW] Cache installation failed:', error);
+      .catch((err) => {
+        console.error('[SW] Pre-cache failed:', err);
       })
   );
-  
-  // Активировать SW немедленно
   self.skipWaiting();
 });
 
-// Активация Service Worker
+// ─── Activate ──────────────────────────────────────────────
 self.addEventListener('activate', (event) => {
-  console.log('[SW] Activating Service Worker...', event);
-  
+  console.log('[SW] Activating...');
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('[SW] Removing old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys().then((names) =>
+      Promise.all(
+        names
+          .filter((name) => name !== STATIC_CACHE && name !== DYNAMIC_CACHE)
+          .map((name) => {
+            console.log('[SW] Deleting old cache:', name);
+            return caches.delete(name);
+          })
+      )
+    )
   );
-  
-  // Захватить всех клиентов
   return self.clients.claim();
 });
 
-// Обработка Push событий
-self.addEventListener('push', (event) => {
-  console.log('[SW] Push notification received:', event);
-  
-  let notificationData = {
-    title: 'МастерОК',
-    body: 'У вас новое уведомление',
-    icon: '/icons/icon-192x192.png',
-    badge: '/icons/badge-72x72.png',
-    data: {}
-  };
+// ─── Fetch — routing strategies ────────────────────────────
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
 
-  // Парсим данные из Push сообщения
-  if (event.data) {
-    try {
-      const data = event.data.json();
-      notificationData = {
-        ...notificationData,
-        ...data
-      };
-    } catch (error) {
-      console.error('[SW] Error parsing push data:', error);
-      notificationData.body = event.data.text();
-    }
+  // Skip non-GET requests
+  if (request.method !== 'GET') return;
+
+  // Skip chrome-extension and other non-http schemes
+  if (!url.protocol.startsWith('http')) return;
+
+  // Network-first for API calls
+  if (url.pathname.startsWith('/api/')) {
+    event.respondWith(networkFirst(request));
+    return;
   }
 
-  const options = {
-    body: notificationData.body,
-    icon: notificationData.icon,
-    badge: notificationData.badge,
-    image: notificationData.image,
-    vibrate: [200, 100, 200, 100, 200],
-    data: notificationData.data || {},
-    actions: notificationData.actions || [],
-    requireInteraction: true,
-    tag: notificationData.data?.orderId || `notification-${Date.now()}`,
-    renotify: true
-  };
+  // Cache-first for static assets
+  const isStatic = STATIC_EXTENSIONS.some((ext) => url.pathname.endsWith(ext));
+  if (isStatic) {
+    event.respondWith(cacheFirst(request));
+    return;
+  }
 
-  event.waitUntil(
-    self.registration.showNotification(notificationData.title, options)
-  );
+  // Network-first for HTML pages with offline fallback
+  event.respondWith(networkFirstWithOffline(request));
 });
 
-// Обработка кликов по уведомлениям
-self.addEventListener('notificationclick', (event) => {
-  console.log('[SW] Notification clicked:', event);
-  
-  event.notification.close();
+// Cache-first strategy (static assets)
+async function cacheFirst(request) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
 
-  const urlToOpen = event.notification.data?.url || '/specialist/dashboard';
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      const cache = await caches.open(STATIC_CACHE);
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (err) {
+    console.error('[SW] cacheFirst fetch failed:', err);
+    return new Response('Offline', { status: 503 });
+  }
+}
 
-  // Обработка действий (кнопок)
-  if (event.action) {
-    console.log('[SW] Action clicked:', event.action);
-    
-    // Различные действия
-    switch (event.action) {
-      case 'view':
-        // Открыть страницу
-        break;
-      case 'reply':
-        // Открыть страницу сообщений
-        event.waitUntil(
-          clients.openWindow('/specialist/messages')
-        );
-        return;
-      case 'ignore':
-        // Просто закрыть уведомление
-        return;
-      default:
-        break;
+// Network-first strategy (API)
+async function networkFirst(request) {
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (err) {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    return new Response(JSON.stringify({ error: 'Offline' }), {
+      status: 503,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+}
+
+// Network-first with offline fallback (HTML pages)
+async function networkFirstWithOffline(request) {
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (err) {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+
+    // Fallback to offline page for navigation requests
+    if (request.mode === 'navigate') {
+      const offlinePage = await caches.match('/offline');
+      if (offlinePage) return offlinePage;
+    }
+
+    return new Response(
+      '<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>МастерОК — Офлайн</title></head>' +
+        '<body style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif;background:#fff8f0;color:#333;">' +
+        '<div style="text-align:center"><h1 style="color:#f97316;">МастерОК</h1><p>Нет подключения к интернету.<br>Проверьте соединение и попробуйте снова.</p></div>' +
+        '</body></html>',
+      { status: 503, headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+    );
+  }
+}
+
+// ─── Push Notifications ────────────────────────────────────
+self.addEventListener('push', (event) => {
+  console.log('[SW] Push received');
+
+  let data = {
+    title: 'МастерОК',
+    body: 'У вас новое уведомление',
+    icon: '/icons/icon-192.png',
+    badge: '/icons/icon-72.png',
+    data: {},
+  };
+
+  if (event.data) {
+    try {
+      const payload = event.data.json();
+      data = { ...data, ...payload };
+    } catch (e) {
+      data.body = event.data.text();
     }
   }
 
-  // Открыть URL или сфокусировать существующее окно
   event.waitUntil(
-    clients.matchAll({
-      type: 'window',
-      includeUncontrolled: true
-    }).then((clientList) => {
-      // Проверяем, есть ли уже открытое окно с этим URL
-      for (let i = 0; i < clientList.length; i++) {
-        const client = clientList[i];
-        if (client.url === urlToOpen && 'focus' in client) {
-          return client.focus();
-        }
-      }
-      
-      // Если нет открытого окна, открываем новое
-      if (clients.openWindow) {
-        return clients.openWindow(urlToOpen);
-      }
+    self.registration.showNotification(data.title, {
+      body: data.body,
+      icon: data.icon,
+      badge: data.badge,
+      image: data.image,
+      vibrate: [200, 100, 200, 100, 200],
+      data: data.data || {},
+      actions: data.actions || [],
+      requireInteraction: true,
+      tag: data.data?.orderId || `notif-${Date.now()}`,
+      renotify: true,
     })
   );
 });
 
-// Обработка закрытия уведомлений
-self.addEventListener('notificationclose', (event) => {
-  console.log('[SW] Notification closed:', event);
-  
-  // Можно отправить аналитику о закрытии уведомления
-  const notification = event.notification;
-  const notificationData = notification.data;
-  
-  // TODO: Отправить на сервер информацию о закрытии
-  // fetch('/api/notifications/closed', {
-  //   method: 'POST',
-  //   body: JSON.stringify({ notificationId: notificationData?.id })
-  // });
-});
+// ─── Notification Click ────────────────────────────────────
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
 
-// Обработка фоновой синхронизации (Background Sync)
-self.addEventListener('sync', (event) => {
-  console.log('[SW] Background sync:', event.tag);
-  
-  if (event.tag === 'sync-messages') {
-    event.waitUntil(syncMessages());
-  } else if (event.tag === 'sync-orders') {
-    event.waitUntil(syncOrders());
-  }
-});
+  const targetUrl = event.notification.data?.url || '/specialist/dashboard';
 
-// Функции синхронизации
-async function syncMessages() {
-  try {
-    console.log('[SW] Syncing messages...');
-    // TODO: Синхронизировать сообщения с сервером
-    const response = await fetch('/api/messages/sync', {
-      method: 'POST'
-    });
-    
-    if (response.ok) {
-      console.log('[SW] Messages synced successfully');
-      
-      // Показать уведомление о новых сообщениях
-      const data = await response.json();
-      if (data.newMessages > 0) {
-        self.registration.showNotification('Новые сообщения', {
-          body: `У вас ${data.newMessages} новых сообщений`,
-          icon: '/icons/message.png',
-          badge: '/icons/badge-72x72.png',
-          data: { url: '/specialist/messages' }
-        });
-      }
-    }
-  } catch (error) {
-    console.error('[SW] Failed to sync messages:', error);
-  }
-}
-
-async function syncOrders() {
-  try {
-    console.log('[SW] Syncing orders...');
-    // TODO: Синхронизировать заказы с сервером
-    const response = await fetch('/api/orders/sync', {
-      method: 'POST'
-    });
-    
-    if (response.ok) {
-      console.log('[SW] Orders synced successfully');
-      
-      const data = await response.json();
-      if (data.newOrders > 0) {
-        self.registration.showNotification('Новые заказы!', {
-          body: `Доступно ${data.newOrders} новых заказов по вашим компетенциям`,
-          icon: '/icons/new-order.png',
-          badge: '/icons/badge-72x72.png',
-          data: { url: '/specialist/dashboard' }
-        });
-      }
-    }
-  } catch (error) {
-    console.error('[SW] Failed to sync orders:', error);
-  }
-}
-
-// Стратегия кэширования для запросов
-self.addEventListener('fetch', (event) => {
-  // Игнорируем запросы к API (они должны быть всегда свежими)
-  if (event.request.url.includes('/api/')) {
+  if (event.action === 'reply') {
+    event.waitUntil(self.clients.openWindow('/specialist/messages'));
     return;
   }
+  if (event.action === 'ignore') return;
 
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Вернуть из кэша или запросить из сети
-        return response || fetch(event.request);
-      })
-      .catch((error) => {
-        console.error('[SW] Fetch failed:', error);
-        throw error;
+  event.waitUntil(
+    self.clients
+      .matchAll({ type: 'window', includeUncontrolled: true })
+      .then((list) => {
+        for (const client of list) {
+          if (client.url.includes(targetUrl) && 'focus' in client) {
+            return client.focus();
+          }
+        }
+        return self.clients.openWindow(targetUrl);
       })
   );
 });
 
-// Обработка сообщений от клиентов
+// ─── Notification Close ────────────────────────────────────
+self.addEventListener('notificationclose', (event) => {
+  console.log('[SW] Notification closed');
+});
+
+// ─── Background Sync ──────────────────────────────────────
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-messages') {
+    event.waitUntil(syncEndpoint('/api/messages/sync', 'messages'));
+  } else if (event.tag === 'sync-orders') {
+    event.waitUntil(syncEndpoint('/api/orders/sync', 'orders'));
+  }
+});
+
+async function syncEndpoint(url, label) {
+  try {
+    const res = await fetch(url, { method: 'POST' });
+    if (res.ok) console.log(`[SW] ${label} synced`);
+  } catch (e) {
+    console.error(`[SW] ${label} sync failed:`, e);
+  }
+}
+
+// ─── Client Messages ──────────────────────────────────────
 self.addEventListener('message', (event) => {
-  console.log('[SW] Message received:', event.data);
-  
-  if (event.data && event.data.type === 'SKIP_WAITING') {
+  if (event.data?.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
-  
-  if (event.data && event.data.type === 'SHOW_NOTIFICATION') {
+  if (event.data?.type === 'SHOW_NOTIFICATION') {
     const { title, options } = event.data;
     self.registration.showNotification(title, options);
   }
 });
 
 console.log('[SW] Service Worker loaded');
-
-
-
-

@@ -256,6 +256,176 @@ class ApiClient {
     });
   }
 
+  // Milestones endpoints
+  async getMilestones(orderId: string) {
+    return this.request(`/orders/${orderId}/milestones`, { method: 'GET' });
+  }
+
+  async createMilestone(orderId: string, data: any) {
+    return this.request(`/orders/${orderId}/milestones`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  async fundMilestone(milestoneId: string) {
+    return this.request(`/milestones/${milestoneId}/fund`, { method: 'POST' });
+  }
+
+  async submitMilestone(milestoneId: string) {
+    return this.request(`/milestones/${milestoneId}/submit`, { method: 'POST' });
+  }
+
+  async approveMilestone(milestoneId: string) {
+    return this.request(`/milestones/${milestoneId}/approve`, { method: 'POST' });
+  }
+
+  // Recommended specialists
+  async getRecommendedSpecialists(orderId: string) {
+    return this.request(`/orders/${orderId}/recommended-specialists`, { method: 'GET' });
+  }
+
+  async getRecommendedByParams(params: Record<string, any>) {
+    const queryParams = new URLSearchParams();
+    Object.entries(params).forEach(([key, value]) => {
+      if (value !== undefined) queryParams.append(key, value.toString());
+    });
+    return this.request(`/specialists/recommended?${queryParams.toString()}`, { method: 'GET' });
+  }
+
+  // Progress updates
+  async getProgressUpdates(orderId: string) {
+    return this.request(`/orders/${orderId}/progress`, { method: 'GET' });
+  }
+
+  async createProgressUpdate(orderId: string, data: any) {
+    return this.request(`/orders/${orderId}/progress`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  // Portfolio
+  async getPortfolio(specialistId: string) {
+    return this.request(`/specialists/${specialistId}/portfolio`, { method: 'GET' });
+  }
+
+  async createPortfolioProject(specialistId: string, data: any) {
+    return this.request(`/specialists/${specialistId}/portfolio`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  // Verification
+  async submitVerification(data: any) {
+    return this.request('/verification/submit', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  async getMyVerification() {
+    return this.request('/verification/me', { method: 'GET' });
+  }
+
+  // Disputes
+  async openDispute(orderId: string, reason: string) {
+    return this.request(`/orders/${orderId}/dispute`, {
+      method: 'POST',
+      body: JSON.stringify({ reason }),
+    });
+  }
+
+  async addDisputeEvidence(disputeId: string, data: any) {
+    return this.request(`/disputes/${disputeId}/evidence`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  async getDispute(disputeId: string) {
+    return this.request(`/disputes/${disputeId}`, { method: 'GET' });
+  }
+
+  // Admin endpoints
+  async getDashboardStats() {
+    return this.request('/admin/dashboard', { method: 'GET' });
+  }
+
+  async getAdminUsers(params?: { search?: string; role?: string; page?: number; limit?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined) queryParams.append(key, value.toString());
+      });
+    }
+    const qs = queryParams.toString();
+    return this.request(`/admin/users${qs ? `?${qs}` : ''}`, { method: 'GET' });
+  }
+
+  async updateUser(userId: string, data: any) {
+    return this.request(`/admin/users/${userId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(data),
+    });
+  }
+
+  async getAdminOrders(params?: { status?: string; page?: number; limit?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined) queryParams.append(key, value.toString());
+      });
+    }
+    const qs = queryParams.toString();
+    return this.request(`/admin/orders${qs ? `?${qs}` : ''}`, { method: 'GET' });
+  }
+
+  async getAdminDisputes(params?: { status?: string; page?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined) queryParams.append(key, value.toString());
+      });
+    }
+    const qs = queryParams.toString();
+    return this.request(`/admin/disputes${qs ? `?${qs}` : ''}`, { method: 'GET' });
+  }
+
+  async resolveDispute(disputeId: string, resolution: string) {
+    return this.request(`/admin/disputes/${disputeId}/resolve`, {
+      method: 'POST',
+      body: JSON.stringify({ resolution }),
+    });
+  }
+
+  async getAdminVerifications(params?: { status?: string; page?: number }) {
+    const queryParams = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined) queryParams.append(key, value.toString());
+      });
+    }
+    const qs = queryParams.toString();
+    return this.request(`/admin/verifications${qs ? `?${qs}` : ''}`, { method: 'GET' });
+  }
+
+  async approveVerification(verificationId: string) {
+    return this.request(`/admin/verifications/${verificationId}/approve`, { method: 'POST' });
+  }
+
+  async rejectVerification(verificationId: string, reason: string) {
+    return this.request(`/admin/verifications/${verificationId}/reject`, {
+      method: 'POST',
+      body: JSON.stringify({ reason }),
+    });
+  }
+
+  async getAnalytics() {
+    return this.request('/admin/analytics', { method: 'GET' });
+  }
+
   // Search
   async search(query: string, filters?: any) {
     const params = new URLSearchParams({ q: query });

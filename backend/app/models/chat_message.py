@@ -22,6 +22,8 @@ class ChatMessage(Base, TimestampMixin):
     text = Column(Text, nullable=False)
     message_type = Column(SQLEnum(MessageType), default=MessageType.TEXT)
     is_read = Column(Boolean, default=False)
+    attachment_url = Column(String, nullable=True)
+    attachment_name = Column(String, nullable=True)
 
     # Relationships
     sender = relationship("User", foreign_keys=[sender_id])

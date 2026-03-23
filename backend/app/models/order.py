@@ -50,6 +50,7 @@ class Order(Base, TimestampMixin):
     review = relationship("Review", back_populates="order", uselist=False)
     bids = relationship("OrderBid", back_populates="order", cascade="all, delete-orphan")
     payments = relationship("Payment", back_populates="order", cascade="all, delete-orphan")
+    milestones = relationship("Milestone", back_populates="order", cascade="all, delete-orphan", order_by="Milestone.sequence")
 
 
 

@@ -27,6 +27,15 @@ python-dotenv==1.0.0
 # Payments (YooKassa)
 yookassa==3.1.0
 
+# Image processing
+Pillow==10.2.0
+
+# Push notifications
+pywebpush==1.14.0
+
+# Email
+aiosmtplib==3.0.1
+
 
 
 

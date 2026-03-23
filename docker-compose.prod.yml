@@ -25,6 +25,7 @@ services:
       DATABASE_URL: postgresql+asyncpg://masterok:masterok_password@postgres:5432/masterok
       SECRET_KEY: change-me-in-production
       DEBUG: "false"
+      UPLOAD_DIR: /data/uploads
       # Для настоящей оплаты:
       # YOOKASSA_SHOP_ID: ""
       # YOOKASSA_SECRET_KEY: ""
@@ -33,6 +34,8 @@ services:
         condition: service_healthy
     expose:
       - "8000"
+    volumes:
+      - ./uploads:/data/uploads
 
   landing:
     build:
@@ -63,10 +66,8 @@ services:
     volumes:
       - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./downloads:/data/downloads:ro
+      - ./uploads:/data/uploads:ro
+      - ./.well-known:/data/.well-known:ro
 
 volumes:
   postgres_data:
-
-
-
-

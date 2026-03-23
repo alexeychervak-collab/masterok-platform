@@ -19,7 +19,7 @@ export default function NotFound() {
             <Link href="/" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gray-900 text-white font-bold hover:bg-black">
               <Home className="w-5 h-5" /> На главную
             </Link>
-            <Link href="/search" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-primary-600 text-white font-bold hover:bg-primary-700">
+            <Link href="/search" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-orange-500 text-white font-bold hover:bg-orange-600">
               <Search className="w-5 h-5" /> Найти специалиста
             </Link>
             <Link href="/help" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-gray-200 font-bold hover:bg-gray-50">

@@ -185,22 +185,22 @@ export default function FindOrdersPage() {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="text-2xl font-bold text-primary-600">
+            <Link href="/" className="text-2xl font-bold text-orange-600">
               МастерОК
             </Link>
             <nav className="hidden md:flex gap-6">
               <Link href="/specialist/dashboard" className="text-gray-600 hover:text-gray-900">
                 Мои заказы
               </Link>
-              <Link href="/specialist/find-orders" className="text-primary-600 font-medium">
+              <Link href="/specialist/find-orders" className="text-orange-600 font-medium">
                 Поиск заказов
               </Link>
               <Link href="/specialist/messages" className="text-gray-600 hover:text-gray-900">
                 Сообщения
               </Link>
             </nav>
-            <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
-              <User className="w-6 h-6 text-primary-600" />
+            <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+              <User className="w-6 h-6 text-orange-600" />
             </div>
           </div>
         </div>
@@ -252,14 +252,14 @@ export default function FindOrdersPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Поиск заказов..."
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
               />
             </div>
             
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+              className="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
             >
               {categories.map(cat => (
                 <option key={cat} value={cat}>{cat}</option>
@@ -317,7 +317,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fVerified}
                     onChange={(e) => setFVerified(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Любой</option>
                     <option value="yes">Да</option>
@@ -330,7 +330,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fRating}
                     onChange={(e) => setFRating(Number(e.target.value))}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value={0}>Любой</option>
                     <option value={4}>4+</option>
@@ -345,7 +345,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fHasReviews}
                     onChange={(e) => setFHasReviews(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Любые</option>
                     <option value="yes">Да</option>
@@ -365,7 +365,7 @@ export default function FindOrdersPage() {
                         setFSection('any')
                       }
                     }}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Любое</option>
                     <option value="Проектирование">Проектирование</option>
@@ -379,7 +379,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fObjectType}
                     onChange={(e) => setFObjectType(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Любой</option>
                     <option value="Жилой">Жилой</option>
@@ -397,7 +397,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fTerm}
                     onChange={(e) => setFTerm(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Любой</option>
                     <option value="7 дней">7 дней</option>
@@ -415,7 +415,7 @@ export default function FindOrdersPage() {
                       <select
                         value={fStage}
                         onChange={(e) => setFStage(e.target.value as any)}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                        className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                       >
                         <option value="any">Любая</option>
                         <option value="Проектная документация">Проектная документация</option>
@@ -428,7 +428,7 @@ export default function FindOrdersPage() {
                       <select
                         value={fSection}
                         onChange={(e) => setFSection(e.target.value as any)}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                        className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                       >
                         <option value="any">Любой</option>
                         {projectSections.map((s) => (
@@ -446,7 +446,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fExpertise}
                     onChange={(e) => setFExpertise(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Любая</option>
                     <option value="Государственная">Государственная</option>
@@ -460,7 +460,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fAuthor}
                     onChange={(e) => setFAuthor(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Не важно</option>
                     <option value="yes">Да</option>
@@ -473,7 +473,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fTravel}
                     onChange={(e) => setFTravel(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Не важно</option>
                     <option value="yes">Требуется</option>
@@ -486,7 +486,7 @@ export default function FindOrdersPage() {
                   <select
                     value={fSafeDeal}
                     onChange={(e) => setFSafeDeal(e.target.value as any)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     <option value="any">Не важно</option>
                     <option value="yes">Да</option>
@@ -512,7 +512,7 @@ export default function FindOrdersPage() {
                       className={`
                         px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center justify-center gap-2
                         ${sortBy === sort.value
-                          ? 'bg-primary-600 text-white'
+                          ? 'bg-orange-500 text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         }
                       `}
@@ -583,7 +583,7 @@ export default function FindOrdersPage() {
                   </div>
 
                   <div className="text-right ml-6">
-                    <div className="text-2xl font-bold text-primary-600 mb-1">
+                    <div className="text-2xl font-bold text-orange-600 mb-1">
                       {getBudgetDisplay(order.budget)}
                     </div>
                     <div className="text-xs text-gray-500">Бюджет</div>
@@ -618,7 +618,7 @@ export default function FindOrdersPage() {
 
                   <Link
                     href={`/specialist/orders/${order.id}`}
-                    className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-semibold transition-colors flex items-center gap-2"
+                    className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-semibold transition-colors flex items-center gap-2"
                   >
                     Откликнуться
                     <ArrowRight className="w-5 h-5" />
@@ -656,7 +656,7 @@ export default function FindOrdersPage() {
                 setFTravel('any')
                 setFSafeDeal('any')
               }}
-              className="px-6 py-3 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors"
+              className="px-6 py-3 bg-orange-500 text-white rounded-xl font-semibold hover:bg-orange-600 transition-colors"
             >
               Сбросить фильтры
             </button>

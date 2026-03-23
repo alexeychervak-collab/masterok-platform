@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Home, Search, Heart, User, Menu, 
+import {
+  X, Home, Search, Heart, User, Menu,
   MessageCircle, Bell, Settings, LogOut,
   TrendingUp, Shield, Award
 } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -33,7 +34,7 @@ const quickLinks = [
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
-  const [user, setUser] = useState<any>(null); // Replace with real user data
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     // Prevent body scroll when menu is open
@@ -71,7 +72,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             className="fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-white z-50 shadow-2xl lg:hidden overflow-y-auto"
           >
             {/* Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 z-10">
+            <div className="sticky top-0 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 z-10">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold">Меню</h2>
                 <button
@@ -87,11 +88,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {user ? (
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-lg font-bold">
-                    {user.name.charAt(0)}
+                    {(user.full_name || user.email || '').charAt(0).toUpperCase()}
                   </div>
                   <div>
-                    <div className="font-semibold">{user.name}</div>
-                    <div className="text-sm text-teal-100">{user.email}</div>
+                    <div className="font-semibold">{user.full_name || 'Пользователь'}</div>
+                    <div className="text-sm text-orange-100">{user.email}</div>
                   </div>
                 </div>
               ) : (
@@ -99,7 +100,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <Link
                     href="/login"
                     onClick={onClose}
-                    className="block w-full py-2 px-4 bg-white text-teal-600 rounded-lg font-semibold text-center hover:bg-teal-50 transition-colors"
+                    className="block w-full py-2 px-4 bg-white text-orange-600 rounded-lg font-semibold text-center hover:bg-orange-50 transition-colors"
                   >
                     Войти
                   </Link>
@@ -130,8 +131,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors group"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="p-2 bg-teal-50 rounded-lg group-hover:bg-teal-100 transition-colors">
-                          <item.icon className="w-5 h-5 text-teal-600" />
+                        <div className="p-2 bg-orange-50 rounded-lg group-hover:bg-orange-100 transition-colors">
+                          <item.icon className="w-5 h-5 text-orange-600" />
                         </div>
                         <span className="font-medium text-gray-900">{item.label}</span>
                       </div>
@@ -184,7 +185,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </Link>
                   <button
                     onClick={() => {
-                      // Handle logout
+                      logout();
                       onClose();
                     }}
                     className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-50 transition-colors text-red-600"
@@ -201,9 +202,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div className="text-xs text-gray-500 text-center">
                 <p className="mb-2">МастерОК</p>
                 <div className="flex justify-center gap-4">
-                  <Link href="/about" className="hover:text-teal-600">О нас</Link>
-                  <Link href="/help" className="hover:text-teal-600">Помощь</Link>
-                  <Link href="/terms" className="hover:text-teal-600">Условия</Link>
+                  <Link href="/about" className="hover:text-orange-600">О нас</Link>
+                  <Link href="/help" className="hover:text-orange-600">Помощь</Link>
+                  <Link href="/terms" className="hover:text-orange-600">Условия</Link>
                 </div>
               </div>
             </div>

@@ -54,7 +54,7 @@ function OrdersContent() {
             <h1 className="text-3xl font-bold">Мои заказы</h1>
             <p className="text-gray-600">Все ваши проекты, обсуждения и безопасные сделки — в одном месте.</p>
           </div>
-          <Link href="/create-order" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-primary-600 text-white font-bold hover:bg-primary-700">
+          <Link href="/create-order" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-orange-500 text-white font-bold hover:bg-orange-600">
             <Plus className="w-5 h-5" /> Создать заказ
           </Link>
         </div>
@@ -75,7 +75,7 @@ function OrdersContent() {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full pl-9 pr-3 py-2.5 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full pl-9 pr-3 py-2.5 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Поиск по заказам..."
               />
             </div>
@@ -85,7 +85,7 @@ function OrdersContent() {
           </div>
 
           <div className="divide-y">
-            {filtered.map((o) => (
+            {filtered.length > 0 ? filtered.map((o) => (
               <Link key={o.id} href={`/orders/${o.id}`} className="block p-5 hover:bg-gray-50 transition-colors">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                   <div className="min-w-0">
@@ -112,7 +112,18 @@ function OrdersContent() {
                   </div>
                 </div>
               </Link>
-            ))}
+            )) : (
+              <div className="p-12 text-center">
+                <Search className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Заказы не найдены</h3>
+                <p className="text-sm text-gray-500 mb-4">
+                  {query ? 'Попробуйте изменить поисковый запрос' : 'У вас пока нет заказов'}
+                </p>
+                <Link href="/create-order" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors">
+                  <Plus className="w-4 h-4" /> Создать первый заказ
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </main>

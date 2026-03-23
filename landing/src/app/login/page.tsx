@@ -24,12 +24,15 @@ export default function LoginPage() {
   const [code, setCode] = useState('')
   const canVerify = useMemo(() => phone.trim().length >= 10 && code.trim().length >= 4, [phone, code])
 
+  const [redirectTo, setRedirectTo] = useState('')
+
   useEffect(() => {
-    // читаем role из query без useSearchParams, чтобы не ломать prerender
     try {
       const params = new URLSearchParams(window.location.search)
       const qp = params.get('role')
       if (qp === 'specialist' || qp === 'client') setRole(qp)
+      const from = params.get('from')
+      if (from) setRedirectTo(from)
     } catch {
       // ignore
     }
@@ -40,11 +43,17 @@ export default function LoginPage() {
     setIsSubmitting(true)
     setError('')
     try {
+      const defaultRedirect = redirectTo || (role === 'specialist' ? '/specialist/dashboard?welcome=true' : '/orders')
       if (mode === 'email') {
+        if (!email.trim() || !password.trim()) {
+          setError('Заполните все поля')
+          setIsSubmitting(false)
+          return
+        }
         const result = await login(email, password)
         if (result.success) {
           localStorage.setItem('masterok_role', role)
-          router.push(role === 'specialist' ? '/specialist/dashboard' : '/create-order')
+          router.push(defaultRedirect)
         } else {
           setError(result.error || 'Неверный email или пароль')
         }
@@ -53,7 +62,7 @@ export default function LoginPage() {
         localStorage.setItem('masterok_role', role)
         localStorage.setItem('masterok_user', JSON.stringify({ role, phone }))
         await new Promise((r) => setTimeout(r, 600))
-        router.push(role === 'specialist' ? '/specialist/dashboard' : '/create-order')
+        router.push(defaultRedirect)
       }
     } catch {
       setError('Ошибка соединения с сервером')
@@ -71,7 +80,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 px-4 py-12">
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-8">
-          <Link href="/" className="text-2xl font-bold text-primary-600">
+          <Link href="/" className="text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors">
             МастерОК
           </Link>
           <h1 className="text-3xl font-bold mt-4">Вход</h1>
@@ -107,7 +116,7 @@ export default function LoginPage() {
               type="button"
               onClick={() => setMode('email')}
               className={`flex-1 px-4 py-3 rounded-xl font-semibold text-sm border transition-colors ${
-                mode === 'email' ? 'border-primary-500 bg-primary-50 text-primary-700' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                mode === 'email' ? 'border-orange-500 bg-orange-50 text-orange-700' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
               }`}
             >
               Email + пароль
@@ -116,7 +125,7 @@ export default function LoginPage() {
               type="button"
               onClick={() => setMode('sms')}
               className={`flex-1 px-4 py-3 rounded-xl font-semibold text-sm border transition-colors ${
-                mode === 'sms' ? 'border-primary-500 bg-primary-50 text-primary-700' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                mode === 'sms' ? 'border-orange-500 bg-orange-50 text-orange-700' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
               }`}
             >
               SMS-код
@@ -136,7 +145,7 @@ export default function LoginPage() {
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="email"
-                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
                     placeholder="email@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -146,7 +155,7 @@ export default function LoginPage() {
                   <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="password"
-                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
                     placeholder="Пароль"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -158,7 +167,7 @@ export default function LoginPage() {
                 <div className="relative">
                   <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
-                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
                     placeholder="+7 (999) 123-45-67"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -174,7 +183,7 @@ export default function LoginPage() {
                 <div className="relative">
                   <ShieldCheck className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
-                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
                     placeholder="Код из SMS (демо)"
                     value={code}
                     onChange={(e) => setCode(e.target.value)}
@@ -186,7 +195,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isSubmitting || (mode === 'sms' ? !canVerify : false)}
-              className="w-full py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>
@@ -203,7 +212,7 @@ export default function LoginPage() {
 
           <div className="mt-6 text-center text-sm text-gray-600">
             Нет аккаунта?{' '}
-            <Link href="/register" className="text-primary-600 font-semibold hover:underline">
+            <Link href="/register" className="text-orange-600 font-semibold hover:underline">
               Регистрация
             </Link>
           </div>

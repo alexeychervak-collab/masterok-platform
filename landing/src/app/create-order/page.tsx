@@ -191,6 +191,29 @@ export default function CreateOrderPage() {
         console.warn('API error, showing success anyway:', response.error);
       }
 
+      // Сохраняем заказ в localStorage для отображения на странице заказов
+      try {
+        const saved = JSON.parse(localStorage.getItem('masterok_client_orders') || '[]');
+        const newOrder = {
+          id: `local-${Date.now()}`,
+          title: formData.title,
+          description: formData.description,
+          category: formData.category || 'Другое',
+          location: formData.location || 'Не указан',
+          budget: formData.budgetType === 'range'
+            ? { min: Number(formData.budgetMin) || 0, max: Number(formData.budgetMax) || 0 }
+            : Number(formData.budgetFixed) || 0,
+          deadline: formData.deadline || '',
+          postedAt: new Date().toISOString(),
+          responses: 0,
+          urgency: 'medium',
+          client: { name: 'Вы', rating: 5, ordersCount: 1, verified: false },
+          status: 'published',
+        };
+        saved.push(newOrder);
+        localStorage.setItem('masterok_client_orders', JSON.stringify(saved));
+      } catch {}
+
       // Успешное создание заказа
       router.push('/orders?created=true');
     } catch (error) {

@@ -96,6 +96,18 @@ export default function SpecialistDashboard() {
   const [orders, setOrders] = useState<Order[]>(mockOrders);
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('welcome') === 'true') {
+        setShowWelcome(true);
+        // Remove the query param from URL without reload
+        window.history.replaceState({}, '', '/specialist/dashboard');
+      }
+    } catch {}
+  }, []);
 
   const stats = {
     activeOrders: orders.filter(o => o.status === 'in_progress').length,
@@ -130,11 +142,11 @@ export default function SpecialistDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
-              <Link href="/" className="text-2xl font-bold text-primary-600">
+              <Link href="/" className="text-2xl font-bold text-orange-600">
                 МастерОК
               </Link>
               <nav className="hidden md:flex gap-6">
-                <Link href="/specialist/dashboard" className="text-primary-600 font-medium">
+                <Link href="/specialist/dashboard" className="text-orange-600 font-medium">
                   Заказы
                 </Link>
                 <Link href="/specialist/find-orders" className="text-gray-600 hover:text-gray-900">
@@ -159,8 +171,8 @@ export default function SpecialistDashboard() {
               <Link href="/specialist/settings" className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
                 <Settings className="w-6 h-6 text-gray-600" />
               </Link>
-              <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
-                <User className="w-6 h-6 text-primary-600" />
+              <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                <User className="w-6 h-6 text-orange-600" />
               </div>
             </div>
           </div>
@@ -168,15 +180,29 @@ export default function SpecialistDashboard() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Welcome Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl p-8 text-white mb-8"
-        >
-          <h1 className="text-3xl font-bold mb-2">Добро пожаловать, Иван!</h1>
-          <p className="text-primary-100">У вас {stats.newOrders} новых заказов, готовых к откликам</p>
-        </motion.div>
+        {/* Welcome Banner - shown on first login or always as a dashboard header */}
+        {showWelcome && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 text-white mb-8 relative"
+          >
+            <button
+              onClick={() => setShowWelcome(false)}
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+            >
+              <XCircle className="w-6 h-6" />
+            </button>
+            <h1 className="text-3xl font-bold mb-2">Добро пожаловать!</h1>
+            <p className="text-orange-100">Вы успешно вошли в систему. У вас {stats.newOrders} новых заказов, готовых к откликам.</p>
+          </motion.div>
+        )}
+
+        {/* Dashboard Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Панель управления</h1>
+          <p className="text-gray-600 mt-1">У вас {stats.newOrders} новых заказов</p>
+        </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -249,7 +275,7 @@ export default function SpecialistDashboard() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Поиск по заказам..."
-                className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+                className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none"
               />
             </div>
             <div className="flex gap-2">
@@ -260,7 +286,7 @@ export default function SpecialistDashboard() {
                   className={`
                     px-4 py-3 rounded-xl font-medium text-sm transition-all
                     ${filterStatus === status
-                      ? 'bg-primary-600 text-white'
+                      ? 'bg-orange-500 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }
                   `}
@@ -304,13 +330,13 @@ export default function SpecialistDashboard() {
                       До {new Date(order.deadline).toLocaleDateString('ru-RU')}
                     </span>
                     <span>{order.location}</span>
-                    <span className="text-primary-600 font-medium">
+                    <span className="text-orange-600 font-medium">
                       {order.responses} откликов
                     </span>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-primary-600 mb-1">
+                  <div className="text-2xl font-bold text-orange-600 mb-1">
                     {order.budget.toLocaleString()} ₽
                   </div>
                   <div className="text-xs text-gray-500">Бюджет</div>
@@ -339,7 +365,7 @@ export default function SpecialistDashboard() {
                       </button>
                       <Link
                         href={`/specialist/orders/${order.id}`}
-                        className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                        className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
                       >
                         Откликнуться
                         <ArrowRight className="w-4 h-4" />
@@ -349,7 +375,7 @@ export default function SpecialistDashboard() {
                   {order.status === 'in_progress' && (
                     <Link
                       href={`/specialist/orders/${order.id}`}
-                      className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                      className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
                     >
                       Открыть
                       <Eye className="w-4 h-4" />

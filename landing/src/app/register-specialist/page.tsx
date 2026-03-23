@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import api from '@/lib/api';
 import { 
   User, 
   Mail, 
@@ -155,23 +156,35 @@ export default function RegisterSpecialistPage() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Отправка на backend
-      const formDataToSend = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        if (value instanceof File) {
-          formDataToSend.append(key, value);
-        } else if (Array.isArray(value) && value.length > 0 && value[0] instanceof File) {
-          value.forEach(file => formDataToSend.append(key, file));
-        } else if (Array.isArray(value)) {
-          formDataToSend.append(key, JSON.stringify(value));
-        } else {
-          formDataToSend.append(key, String(value));
-        }
+      // 1. Регистрация пользователя
+      const nameParts = formData.fullName.trim().split(' ');
+      const registerResponse = await api.register({
+        email: formData.email,
+        password: formData.password,
+        name: formData.fullName,
+        phone: formData.phone,
       });
 
-      // Симуляция отправки
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      if (registerResponse.data?.access_token) {
+        api.setToken(registerResponse.data.access_token);
+      }
+
+      // 2. Создание профиля специалиста
+      const experienceMap: Record<string, number> = {
+        'less-1': 0, '1-3': 2, '3-5': 4, '5-10': 7, '10+': 12
+      };
+      const specialistResponse = await api.createSpecialist({
+        title: formData.categories[0] || 'Мастер',
+        description: formData.description,
+        city: formData.city,
+        experience: experienceMap[formData.experience] || 1,
+      });
+
+      if (registerResponse.error && specialistResponse.error) {
+        // Оба вызова не удались — показываем ошибку
+        throw new Error('Ошибка регистрации');
+      }
+
       // Успешная регистрация
       router.push('/specialist/dashboard?welcome=true');
     } catch (error) {

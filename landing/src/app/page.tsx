@@ -25,8 +25,20 @@ import {
   Mail,
   Menu,
   X,
-  FileText
+  FileText,
+  Building2,
+  Hammer,
+  Palette,
+  Droplets,
+  Ruler,
+  Home,
+  PaintBucket,
+  type LucideIcon
 } from 'lucide-react';
+
+const categoryIconMap: Record<string, LucideIcon> = {
+  Building2, Hammer, Palette, Droplets, Zap, Ruler, Home, PaintBucket
+};
 
 const APP_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_APP_DOWNLOAD_URL || '/downloads/app-release.apk';
@@ -37,7 +49,7 @@ const categories = [
     id: 1,
     name: 'Строительство домов',
     count: 3200,
-    icon: '🏗️',
+    icon: 'Building2',
     image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400',
     popular: true
   },
@@ -45,7 +57,7 @@ const categories = [
     id: 2,
     name: 'Ремонт квартир',
     count: 4800,
-    icon: '🔨',
+    icon: 'Hammer',
     image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400',
     popular: true
   },
@@ -53,7 +65,7 @@ const categories = [
     id: 3,
     name: 'Дизайн интерьера',
     count: 1920,
-    icon: '🎨',
+    icon: 'Palette',
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400',
     popular: true
   },
@@ -61,35 +73,35 @@ const categories = [
     id: 4,
     name: 'Сантехника',
     count: 1850,
-    icon: '🚰',
+    icon: 'Droplets',
     image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400'
   },
   {
     id: 5,
     name: 'Электромонтаж',
     count: 2100,
-    icon: '⚡',
+    icon: 'Zap',
     image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400'
   },
   {
     id: 6,
     name: 'Архитектура',
     count: 2450,
-    icon: '📐',
+    icon: 'Ruler',
     image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400'
   },
   {
     id: 7,
     name: 'Кровельные работы',
     count: 980,
-    icon: '🏠',
+    icon: 'Home',
     image: 'https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=400'
   },
   {
     id: 8,
     name: 'Фасадные работы',
     count: 1340,
-    icon: '🎭',
+    icon: 'PaintBucket',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400'
   }
 ];
@@ -556,7 +568,7 @@ export default function EnhancedHomePage() {
                   )}
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-4xl mb-2">{category.icon}</div>
+                    {(() => { const IconComp = categoryIconMap[category.icon]; return IconComp ? <IconComp className="w-8 h-8 text-orange-500 mb-2" /> : null; })()}
                     <h3 className="text-xl font-bold text-white mb-2">
                       {category.name}
                     </h3>

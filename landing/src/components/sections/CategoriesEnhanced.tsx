@@ -2,7 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp } from 'lucide-react';
+import { ArrowRight, TrendingUp, Building2, Hammer, Ruler, Droplets, Zap, Palette, Home, Building, type LucideIcon } from 'lucide-react';
+
+const catIconMap: Record<string, LucideIcon> = {
+  Building2, Hammer, Ruler, Droplets, Zap, Palette, Home, Building
+};
 import { Badge } from '@/components/ui/badge';
 
 interface Category {
@@ -21,7 +25,7 @@ const categories: Category[] = [
     id: '1',
     name: 'Строительство домов',
     count: 3200,
-    icon: '🏗️',
+    icon: 'Building2',
     gradient: 'from-blue-500 via-blue-600 to-blue-700',
     image: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     trending: true,
@@ -31,7 +35,7 @@ const categories: Category[] = [
     id: '2',
     name: 'Ремонт квартир',
     count: 4800,
-    icon: '🔨',
+    icon: 'Hammer',
     gradient: 'from-orange-500 via-red-500 to-pink-500',
     image: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     trending: true,
@@ -41,7 +45,7 @@ const categories: Category[] = [
     id: '3',
     name: 'Архитектура',
     count: 2450,
-    icon: '📐',
+    icon: 'Ruler',
     gradient: 'from-cyan-500 via-blue-500 to-indigo-500',
     image: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     trending: false,
@@ -51,7 +55,7 @@ const categories: Category[] = [
     id: '4',
     name: 'Сантехника',
     count: 1850,
-    icon: '🚰',
+    icon: 'Droplets',
     gradient: 'from-blue-400 via-blue-500 to-blue-600',
     image: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     trending: false,
@@ -61,7 +65,7 @@ const categories: Category[] = [
     id: '5',
     name: 'Электромонтаж',
     count: 2100,
-    icon: '⚡',
+    icon: 'Zap',
     gradient: 'from-yellow-400 via-orange-400 to-red-400',
     image: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     trending: true,
@@ -71,7 +75,7 @@ const categories: Category[] = [
     id: '6',
     name: 'Дизайн интерьера',
     count: 1920,
-    icon: '🎨',
+    icon: 'Palette',
     gradient: 'from-purple-500 via-pink-500 to-red-500',
     image: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
     trending: false,
@@ -81,7 +85,7 @@ const categories: Category[] = [
     id: '7',
     name: 'Кровельные работы',
     count: 980,
-    icon: '🏠',
+    icon: 'Home',
     gradient: 'from-gray-600 via-gray-700 to-gray-800',
     image: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
     trending: false,
@@ -91,7 +95,7 @@ const categories: Category[] = [
     id: '8',
     name: 'Фасадные работы',
     count: 1340,
-    icon: '🏢',
+    icon: 'Building',
     gradient: 'from-teal-500 via-green-500 to-emerald-500',
     image: 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)',
     trending: false,
@@ -157,8 +161,8 @@ export default function CategoriesEnhanced() {
                 <div className="relative p-6 h-48 flex flex-col justify-between">
                   {/* Top: Icon and Badge */}
                   <div className="flex items-start justify-between">
-                    <div className="text-5xl group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg">
-                      {category.icon}
+                    <div className="group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg">
+                      {(() => { const IC = catIconMap[category.icon]; return IC ? <IC className="w-10 h-10 text-white" /> : null; })()}
                     </div>
                     
                     {category.trending && (

@@ -17,7 +17,17 @@ import {
   BarChart3,
   Sparkles,
   Clock,
+  Building,
+  Store,
+  Hotel,
+  Landmark,
+  Factory,
+  type LucideIcon,
 } from 'lucide-react';
+
+const businessIconMap: Record<string, LucideIcon> = {
+  Building, Building2, Store, Hotel, Landmark, Factory
+};
 
 const features = [
   {
@@ -53,12 +63,12 @@ const features = [
 ];
 
 const useCases = [
-  { title: 'Управляющие компании', desc: 'Плановый и аварийный ремонт, обслуживание зданий', icon: '🏢' },
-  { title: 'Девелоперы', desc: 'Отделка, благоустройство, коммуникации для новостроек', icon: '🏗️' },
-  { title: 'Ритейл', desc: 'Ремонт и оформление торговых точек по всей России', icon: '🏪' },
-  { title: 'HoReCa', desc: 'Ремонт ресторанов, кафе, отелей с минимальным простоем', icon: '🏨' },
-  { title: 'Офисы', desc: 'Обустройство и ремонт офисных пространств', icon: '🏛️' },
-  { title: 'Производство', desc: 'Ремонт и обслуживание промышленных объектов', icon: '🏭' },
+  { title: 'Управляющие компании', desc: 'Плановый и аварийный ремонт, обслуживание зданий', icon: 'Building' },
+  { title: 'Девелоперы', desc: 'Отделка, благоустройство, коммуникации для новостроек', icon: 'Building2' },
+  { title: 'Ритейл', desc: 'Ремонт и оформление торговых точек по всей России', icon: 'Store' },
+  { title: 'HoReCa', desc: 'Ремонт ресторанов, кафе, отелей с минимальным простоем', icon: 'Hotel' },
+  { title: 'Офисы', desc: 'Обустройство и ремонт офисных пространств', icon: 'Landmark' },
+  { title: 'Производство', desc: 'Ремонт и обслуживание промышленных объектов', icon: 'Factory' },
 ];
 
 const clients = [
@@ -175,7 +185,7 @@ export default function BusinessPage() {
                   viewport={{ once: true }}
                   className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="text-4xl mb-3">{uc.icon}</div>
+                  <div className="mb-3">{(() => { const IC = businessIconMap[uc.icon]; return IC ? <IC className="w-8 h-8 text-orange-500" /> : null; })()}</div>
                   <h3 className="font-bold mb-1 text-sm">{uc.title}</h3>
                   <p className="text-xs text-gray-500">{uc.desc}</p>
                 </motion.div>

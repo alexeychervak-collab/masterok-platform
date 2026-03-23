@@ -15,18 +15,31 @@ import {
   Clock,
   CheckCircle,
   ArrowRight,
-  AlertCircle
+  AlertCircle,
+  Home,
+  Zap,
+  Droplets,
+  Palette,
+  Building2,
+  Sparkles,
+  TreePine,
+  Armchair,
+  type LucideIcon
 } from 'lucide-react';
 
+const createOrderIconMap: Record<string, LucideIcon> = {
+  Home, Zap, Droplets, Palette, Building2, Sparkles, TreePine, Armchair
+};
+
 const categories = [
-  { id: 'repair', name: 'Ремонт квартир', icon: '🏠' },
-  { id: 'electric', name: 'Электрика', icon: '⚡' },
-  { id: 'plumbing', name: 'Сантехника', icon: '🚰' },
-  { id: 'design', name: 'Дизайн интерьера', icon: '🎨' },
-  { id: 'construction', name: 'Строительство', icon: '🏗️' },
-  { id: 'cleaning', name: 'Уборка', icon: '🧹' },
-  { id: 'landscaping', name: 'Ландшафт', icon: '🌳' },
-  { id: 'furniture', name: 'Мебель на заказ', icon: '🪑' }
+  { id: 'repair', name: 'Ремонт квартир', icon: 'Home' },
+  { id: 'electric', name: 'Электрика', icon: 'Zap' },
+  { id: 'plumbing', name: 'Сантехника', icon: 'Droplets' },
+  { id: 'design', name: 'Дизайн интерьера', icon: 'Palette' },
+  { id: 'construction', name: 'Строительство', icon: 'Building2' },
+  { id: 'cleaning', name: 'Уборка', icon: 'Sparkles' },
+  { id: 'landscaping', name: 'Ландшафт', icon: 'TreePine' },
+  { id: 'furniture', name: 'Мебель на заказ', icon: 'Armchair' }
 ];
 
 export default function CreateOrderPage() {
@@ -302,7 +315,7 @@ export default function CreateOrderPage() {
                           }
                         `}
                       >
-                        <div className="text-3xl mb-2">{cat.icon}</div>
+                        <div className="mb-2">{(() => { const IC = createOrderIconMap[cat.icon]; return IC ? <IC className="w-8 h-8 text-orange-500" /> : null; })()}</div>
                         <div className="text-sm font-medium text-gray-900">{cat.name}</div>
                       </button>
                     ))}

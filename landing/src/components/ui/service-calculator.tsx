@@ -2,7 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, Home, Ruler, Clock, TrendingUp, Check } from 'lucide-react';
+import { Calculator, Home, Ruler, Clock, TrendingUp, Check, Building2, Palette, Droplets, Zap, type LucideIcon } from 'lucide-react';
+
+const calcIconMap: Record<string, LucideIcon> = {
+  Home, Building2, Palette, Droplets, Zap
+};
 
 interface ServiceOption {
   id: string;
@@ -12,11 +16,11 @@ interface ServiceOption {
 }
 
 const serviceTypes = [
-  { value: 'renovation', label: 'Ремонт квартиры', icon: '🏠' },
-  { value: 'construction', label: 'Строительство дома', icon: '🏗️' },
-  { value: 'design', label: 'Дизайн интерьера', icon: '🎨' },
-  { value: 'plumbing', label: 'Сантехника', icon: '🚰' },
-  { value: 'electric', label: 'Электромонтаж', icon: '⚡' },
+  { value: 'renovation', label: 'Ремонт квартиры', icon: 'Home' },
+  { value: 'construction', label: 'Строительство дома', icon: 'Building2' },
+  { value: 'design', label: 'Дизайн интерьера', icon: 'Palette' },
+  { value: 'plumbing', label: 'Сантехника', icon: 'Droplets' },
+  { value: 'electric', label: 'Электромонтаж', icon: 'Zap' },
 ];
 
 const renovationOptions: ServiceOption[] = [
@@ -82,7 +86,7 @@ export default function ServiceCalculator() {
                     }
                   `}
                 >
-                  <div className="text-2xl mb-1">{type.icon}</div>
+                  <div className="mb-1">{(() => { const IC = calcIconMap[type.icon]; return IC ? <IC className="w-6 h-6 text-orange-500" /> : null; })()}</div>
                   <div className={`text-sm font-medium ${
                     serviceType === type.value ? 'text-primary-700' : 'text-gray-700'
                   }`}>
@@ -253,7 +257,7 @@ export default function ServiceCalculator() {
 
           {/* Tips */}
           <div className="mt-6 p-5 bg-blue-50 rounded-xl border border-blue-100">
-            <h4 className="font-semibold text-blue-900 mb-2 text-sm">💡 Совет</h4>
+            <h4 className="font-semibold text-blue-900 mb-2 text-sm flex items-center gap-1"><Zap className="w-4 h-4 text-yellow-500" /> Совет</h4>
             <p className="text-xs text-blue-700 leading-relaxed">
               Для точного расчета рекомендуем получить смету от нескольких специалистов. 
               Средняя разница в ценах может составлять до 30%.
